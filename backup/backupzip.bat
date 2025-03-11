@@ -2,7 +2,7 @@
 setlocal
 
 set BACKUP_FILES=(
-    "adapter /bigdata/EXD_Geely/exd/"
+    "adapter /bigdata/EXD_Geely/exd/adapter"
     "lcfg /lcfg"
     "odm /odm"
     "product /product"
