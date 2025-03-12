@@ -1,6 +1,4 @@
 @echo off
-chcp 65001 > nul
-cls
 
 
 set "ip=192.168.1.5"
@@ -19,34 +17,26 @@ if errorlevel 1 (
 
 :menu
 cls
-echo "   ____           _          ____       _                    _____ ____  ";
-echo "  / ___| ___  ___| |_   _   / ___| __ _| | __ ___  ___   _  | ____| ___| ";
-echo " | |  _ / _ \/ _ \ | | | | | |  _ / _` | |/ _` \ \/ / | | | |  _| |___ \ ";
-echo " | |_| |  __/  __/ | |_| | | |_| | (_| | | (_| |>  <| |_| | | |___ ___) |";
-echo "  \____|\___|\___|_|\__, |  \____|\__,_|_|\__,_/_/\_\\__, | |_____|____/ ";
-echo "                    |___/                            |___/               ";
 echo ==========================================
 echo          ADB Script Menu
 echo ==========================================
-echo Что вы хотите сделать?
-echo 1. Проверка подключения к головному устройству по проводу.
+echo 1. Check ADB connection via cable.
 echo 2. Run adb_test.bat
-echo 3. Run backupzip.bat
-echo 4. Run backup.bat
-echo 5. Run restorezip.bat
+echo 3. Run backupzip.bat - Dont work
+echo 4. Run backup.bat - Dont work
+echo 5. Run restorezip.bat - Dont work
 echo 6. Run ADB Console
-echo 7. Установка стартового пакета приложений.
-echo 0. Выйти
+echo 7. Install base apps pack.
+echo 0. Exit
 echo ==========================================
-set /p choice="Выберите действие для запуска (1-7): "
+set /p choice="choose action (1-7): "
 
 if "%choice%"=="1" (
-    cd backup
     adb devices -l | find "device usb" > nul 2>&1
 if %errorlevel%==0 (
-    echo Машина подключена
+    echo car connected
     ) else (
-    echo Проверьте подключение к авто
+    echo check connection to car
     )
 pause
 cls
@@ -66,17 +56,16 @@ if "%choice%"=="2" (
     cd backup
     cmd
 ) else if "%choice%"=="7" (
-    cd ..\apps_to_install
+    cd ..\app_to_install
     for %%A in (*.apk) do (
-        echo Установка приложений: %%~nxA
+        echo Installing app: %%~nxA
         adb install -g "%%A"
     )
-    cd ..\backup  rem Возвращаемся в папку backup после установки
   ) else if "%choice%"=="0" (
-    echo Выход из программы
+    echo Exit from app
     exit /b
 ) else (
-    echo Некорректный выбор. Попробуйте снова.
+    echo Incorrect choice. Try again.
 )
 
 pause
