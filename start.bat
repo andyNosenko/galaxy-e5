@@ -22,14 +22,13 @@ echo          ADB Script Menu
 echo ==========================================
 echo 1. Check ADB connection via cable.
 echo 2. Run adb_test.bat
-echo 3. Run backupzip.bat - Dont work
-echo 4. Run backup.bat - Dont work
-echo 5. Run restorezip.bat - Dont work
-echo 6. Run ADB Console
-echo 7. Install base apps pack.
+echo 3. Run backupzip.bat - tested on android phone
+echo 4. Run restorezip.bat - tested on android phone
+echo 5. Run ADB Console
+echo 6. Install base apps pack.
 echo 0. Exit
 echo ==========================================
-set /p choice="choose action (1-7): "
+set /p choice="choose action (1-6): "
 
 if "%choice%"=="1" (
     adb devices -l | find "device usb" > nul 2>&1
@@ -49,13 +48,11 @@ if "%choice%"=="2" (
 ) else if "%choice%"=="3" (
     call backupzip.bat
 ) else if "%choice%"=="4" (
-    call backup.bat
-) else if "%choice%"=="5" (
     call restorezip.bat
-) else if "%choice%"=="6" (
+) else if "%choice%"=="5" (
     cd backup
     cmd
-) else if "%choice%"=="7" (
+) else if "%choice%"=="6" (
     cd ..\app_to_install
     for %%A in (*.apk) do (
         echo Installing app: %%~nxA
