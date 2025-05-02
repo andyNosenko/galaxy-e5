@@ -1,34 +1,41 @@
 @echo off
 setlocal
 
-set log_file=..\logs\install_log.txt
+set "log_file=..\logs\install_log.txt"
+set "apk_path=..\app_to_install\AppDrawer v1.2.apk"
 
-rem Убедитесь, что папка для логов существует
+:: Создание папки для логов, если не существует
 if not exist "..\logs" (
     mkdir "..\logs"
 )
 
-echo Checking for connected devices...
+echo Поиск подключённых устройств...
 adb devices
 
-rem Проверяем, есть ли хотя бы одно подключенное устройство
-for /f "skip=1" %%a in ('adb devices') do (
-    set "DEVICE=%%a"
+:: Проверка наличия хотя бы одного устройства
+set "DEVICE_FOUND="
+for /f "skip=1 tokens=1" %%a in ('adb devices') do (
+    if not "%%a"=="offline" if not "%%a"=="unauthorized" if not "%%a"=="" (
+        set "DEVICE_FOUND=1"
+    )
 )
-if "%DEVICE%"=="" (
-    echo No devices found. Please connect a device and enable USB debugging.
+
+if not defined DEVICE_FOUND (
+    echo ❌ Устройства не найдены. Подключите устройство и включите отладку по USB.
     pause
     exit /b
 )
 
+:: Установка APK
+echo Установка приложения: AppDrawer v1.2.apk ...
+adb install -d -r "%apk_path%" >> "%log_file%" 2>&1
 
-echo Installing AppDrawer v1.2.apk...
-adb install -d -r "..\app_to_install\AppDrawer v1.2.apk"
 if errorlevel 1 (
-    echo Installation failed. Check if the APK file is valid or if the device is compatible. >> "%log_file%
-    echo Installation failed. Check install_log.txt for more details in the logs folder.
+    echo ❌ Ошибка установки. Подробнее в "%log_file%".
+    echo [%DATE% %TIME%] ❌ Установка не удалась. APK: %apk_path% >> "%log_file%"
 ) else (
-    echo Installation successful.
+    echo ✅ Установка прошла успешно.
+    echo [%DATE% %TIME%] ✅ Успешная установка. APK: %apk_path% >> "%log_file%"
 )
 
 pause

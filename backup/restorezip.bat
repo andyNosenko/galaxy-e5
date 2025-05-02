@@ -1,13 +1,18 @@
 @echo off
-echo [%DATE% %TIME%] restore started -------------------------------
-echo [%DATE% %TIME%] restore started ------------------------------- >> restore_log.txt
+setlocal
+
+set "LOG=..\logs\restore_log.txt"
+
+:: Старт лога
+echo [%DATE% %TIME%] 🔄 Начало восстанрвления из резервной копии ------------------------------- | tee -a %LOG%
 
 rem Test folder on android phone
+:: Восстановление из резервной копии с загрузкой на устройство
 adb push Documents.tar /sdcard/
 adb shell "tar -xvf /sdcard/Documents.tar -C /sdcard Documents"
 adb shell "rm /sdcard/Documents.tar"
 
-@echo off
-echo [%DATE% %TIME%] restore created -------------------------------
-echo [%DATE% %TIME%] restore created ------------------------------- >> restore_log.txt
+:: Завершение лога
+echo [%DATE% %TIME%] ✅ Восстановление выполнено успешно ------------------------------- | tee -a %LOG%
+
 pause

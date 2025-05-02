@@ -1,14 +1,18 @@
 @echo off
-echo [%DATE% %TIME%] backup started -------------------------------
-echo [%DATE% %TIME%] backup started ------------------------------- >> backup_log.txt
-@echo on
+setlocal
+
+set "LOG=..\logs\backup_log.txt"
+
+:: Старт лога
+echo [%DATE% %TIME%] 🔄 Начало резервного копирования ------------------------------- | tee -a %LOG%
 
 rem Test folder on android phone
+:: Создание архива на устройстве и загрузка
 adb exec-out "tar -cvf /sdcard/Documents.tar -C /sdcard Documents"
 adb pull /sdcard/Documents.tar .
 adb shell "rm /sdcard/Documents.tar"
 
-@echo off
-echo [%DATE% %TIME%] backup created -------------------------------
-echo [%DATE% %TIME%] backup created ------------------------------- >> backup_log.txt
+:: Завершение лога
+echo [%DATE% %TIME%] ✅ Резервная копия создана ------------------------------- | tee -a %LOG%
+
 pause
