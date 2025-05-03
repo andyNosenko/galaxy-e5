@@ -18,7 +18,6 @@ if errorlevel 1 (
     echo Ошибка при перезапуске ADB.
     echo !timestamp! Ошибка при перезапуске ADB. >> "%LOG%"
     pause
-    exit /b
 )
 
 adb wait-for-device
@@ -28,7 +27,6 @@ if errorlevel 1 (
     echo Не удалось получить root-доступ или сделать remount.
     echo !timestamp! Не удалось получить root-доступ или сделать remount. >> "%LOG%"
     pause
-    exit /b
 )
 
 echo Поиск подключённых устройств...
@@ -46,7 +44,6 @@ if not defined DEVICE_FOUND (
     echo Устройства не найдены. Подключите устройство и включите отладку по USB.
     echo !timestamp! Устройства не найдены. Подключите устройство и включите отладку по USB. >> "%LOG%"
     pause
-    exit /b
 )
 
 :: === Передача файлов ===
@@ -55,7 +52,6 @@ adb push ".\system\framework\services.jar" /system/framework/services.jar || (
     echo Ошибка при передаче services.jar
     echo !timestamp! Ошибка при передаче services.jar >> "%LOG%"
     pause
-    exit /b
 )
 
 echo ⬆ Копирование services.dex... | tee -a %log_file%
@@ -63,15 +59,14 @@ adb push ".\system\framework\oat\arm64\services.dex" /system/framework/oat/arm64
     echo Ошибка при передаче services.dex
     echo !timestamp! Ошибка при передаче services.dex >> "%LOG%"
     pause
-    exit /b
 )
 
 echo Копирование services.vdex...
 echo !timestamp! Копирование services.vdex... >> "%LOG%"
 adb push ".\system\framework\oat\arm64\services.vdex" /system/framework/oat/arm64/services.vdex || (
-    echo ❌ Ошибка при передаче services.vdex | tee -a %log_file%
+    echo Ошибка при передаче services.vdex
+    echo !timestamp! Ошибка при передаче services.vdex >> "%LOG%"
     pause
-    exit /b
 )
 
 :: === Очистка кеша Dalvik ===
@@ -82,5 +77,5 @@ adb shell rm -rf /data/dalvik-cache/arm/system@framework@services.jar@classes.vd
 
 :: === Завершение ===
 echo Восстановление завершено -------------------------------
-echo !timestamp! ✅ Восстановление завершено ------------------------------- >> "%LOG%"
+echo !timestamp! Восстановление завершено ------------------------------- >> "%LOG%"
 pause

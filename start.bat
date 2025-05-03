@@ -7,6 +7,11 @@ set "LOG=logs\adb_menu.log"
 set "ip=192.168.1.5"
 set "timestamp=[%DATE% %TIME%]"
 
+:: Создание папки для логов, если не существует
+if not exist "logs" (
+    mkdir "logs"
+)
+
 :: === ASCII-арт (если есть) ===
 if exist art.txt (
     type art.txt
