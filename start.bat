@@ -113,7 +113,7 @@ if "%choice%"=="5" (
 )
 
 if "%choice%"=="6" (
-    cd ..\app_to_install
+    cd app_to_install
     for %%A in (*.apk) do (
         echo Установка: %%~nxA
         adb install -g "%%A"
