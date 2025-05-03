@@ -27,6 +27,7 @@ if errorlevel 1 (
     echo Не удалось получить root-доступ или сделать remount.
     echo !timestamp! Не удалось получить root-доступ или сделать remount. >> "%LOG%"
     pause
+    exit /b
 )
 
 echo Поиск подключённых устройств...
@@ -44,21 +45,26 @@ if not defined DEVICE_FOUND (
     echo Устройства не найдены. Подключите устройство и включите отладку по USB.
     echo !timestamp! Устройства не найдены. Подключите устройство и включите отладку по USB. >> "%LOG%"
     pause
+    exit /b
 )
 
 :: === Передача файлов ===
-echo ? Копирование services.jar... | tee -a %log_file%
+echo Копирование services.jar...
+echo !timestamp! Копирование services.jar... >> "%LOG%"
 adb push ".\system\framework\services.jar" /system/framework/services.jar || (
     echo Ошибка при передаче services.jar
     echo !timestamp! Ошибка при передаче services.jar >> "%LOG%"
     pause
+    exit /b
 )
 
-echo ? Копирование services.dex... | tee -a %log_file%
+echo Копирование services.dex...
+echo !timestamp! Копирование services.dex... >> "%LOG%"
 adb push ".\system\framework\oat\arm64\services.dex" /system/framework/oat/arm64/services.dex || (
     echo Ошибка при передаче services.dex
     echo !timestamp! Ошибка при передаче services.dex >> "%LOG%"
     pause
+    exit /b
 )
 
 echo Копирование services.vdex...
@@ -67,6 +73,7 @@ adb push ".\system\framework\oat\arm64\services.vdex" /system/framework/oat/arm6
     echo Ошибка при передаче services.vdex
     echo !timestamp! Ошибка при передаче services.vdex >> "%LOG%"
     pause
+    exit /b
 )
 
 :: === Очистка кеша Dalvik ===

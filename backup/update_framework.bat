@@ -18,6 +18,7 @@ if errorlevel 1 (
     echo Ошибка при перезапуске ADB.
     echo !timestamp! Ошибка при перезапуске ADB. >> "%LOG%"
     pause
+    exit /b
 )
 
 adb wait-for-device
@@ -27,9 +28,11 @@ if errorlevel 1 (
     echo Не удалось получить root-доступ или сделать remount.
     echo !timestamp! Не удалось получить root-доступ или сделать remount. >> "%LOG%"
     pause
+    exit /b
 )
 
 echo Поиск подключённых устройств...
+echo !timestamp! Поиск подключённых устройств... >> "%LOG%"
 adb devices
 
 :: Проверка наличия хотя бы одного устройства
@@ -44,6 +47,7 @@ if not defined DEVICE_FOUND (
     echo Устройства не найдены. Подключите устройство и включите отладку по USB.
     echo !timestamp! Устройства не найдены. Подключите устройство и включите отладку по USB. >> "%LOG%"
     pause
+    exit /b
 )
 
 :: === Копирование нового JAR ===
@@ -53,6 +57,7 @@ adb push ".\system\framework\services-242961-ru.jar" /system/framework/services.
     echo Ошибка при передаче services-242961-ru.jar
     echo !timestamp! Ошибка при передаче services-242961-ru.jar >> "%LOG%"
     pause
+    exit /b
 )
 
 :: === Очистка кеша и старых файлов ===
