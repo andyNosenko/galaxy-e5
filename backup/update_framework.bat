@@ -2,21 +2,21 @@
 chcp 1251 > nul
 setlocal enabledelayedexpansion
 
-:: === ÐÐ°ÑÑ‚Ñ€Ð¾Ð¹ÐºÐ° Ð»Ð¾Ð³-Ñ„Ð°Ð¹Ð»Ð° ===
+:: === Íàñòðîéêà ëîã-ôàéëà ===
 set "LOG=..\logs\update_framework_log.log"
 set "timestamp=[%DATE% %TIME%]"
 
-:: === ÐÐ°Ñ‡Ð°Ð»Ð¾ Ð¾Ð±Ð½Ð¾Ð²Ð»ÐµÐ½Ð¸Ñ ===
-echo ÐÐ°Ñ‡Ð°Ð»Ð¾ Ð¾Ð±Ð½Ð¾Ð²Ð»ÐµÐ½Ð¸Ñ services.jar -------------------------------
-echo !timestamp! ÐÐ°Ñ‡Ð°Ð»Ð¾ Ð¾Ð±Ð½Ð¾Ð²Ð»ÐµÐ½Ð¸Ñ services.jar ------------------------------- >> "%LOG%"
+:: === Íà÷àëî îáíîâëåíèÿ ===
+echo Íà÷àëî îáíîâëåíèÿ services.jar -------------------------------
+echo !timestamp! Íà÷àëî îáíîâëåíèÿ services.jar ------------------------------- >> "%LOG%"
 
-:: ÐŸÐµÑ€ÐµÐ·Ð°Ð¿ÑƒÑÐº ADB
-echo ÐŸÐµÑ€ÐµÐ·Ð°Ð¿ÑƒÑÐº ADB-ÑÐµÑ€Ð²ÐµÑ€Ð°...
-echo !timestamp! ÐŸÐµÑ€ÐµÐ·Ð°Ð¿ÑƒÑÐº ADB-ÑÐµÑ€Ð²ÐµÑ€Ð°... >> "%LOG%"
+:: Ïåðåçàïóñê ADB
+echo Ïåðåçàïóñê ADB-ñåðâåðà...
+echo !timestamp! Ïåðåçàïóñê ADB-ñåðâåðà... >> "%LOG%"
 adb kill-server && adb start-server
 if errorlevel 1 (
-    echo ÐžÑˆÐ¸Ð±ÐºÐ° Ð¿Ñ€Ð¸ Ð¿ÐµÑ€ÐµÐ·Ð°Ð¿ÑƒÑÐºÐµ ADB.
-    echo !timestamp! ÐžÑˆÐ¸Ð±ÐºÐ° Ð¿Ñ€Ð¸ Ð¿ÐµÑ€ÐµÐ·Ð°Ð¿ÑƒÑÐºÐµ ADB. >> "%LOG%"
+    echo Îøèáêà ïðè ïåðåçàïóñêå ADB.
+    echo !timestamp! Îøèáêà ïðè ïåðåçàïóñêå ADB. >> "%LOG%"
     pause
 )
 
@@ -24,15 +24,15 @@ adb wait-for-device
 adb root
 adb remount
 if errorlevel 1 (
-    echo ÐÐµ ÑƒÐ´Ð°Ð»Ð¾ÑÑŒ Ð¿Ð¾Ð»ÑƒÑ‡Ð¸Ñ‚ÑŒ root-Ð´Ð¾ÑÑ‚ÑƒÐ¿ Ð¸Ð»Ð¸ ÑÐ´ÐµÐ»Ð°Ñ‚ÑŒ remount.
-    echo !timestamp! ÐÐµ ÑƒÐ´Ð°Ð»Ð¾ÑÑŒ Ð¿Ð¾Ð»ÑƒÑ‡Ð¸Ñ‚ÑŒ root-Ð´Ð¾ÑÑ‚ÑƒÐ¿ Ð¸Ð»Ð¸ ÑÐ´ÐµÐ»Ð°Ñ‚ÑŒ remount. >> "%LOG%"
+    echo Íå óäàëîñü ïîëó÷èòü root-äîñòóï èëè ñäåëàòü remount.
+    echo !timestamp! Íå óäàëîñü ïîëó÷èòü root-äîñòóï èëè ñäåëàòü remount. >> "%LOG%"
     pause
 )
 
-echo ÐŸÐ¾Ð¸ÑÐº Ð¿Ð¾Ð´ÐºÐ»ÑŽÑ‡Ñ‘Ð½Ð½Ñ‹Ñ… ÑƒÑÑ‚Ñ€Ð¾Ð¹ÑÑ‚Ð²...
+echo Ïîèñê ïîäêëþ÷¸ííûõ óñòðîéñòâ...
 adb devices
 
-:: ÐŸÑ€Ð¾Ð²ÐµÑ€ÐºÐ° Ð½Ð°Ð»Ð¸Ñ‡Ð¸Ñ Ñ…Ð¾Ñ‚Ñ Ð±Ñ‹ Ð¾Ð´Ð½Ð¾Ð³Ð¾ ÑƒÑÑ‚Ñ€Ð¾Ð¹ÑÑ‚Ð²Ð°
+:: Ïðîâåðêà íàëè÷èÿ õîòÿ áû îäíîãî óñòðîéñòâà
 set "DEVICE_FOUND="
 for /f "skip=1 tokens=1" %%a in ('adb devices') do (
     if not "%%a"=="offline" if not "%%a"=="unauthorized" if not "%%a"=="" (
@@ -41,23 +41,23 @@ for /f "skip=1 tokens=1" %%a in ('adb devices') do (
 )
 
 if not defined DEVICE_FOUND (
-    echo Ð£ÑÑ‚Ñ€Ð¾Ð¹ÑÑ‚Ð²Ð° Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½Ñ‹. ÐŸÐ¾Ð´ÐºÐ»ÑŽÑ‡Ð¸Ñ‚Ðµ ÑƒÑÑ‚Ñ€Ð¾Ð¹ÑÑ‚Ð²Ð¾ Ð¸ Ð²ÐºÐ»ÑŽÑ‡Ð¸Ñ‚Ðµ Ð¾Ñ‚Ð»Ð°Ð´ÐºÑƒ Ð¿Ð¾ USB.
-    echo !timestamp! Ð£ÑÑ‚Ñ€Ð¾Ð¹ÑÑ‚Ð²Ð° Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½Ñ‹. ÐŸÐ¾Ð´ÐºÐ»ÑŽÑ‡Ð¸Ñ‚Ðµ ÑƒÑÑ‚Ñ€Ð¾Ð¹ÑÑ‚Ð²Ð¾ Ð¸ Ð²ÐºÐ»ÑŽÑ‡Ð¸Ñ‚Ðµ Ð¾Ñ‚Ð»Ð°Ð´ÐºÑƒ Ð¿Ð¾ USB. >> "%LOG%"
+    echo Óñòðîéñòâà íå íàéäåíû. Ïîäêëþ÷èòå óñòðîéñòâî è âêëþ÷èòå îòëàäêó ïî USB.
+    echo !timestamp! Óñòðîéñòâà íå íàéäåíû. Ïîäêëþ÷èòå óñòðîéñòâî è âêëþ÷èòå îòëàäêó ïî USB. >> "%LOG%"
     pause
 )
 
-:: === ÐšÐ¾Ð¿Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð¸Ðµ Ð½Ð¾Ð²Ð¾Ð³Ð¾ JAR ===
-echo ÐžÐ±Ð½Ð¾Ð²Ð»ÐµÐ½Ð¸Ðµ services.jar...
-echo !timestamp! ÐžÐ±Ð½Ð¾Ð²Ð»ÐµÐ½Ð¸Ðµ services.jar... >> "%LOG%"
+:: === Êîïèðîâàíèå íîâîãî JAR ===
+echo Îáíîâëåíèå services.jar...
+echo !timestamp! Îáíîâëåíèå services.jar... >> "%LOG%"
 adb push ".\system\framework\services-242961-ru.jar" /system/framework/services.jar || (
-    echo ÐžÑˆÐ¸Ð±ÐºÐ° Ð¿Ñ€Ð¸ Ð¿ÐµÑ€ÐµÐ´Ð°Ñ‡Ðµ services-242961-ru.jar
-    echo !timestamp! ÐžÑˆÐ¸Ð±ÐºÐ° Ð¿Ñ€Ð¸ Ð¿ÐµÑ€ÐµÐ´Ð°Ñ‡Ðµ services-242961-ru.jar >> "%LOG%"
+    echo Îøèáêà ïðè ïåðåäà÷å services-242961-ru.jar
+    echo !timestamp! Îøèáêà ïðè ïåðåäà÷å services-242961-ru.jar >> "%LOG%"
     pause
 )
 
-:: === ÐžÑ‡Ð¸ÑÑ‚ÐºÐ° ÐºÐµÑˆÐ° Ð¸ ÑÑ‚Ð°Ñ€Ñ‹Ñ… Ñ„Ð°Ð¹Ð»Ð¾Ð² ===
-echo ÐžÑ‡Ð¸ÑÑ‚ÐºÐ° ÑÑ‚Ð°Ñ€Ñ‹Ñ… oat/dex Ñ„Ð°Ð¹Ð»Ð¾Ð²...
-echo !timestamp! ÐžÑ‡Ð¸ÑÑ‚ÐºÐ° ÑÑ‚Ð°Ñ€Ñ‹Ñ… oat/dex Ñ„Ð°Ð¹Ð»Ð¾Ð²... >> "%LOG%"
+:: === Î÷èñòêà êåøà è ñòàðûõ ôàéëîâ ===
+echo Î÷èñòêà ñòàðûõ oat/dex ôàéëîâ...
+echo !timestamp! Î÷èñòêà ñòàðûõ oat/dex ôàéëîâ... >> "%LOG%"
 adb shell rm -rf /system/framework/oat/arm64/services.dex
 adb shell rm -rf /system/framework/oat/arm64/services.vdex
 adb shell rm -rf /data/dalvik-cache/arm/system@framework@services.jar@classes.dex

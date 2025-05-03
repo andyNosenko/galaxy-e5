@@ -2,40 +2,40 @@
 chcp 1251 > nul
 setlocal enabledelayedexpansion
 
-:: === ÐÐ°ÑÑ‚Ñ€Ð¾Ð¹ÐºÐ¸ ===
+:: === Íàñòðîéêè ===
 set "LOG=logs\adb_menu.log"
 set "ip=192.168.1.5"
 set "timestamp=[%DATE% %TIME%]"
 
-:: Ð¡Ð¾Ð·Ð´Ð°Ð½Ð¸Ðµ Ð¿Ð°Ð¿ÐºÐ¸ Ð´Ð»Ñ Ð»Ð¾Ð³Ð¾Ð², ÐµÑÐ»Ð¸ Ð½Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚
+:: Ñîçäàíèå ïàïêè äëÿ ëîãîâ, åñëè íå ñóùåñòâóåò
 if not exist "logs" (
     mkdir "logs"
 )
 
-:: === ASCII-Ð°Ñ€Ñ‚ (ÐµÑÐ»Ð¸ ÐµÑÑ‚ÑŒ) ===
+:: === ASCII-àðò (åñëè åñòü) ===
 if exist art.txt (
     type art.txt
     timeout /t 2 > nul
 )
 
-:: === Ð¡Ñ‚Ð°Ñ€Ñ‚ Ð»Ð¾Ð³Ð¸Ñ€Ð¾Ð²Ð°Ð½Ð¸Ñ ===
-echo Ð—Ð°Ð¿ÑƒÑÐº ÑÐºÑ€Ð¸Ð¿Ñ‚Ð°
-echo !timestamp! Ð—Ð°Ð¿ÑƒÑÐº ÑÐºÑ€Ð¸Ð¿Ñ‚Ð° >> "%LOG%"
+:: === Ñòàðò ëîãèðîâàíèÿ ===
+echo Çàïóñê ñêðèïòà
+echo !timestamp! Çàïóñê ñêðèïòà >> "%LOG%"
 
-:: === ÐŸÐ¾Ð»ÑƒÑ‡Ð°ÐµÐ¼ IP ÑˆÐ»ÑŽÐ·Ð° ===
+:: === Ïîëó÷àåì IP øëþçà ===
 for /f "tokens=2 delims={,}" %%a in ('"WMIC NICConfig where IPEnabled="True" get DefaultIPGateway /value | find "I" "') do (
     if not defined ip set "ip=%%~a"
 )
 
-:: === ÐŸÐ¾Ð´ÐºÐ»ÑŽÑ‡ÐµÐ½Ð¸Ðµ Ðº ADB ===
-@REM echo ÐŸÐ¾Ð´ÐºÐ»ÑŽÑ‡ÐµÐ½Ð¸Ðµ Ðº ADB Ð¿Ð¾ Wi-Fi: %ip%:5555...
-@REM echo !timestamp! ÐŸÐ¾Ð´ÐºÐ»ÑŽÑ‡ÐµÐ½Ð¸Ðµ Ðº ADB: %ip%:5555 >> "%LOG%"
+:: === Ïîäêëþ÷åíèå ê ADB ===
+@REM echo Ïîäêëþ÷åíèå ê ADB ïî Wi-Fi: %ip%:5555...
+@REM echo !timestamp! Ïîäêëþ÷åíèå ê ADB: %ip%:5555 >> "%LOG%"
 @REM
 @REM cd backup
 @REM adb connect %ip%:5555 > nul
 @REM if errorlevel 1 (
-@REM     echo ÐžÑˆÐ¸Ð±ÐºÐ° Ð¿Ð¾Ð´ÐºÐ»ÑŽÑ‡ÐµÐ½Ð¸Ñ Ðº ADB.
-@REM     echo !timestamp! ÐžÑˆÐ¸Ð±ÐºÐ° Ð¿Ð¾Ð´ÐºÐ»ÑŽÑ‡ÐµÐ½Ð¸Ñ Ðº ADB >> "%LOG%"
+@REM     echo Îøèáêà ïîäêëþ÷åíèÿ ê ADB.
+@REM     echo !timestamp! Îøèáêà ïîäêëþ÷åíèÿ ê ADB >> "%LOG%"
 @REM     pause
 @REM     exit /b
 @REM )
@@ -45,32 +45,32 @@ for /f "tokens=2 delims={,}" %%a in ('"WMIC NICConfig where IPEnabled="True" get
 :menu
 cls
 echo ==========================================
-echo         ÐœÐ•ÐÐ® ADB-Ð¡ÐšÐ Ð˜ÐŸÐ¢Ð
+echo         ÌÅÍÞ ADB-ÑÊÐÈÏÒÀ
 echo ==========================================
-echo 1. ÐŸÑ€Ð¾Ð²ÐµÑ€Ð¸Ñ‚ÑŒ ADB-ÑÐ¾ÐµÐ´Ð¸Ð½ÐµÐ½Ð¸Ðµ Ð¿Ð¾ ÐºÐ°Ð±ÐµÐ»ÑŽ
-echo 2. Ð—Ð°Ð¿ÑƒÑÑ‚Ð¸Ñ‚ÑŒ adb_test.bat
-echo 3. Ð¡Ð´ÐµÐ»Ð°Ñ‚ÑŒ Ñ€ÐµÐ·ÐµÑ€Ð²Ð½ÑƒÑŽ ÐºÐ¾Ð¿Ð¸ÑŽ (backupzip.bat)
-echo 4. Ð’Ð¾ÑÑÑ‚Ð°Ð½Ð¾Ð²Ð¸Ñ‚ÑŒ Ð¸Ð· ÐºÐ¾Ð¿Ð¸Ð¸ (restorezip.bat)
-echo 5. ÐžÑ‚ÐºÑ€Ñ‹Ñ‚ÑŒ ADB-ÐºÐ¾Ð½ÑÐ¾Ð»ÑŒ
-echo 6. Ð£ÑÑ‚Ð°Ð½Ð¾Ð²Ð¸Ñ‚ÑŒ Ð±Ð°Ð·Ð¾Ð²Ñ‹Ðµ Ð¿Ñ€Ð¸Ð»Ð¾Ð¶ÐµÐ½Ð¸Ñ (*.apk)
-echo 0. Ð’Ñ‹Ñ…Ð¾Ð´
+echo 1. Ïðîâåðèòü ADB-ñîåäèíåíèå ïî êàáåëþ
+echo 2. Çàïóñòèòü adb_test.bat
+echo 3. Ñäåëàòü ðåçåðâíóþ êîïèþ (backupzip.bat)
+echo 4. Âîññòàíîâèòü èç êîïèè (restorezip.bat)
+echo 5. Îòêðûòü ADB-êîíñîëü
+echo 6. Óñòàíîâèòü áàçîâûå ïðèëîæåíèÿ (*.apk)
+echo 0. Âûõîä
 echo ==========================================
-set /p choice="Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ (0-6): "
+set /p choice="Âûáåðèòå äåéñòâèå (0-6): "
 
 if "%choice%"=="1" (
 @REM     adb devices -l | find "device usb" > nul
 @REM     if !errorlevel! == 0 (
-@REM         echo Ð£ÑÑ‚Ñ€Ð¾Ð¹ÑÑ‚Ð²Ð¾ Ð¿Ð¾ USB Ð¿Ð¾Ð´ÐºÐ»ÑŽÑ‡ÐµÐ½Ð¾.
-@REM         echo !timestamp! USB Ð¿Ð¾Ð´ÐºÐ»ÑŽÑ‡ÐµÐ½Ð¸Ðµ Ð°ÐºÑ‚Ð¸Ð²Ð½Ð¾ >> "%LOG%"
+@REM         echo Óñòðîéñòâî ïî USB ïîäêëþ÷åíî.
+@REM         echo !timestamp! USB ïîäêëþ÷åíèå àêòèâíî >> "%LOG%"
 @REM     ) else (
-@REM         echo Ð£ÑÑ‚Ñ€Ð¾Ð¹ÑÑ‚Ð²Ð¾ Ð¿Ð¾ USB Ð½Ðµ Ð¾Ð±Ð½Ð°Ñ€ÑƒÐ¶ÐµÐ½Ð¾.
-@REM         echo !timestamp! USB Ð½Ðµ Ð¾Ð±Ð½Ð°Ñ€ÑƒÐ¶ÐµÐ½Ð¾ >> "%LOG%"
+@REM         echo Óñòðîéñòâî ïî USB íå îáíàðóæåíî.
+@REM         echo !timestamp! USB íå îáíàðóæåíî >> "%LOG%"
 @REM     )
 @REM
-    echo ÐŸÐ¾Ð¸ÑÐº Ð¿Ð¾Ð´ÐºÐ»ÑŽÑ‡Ñ‘Ð½Ð½Ñ‹Ñ… ÑƒÑÑ‚Ñ€Ð¾Ð¹ÑÑ‚Ð²...
+    echo Ïîèñê ïîäêëþ÷¸ííûõ óñòðîéñòâ...
     adb devices
 
-    :: ÐŸÑ€Ð¾Ð²ÐµÑ€ÐºÐ° Ð½Ð°Ð»Ð¸Ñ‡Ð¸Ñ Ñ…Ð¾Ñ‚Ñ Ð±Ñ‹ Ð¾Ð´Ð½Ð¾Ð³Ð¾ ÑƒÑÑ‚Ñ€Ð¾Ð¹ÑÑ‚Ð²Ð°
+    :: Ïðîâåðêà íàëè÷èÿ õîòÿ áû îäíîãî óñòðîéñòâà
     set "DEVICE_FOUND="
     for /f "skip=1 tokens=1" %%a in ('adb devices') do (
         if not "%%a"=="offline" if not "%%a"=="unauthorized" if not "%%a"=="" (
@@ -79,8 +79,8 @@ if "%choice%"=="1" (
     )
 
     if not defined DEVICE_FOUND (
-        echo Ð£ÑÑ‚Ñ€Ð¾Ð¹ÑÑ‚Ð²Ð° Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½Ñ‹. ÐŸÐ¾Ð´ÐºÐ»ÑŽÑ‡Ð¸Ñ‚Ðµ ÑƒÑÑ‚Ñ€Ð¾Ð¹ÑÑ‚Ð²Ð¾ Ð¸ Ð²ÐºÐ»ÑŽÑ‡Ð¸Ñ‚Ðµ Ð¾Ñ‚Ð»Ð°Ð´ÐºÑƒ Ð¿Ð¾ USB.
-        echo !timestamp! Ð£ÑÑ‚Ñ€Ð¾Ð¹ÑÑ‚Ð²Ð° Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½Ñ‹. ÐŸÐ¾Ð´ÐºÐ»ÑŽÑ‡Ð¸Ñ‚Ðµ ÑƒÑÑ‚Ñ€Ð¾Ð¹ÑÑ‚Ð²Ð¾ Ð¸ Ð²ÐºÐ»ÑŽÑ‡Ð¸Ñ‚Ðµ Ð¾Ñ‚Ð»Ð°Ð´ÐºÑƒ Ð¿Ð¾ USB. >> "%LOG%"
+        echo Óñòðîéñòâà íå íàéäåíû. Ïîäêëþ÷èòå óñòðîéñòâî è âêëþ÷èòå îòëàäêó ïî USB.
+        echo !timestamp! Óñòðîéñòâà íå íàéäåíû. Ïîäêëþ÷èòå óñòðîéñòâî è âêëþ÷èòå îòëàäêó ïî USB. >> "%LOG%"
     )
     pause
     goto menu
@@ -88,25 +88,25 @@ if "%choice%"=="1" (
 
 if "%choice%"=="2" (
     call adb_test.bat
-    if errorlevel 1  echo ÐžÑˆÐ¸Ð±ÐºÐ° Ð² adb_test.bat & echo !timestamp! ÐžÑˆÐ¸Ð±ÐºÐ° Ð² adb_test.bat >> "%LOG%"
+    if errorlevel 1  echo Îøèáêà â adb_test.bat & echo !timestamp! Îøèáêà â adb_test.bat >> "%LOG%"
     goto menu
 )
 
 if "%choice%"=="3" (
     call backupzip.bat
-    if errorlevel 1 echo ÐžÑˆÐ¸Ð±ÐºÐ° Ð² backupzip.bat & echo !timestamp! ÐžÑˆÐ¸Ð±ÐºÐ° Ð² backupzip.bat >> "%LOG%"
+    if errorlevel 1 echo Îøèáêà â backupzip.bat & echo !timestamp! Îøèáêà â backupzip.bat >> "%LOG%"
     goto menu
 )
 
 if "%choice%"=="4" (
     call restorezip.bat
-    if errorlevel 1 echo  ÐžÑˆÐ¸Ð±ÐºÐ° Ð² restorezip.bat & echo !timestamp! ÐžÑˆÐ¸Ð±ÐºÐ° Ð² restorezip.bat >> "%LOG%"
+    if errorlevel 1 echo  Îøèáêà â restorezip.bat & echo !timestamp! Îøèáêà â restorezip.bat >> "%LOG%"
     goto menu
 )
 
 if "%choice%"=="5" (
-    echo  ÐžÑ‚ÐºÑ€Ñ‹Ñ‚Ð¸Ðµ ADB-ÐºÐ¾Ð½ÑÐ¾Ð»Ð¸
-    echo !timestamp! ÐžÑ‚ÐºÑ€Ñ‹Ñ‚Ð¸Ðµ ADB-ÐºÐ¾Ð½ÑÐ¾Ð»Ð¸ >> "%LOG%"
+    echo  Îòêðûòèå ADB-êîíñîëè
+    echo !timestamp! Îòêðûòèå ADB-êîíñîëè >> "%LOG%"
     cd backup
     cmd
     goto menu
@@ -115,14 +115,14 @@ if "%choice%"=="5" (
 if "%choice%"=="6" (
     cd ..\app_to_install
     for %%A in (*.apk) do (
-        echo Ð£ÑÑ‚Ð°Ð½Ð¾Ð²ÐºÐ°: %%~nxA
+        echo Óñòàíîâêà: %%~nxA
         adb install -g "%%A"
         if errorlevel 1 (
-            echo ÐžÑˆÐ¸Ð±ÐºÐ° Ð¿Ñ€Ð¸ ÑƒÑÑ‚Ð°Ð½Ð¾Ð²ÐºÐµ: %%~nxA
-            echo !timestamp! ÐžÑˆÐ¸Ð±ÐºÐ° ÑƒÑÑ‚Ð°Ð½Ð¾Ð²ÐºÐ¸: %%~nxA >> "%LOG%"
+            echo Îøèáêà ïðè óñòàíîâêå: %%~nxA
+            echo !timestamp! Îøèáêà óñòàíîâêè: %%~nxA >> "%LOG%"
         ) else (
-            echo Ð£ÑÑ‚Ð°Ð½Ð¾Ð²Ð»ÐµÐ½Ð¾: %%~nxA
-            echo !timestamp! Ð£ÑÑ‚Ð°Ð½Ð¾Ð²Ð»ÐµÐ½Ð¾: %%~nxA >> "%LOG%"
+            echo Óñòàíîâëåíî: %%~nxA
+            echo !timestamp! Óñòàíîâëåíî: %%~nxA >> "%LOG%"
         )
     )
     pause
@@ -130,12 +130,12 @@ if "%choice%"=="6" (
 )
 
 if "%choice%"=="0" (
-    echo Ð’Ñ‹Ñ…Ð¾Ð´...
-    echo !timestamp! Ð’Ñ‹Ñ…Ð¾Ð´ Ð¸Ð· ÑÐºÑ€Ð¸Ð¿Ñ‚Ð° >> "%LOG%"
+    echo Âûõîä...
+    echo !timestamp! Âûõîä èç ñêðèïòà >> "%LOG%"
     exit /b
 )
 
-echo ÐÐµÐ²ÐµÑ€Ð½Ñ‹Ð¹ Ð²Ñ‹Ð±Ð¾Ñ€. ÐŸÐ¾Ð²Ñ‚Ð¾Ñ€Ð¸Ñ‚Ðµ Ð¿Ð¾Ð¿Ñ‹Ñ‚ÐºÑƒ.
-echo !timestamp! ÐÐµÐ²ÐµÑ€Ð½Ñ‹Ð¹ Ð²Ð²Ð¾Ð´: %choice% >> "%LOG%"
+echo Íåâåðíûé âûáîð. Ïîâòîðèòå ïîïûòêó.
+echo !timestamp! Íåâåðíûé ââîä: %choice% >> "%LOG%"
 pause
 goto menu
