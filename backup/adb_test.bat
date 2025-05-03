@@ -1,8 +1,10 @@
 @echo off
-setlocal
+chcp 1251 > nul
+setlocal enabledelayedexpansion
 
-set "log_file=..\logs\install_log.txt"
+set "LOG=..\logs\install_log.log"
 set "apk_path=..\app_to_install\AppDrawer v1.2.apk"
+set "timestamp=[%DATE% %TIME%]"
 
 :: Создание папки для логов, если не существует
 if not exist "..\logs" (
@@ -21,21 +23,23 @@ for /f "skip=1 tokens=1" %%a in ('adb devices') do (
 )
 
 if not defined DEVICE_FOUND (
-    echo ❌ Устройства не найдены. Подключите устройство и включите отладку по USB.
+    echo Устройства не найдены. Подключите устройство и включите отладку по USB.
+    echo !timestamp! Устройства не найдены. Подключите устройство и включите отладку по USB. >> "%LOG%"
     pause
     exit /b
 )
 
 :: Установка APK
 echo Установка приложения: AppDrawer v1.2.apk ...
+echo !timestamp! Установка приложения: AppDrawer v1.2.apk ... >> "%LOG%"
 adb install -d -r "%apk_path%" >> "%log_file%" 2>&1
 
 if errorlevel 1 (
-    echo ❌ Ошибка установки. Подробнее в "%log_file%".
-    echo [%DATE% %TIME%] ❌ Установка не удалась. APK: %apk_path% >> "%log_file%"
+    echo Ошибка установки. Подробнее в "%LOG%".
+    echo !timestamp!  Установка не удалась. APK: %apk_path% >> "%LOG%"
 ) else (
-    echo ✅ Установка прошла успешно.
-    echo [%DATE% %TIME%] ✅ Успешная установка. APK: %apk_path% >> "%log_file%"
+    echo Установка прошла успешно.
+    echo !timestamp! Успешная установка. APK: %apk_path% >> "%LOG%"
 )
 
 pause
