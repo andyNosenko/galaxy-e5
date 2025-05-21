@@ -2,11 +2,16 @@
 setlocal enabledelayedexpansion
 
 :: === Настройки ===
+set "SCRIPT_DIR=%~dp0"
 set "LOG_DIR=logs"
 set "LOG_FILE=%LOG_DIR%\adb_menu.log"
 set "MAX_LOG_SIZE=10485760"
 set "MAX_LOG_FILES=5"
 set "timestamp=[%DATE% %TIME%]"
+
+:: Подключение общих функций
+call "%SCRIPT_DIR%config.bat"
+call "%SCRIPT_DIR%logger.bat"
 
 :: Функция ротации логов
 :rotate_logs

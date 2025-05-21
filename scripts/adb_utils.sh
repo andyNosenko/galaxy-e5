@@ -1,8 +1,9 @@
 #!/bin/bash
 
 # Общие функции для работы с ADB
-source ../config.sh
-source logger.sh
+SCRIPT_DIR="$(dirname "$0")"
+source "$SCRIPT_DIR/config.sh"
+source "$SCRIPT_DIR/logger.sh"
 
 # Проверка ADB соединения
 check_adb_connection() {

@@ -1,8 +1,13 @@
 @echo off
 setlocal enabledelayedexpansion
 
+:: === Настройки ===
+set "SCRIPT_DIR=%~dp0"
+
 :: Подключение общих функций
-call adb_utils.bat
+call "%SCRIPT_DIR%config.bat"
+call "%SCRIPT_DIR%logger.bat"
+call "%SCRIPT_DIR%adb_utils.bat"
 
 :: Проверка версии ADB
 call :check_adb_version

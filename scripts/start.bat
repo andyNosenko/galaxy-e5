@@ -3,6 +3,7 @@ chcp 1251 > nul
 setlocal enabledelayedexpansion
 
 :: === Настройки ===
+set "SCRIPT_DIR=%~dp0"
 set "LOG_DIR=logs"
 set "LOG_FILE=%LOG_DIR%\adb_menu.log"
 set "APK_DIR=..\apps_to_install"
@@ -15,7 +16,9 @@ if not exist "%APK_DIR%" mkdir "%APK_DIR%"
 if not exist "%BACKUP_DIR%" mkdir "%BACKUP_DIR%"
 
 :: Подключение общих функций
-call adb_utils.bat
+call "%SCRIPT_DIR%config.bat"
+call "%SCRIPT_DIR%logger.bat"
+call "%SCRIPT_DIR%adb_utils.bat"
 
 :: Проверка зависимостей
 :check_dependencies

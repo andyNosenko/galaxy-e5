@@ -1,9 +1,9 @@
 #!/bin/bash
 set -euo pipefail
 
-source ../config.sh
-source logger.sh
-source adb_utils.sh
+source "$(dirname "$0")/config.sh"
+source "$(dirname "$0")/logger.sh"
+source "$(dirname "$0")/adb_utils.sh"
 
 # Проверка ADB соединения
 check_adb_connection() {

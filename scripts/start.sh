@@ -1,13 +1,16 @@
 #!/bin/bash
 
 # === Настройки ===
-LOG_DIR="logs"
+SCRIPT_DIR="$(dirname "$0")"
+LOG_DIR="$SCRIPT_DIR/logs"
 LOG_FILE="$LOG_DIR/adb_menu.log"
-APK_DIR="../apps_to_install"
-BACKUP_DIR="backup"
+APK_DIR="$SCRIPT_DIR/../apps_to_install"
+BACKUP_DIR="$SCRIPT_DIR/backup"
 
 # Подключение общих функций
-source adb_utils.sh
+source "$SCRIPT_DIR/config.sh"
+source "$SCRIPT_DIR/logger.sh"
+source "$SCRIPT_DIR/adb_utils.sh"
 
 # Основное меню
 show_menu() {
@@ -38,15 +41,15 @@ show_menu() {
             ;;
         2)
             log_info "▶ Запуск adb_test.sh"
-            ./adb_test.sh
+            "$SCRIPT_DIR/adb_test.sh"
             ;;
         3)
             log_info "💾 Создание резервной копии..."
-            ./backupzip.sh
+            "$SCRIPT_DIR/backupzip.sh"
             ;;
         4)
             log_info "♻ Восстановление из резервной копии..."
-            ./restorezip.sh
+            "$SCRIPT_DIR/restorezip.sh"
             ;;
         5)
             log_info "🖥 Запуск ADB-консоли"

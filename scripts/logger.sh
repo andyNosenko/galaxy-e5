@@ -1,6 +1,13 @@
 #!/bin/bash
 
-source ../config.sh
+source "$(dirname "$0")/config.sh"
+
+# Константы для уровней логирования
+LOG_LEVEL_INFO="INFO"
+LOG_LEVEL_ERROR="ERROR"
+LOG_LEVEL_DEBUG="DEBUG"
+MAX_LOG_SIZE=10485760  # 10MB
+MAX_LOG_FILES=5
 
 # Функция ротации логов
 rotate_logs() {

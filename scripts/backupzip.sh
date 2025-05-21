@@ -1,9 +1,10 @@
 #!/bin/bash
 set -euo pipefail
 
-source ../config.sh
-source logger.sh
-source adb_utils.sh
+SCRIPT_DIR="$(dirname "$0")"
+source "$SCRIPT_DIR/config.sh"
+source "$SCRIPT_DIR/logger.sh"
+source "$SCRIPT_DIR/adb_utils.sh"
 
 # Проверка наличия устройства
 check_device() {
