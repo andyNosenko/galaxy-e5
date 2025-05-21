@@ -3,8 +3,10 @@ setlocal enabledelayedexpansion
 
 :: === Настройки ===
 set "SCRIPT_DIR=%~dp0"
-set "LOG_DIR=logs"
+set "LOG_DIR=%SCRIPT_DIR%logs"
 set "LOG_FILE=%LOG_DIR%\adb_menu.log"
+set "APK_DIR=%SCRIPT_DIR%..\apps_to_install"
+set "BACKUP_DIR=%SCRIPT_DIR%backup"
 set "MAX_LOG_SIZE=10485760"
 set "MAX_LOG_FILES=5"
 set "timestamp=[%DATE% %TIME%]"
@@ -220,21 +222,23 @@ exit /b 0
 :: Удаление всех пользовательских приложений
 :uninstall_all_apps
 call :log "🗑️ Удаление всех пользовательских приложений..."
+set "error=0"
 for /f "tokens=2 delims=:" %%a in ('adb shell pm list packages -3') do (
     call :uninstall_app "%%a"
+    if errorlevel 1 set "error=1"
 )
-if errorlevel 1 (
+if %error% equ 0 (
+    call :log "✅ Все приложения удалены"
+    exit /b 0
+) else (
     call :log "❌ Ошибка при удалении приложений"
     exit /b 1
 )
-call :log "✅ Все приложения удалены"
-exit /b 0
 
 :: Удаление приложений из app_to_install
 :uninstall_installed_apps
 call :log "🗑️ Удаление приложений из %APK_DIR%..."
 set "error=0"
-
 for %%A in ("%APK_DIR%\*.apk") do (
     set "apk_name=%%~nA"
     for /f "tokens=2 delims=:" %%a in ('adb shell pm list packages -3 ^| findstr /i "!apk_name!"') do (
@@ -242,10 +246,10 @@ for %%A in ("%APK_DIR%\*.apk") do (
         if errorlevel 1 set "error=1"
     )
 )
-
-if %error% equ 1 (
+if %error% equ 0 (
+    call :log "✅ Все приложения из %APK_DIR% удалены"
+    exit /b 0
+) else (
     call :log "❌ Ошибка при удалении приложений"
     exit /b 1
-)
-call :log "✅ Все приложения из %APK_DIR% удалены"
-exit /b 0 
+) 

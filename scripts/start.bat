@@ -1,13 +1,13 @@
 @echo off
-chcp 1251 > nul
+chcp 65001 > nul
 setlocal enabledelayedexpansion
 
 :: === Настройки ===
 set "SCRIPT_DIR=%~dp0"
-set "LOG_DIR=logs"
+set "LOG_DIR=%SCRIPT_DIR%logs"
 set "LOG_FILE=%LOG_DIR%\adb_menu.log"
-set "APK_DIR=..\apps_to_install"
-set "BACKUP_DIR=backup"
+set "APK_DIR=%SCRIPT_DIR%..\apps_to_install"
+set "BACKUP_DIR=%SCRIPT_DIR%backup"
 set "timestamp=[%DATE% %TIME%]"
 
 :: Создание необходимых директорий
@@ -64,7 +64,7 @@ if "%choice%"=="1" (
 
 if "%choice%"=="2" (
     call :log "▶ Запуск adb_test.bat"
-    call adb_test.bat
+    call "%SCRIPT_DIR%adb_test.bat"
     if errorlevel 1 call :log "❌ Ошибка при запуске adb_test.bat"
     pause
     goto menu
@@ -72,7 +72,7 @@ if "%choice%"=="2" (
 
 if "%choice%"=="3" (
     call :log "💾 Создание резервной копии..."
-    call backupzip.bat
+    call "%SCRIPT_DIR%backupzip.bat"
     if errorlevel 1 call :log "❌ Ошибка при запуске backupzip.bat"
     pause
     goto menu
@@ -80,7 +80,7 @@ if "%choice%"=="3" (
 
 if "%choice%"=="4" (
     call :log "♻ Восстановление из резервной копии..."
-    call restorezip.bat
+    call "%SCRIPT_DIR%restorezip.bat"
     if errorlevel 1 call :log "❌ Ошибка при запуске restorezip.bat"
     pause
     goto menu
