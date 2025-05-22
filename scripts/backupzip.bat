@@ -5,9 +5,9 @@ setlocal enabledelayedexpansion
 set "SCRIPT_DIR=%~dp0"
 
 :: Подключение общих функций
-call "%SCRIPT_DIR%config.bat"
-call "%SCRIPT_DIR%logger.bat"
-call "%SCRIPT_DIR%adb_utils.bat"
+call "%SCRIPT_DIR%\config.bat"
+call "%SCRIPT_DIR%\logger.bat"
+call "%SCRIPT_DIR%\adb_utils.bat"
 
 :: Проверка версии ADB
 call :check_adb_version
@@ -53,4 +53,35 @@ if errorlevel 1 (
 )
 
 call :log "✅ Резервная копия создана успешно"
+exit /b 0
+
+:: Функция проверки наличия резервных копий
+:check_backup_files
+set "backup_count=0"
+for %%A in ("%BACKUP_DIR%\*.ab") do (
+    set /a "backup_count+=1"
+)
+if %backup_count% equ 0 (
+    call :log "❌ Резервные копии не найдены в %BACKUP_DIR%"
+    exit /b 1
+)
+call :log "📦 Найдено резервных копий: %backup_count%"
+exit /b 0
+
+:: Функция очистки старых резервных копий
+:cleanup_old_backups
+set "max_backups=5"
+set "backup_count=0"
+for %%A in ("%BACKUP_DIR%\*.ab") do (
+    set /a "backup_count+=1"
+    set "backup_file[!backup_count!]=%%A"
+)
+
+if !backup_count! gtr %max_backups% (
+    set /a "to_delete=!backup_count! - %max_backups%"
+    for /l %%i in (1,1,!to_delete!) do (
+        del "!backup_file[%%i]!"
+        call :log "Удалена старая резервная копия: %%~nxbackup_file[%%i]"
+    )
+)
 exit /b 0 

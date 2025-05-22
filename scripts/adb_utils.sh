@@ -176,27 +176,6 @@ uninstall_app() {
     fi
 }
 
-# Удаление всех пользовательских приложений
-uninstall_all_apps() {
-    log_info "🗑️ Удаление всех пользовательских приложений..."
-    local error=0
-    
-    while read -r package; do
-        package=$(echo "$package" | cut -d':' -f2)
-        if ! uninstall_app "$package"; then
-            error=1
-        fi
-    done < <(adb shell pm list packages -3)
-    
-    if [ $error -eq 0 ]; then
-        log_info "✅ Все приложения удалены"
-        return 0
-    else
-        log_error "❌ Ошибка при удалении приложений"
-        return 1
-    fi
-}
-
 # Удаление приложений из app_to_install
 uninstall_installed_apps() {
     log_info "🗑️ Удаление приложений из $APK_DIR..."
@@ -206,8 +185,8 @@ uninstall_installed_apps() {
         if [ -f "$apk" ]; then
             local apk_name=$(basename "$apk" .apk)
             while read -r package; do
-                if [[ "$package" == *"$apk_name"* ]]; then
-                    package=$(echo "$package" | cut -d':' -f2)
+                package=$(echo "$package" | cut -d':' -f2)
+                if [[ $package == *"$apk_name"* ]]; then
                     if ! uninstall_app "$package"; then
                         error=1
                     fi

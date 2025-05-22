@@ -4,10 +4,10 @@ setlocal enabledelayedexpansion
 
 :: === Настройки ===
 set "SCRIPT_DIR=%~dp0"
-set "LOG_DIR=%SCRIPT_DIR%logs"
+set "LOG_DIR=%SCRIPT_DIR%\logs"
 set "LOG_FILE=%LOG_DIR%\adb_menu.log"
-set "APK_DIR=%SCRIPT_DIR%..\apps_to_install"
-set "BACKUP_DIR=%SCRIPT_DIR%backup"
+set "APK_DIR=%SCRIPT_DIR%\..\apps_to_install"
+set "BACKUP_DIR=%SCRIPT_DIR%\backup"
 set "timestamp=[%DATE% %TIME%]"
 
 :: Создание необходимых директорий
@@ -16,9 +16,9 @@ if not exist "%APK_DIR%" mkdir "%APK_DIR%"
 if not exist "%BACKUP_DIR%" mkdir "%BACKUP_DIR%"
 
 :: Подключение общих функций
-call "%SCRIPT_DIR%config.bat"
-call "%SCRIPT_DIR%logger.bat"
-call "%SCRIPT_DIR%adb_utils.bat"
+call "%SCRIPT_DIR%\config.bat"
+call "%SCRIPT_DIR%\logger.bat"
+call "%SCRIPT_DIR%\adb_utils.bat"
 
 :: Проверка зависимостей
 :check_dependencies
@@ -35,129 +35,85 @@ cls
 echo ==========================================
 echo         МЕНЮ ADB-СКРИПТА (Windows)
 echo ==========================================
-echo 1. Проверить ADB-соединение по USB
-echo 2. Запустить adb_test.bat
-echo 3. Сделать резервную копию (backupzip.bat)
-echo 4. Восстановить из копии (restorezip.bat)
-echo 5. Открыть ADB-консоль
-echo 6. Установить все APK из: %APK_DIR%
-echo 7. Очистить логи
-echo 8. Перезапустить ADB сервер
-echo 9. Список установленных приложений
-echo 10. Удалить приложение
-echo 11. Удалить все пользовательские приложения
-echo 12. Удалить приложения из %APK_DIR%
+echo 1. Проверить ADB соединение
+echo 2. Запустить тест
+echo 3. Создать резервную копию
+echo 4. Восстановить из копии
+echo 5. Установить все APK
+echo 6. Установить один APK
+echo 7. Список установленных приложений
+echo 8. Удалить приложение
+echo 9. Удалить приложения из apps_to_install
+echo 10. Очистить логи
 echo 0. Выход
 echo ==========================================
-set /p choice="Выберите действие (0-12): "
+set /p choice="Выберите действие (0-10): "
 
 if "%choice%"=="1" (
     call :check_adb_connection
-    if errorlevel 1 (
-        call :log "❌ Ошибка проверки соединения"
-    ) else (
-        call :check_device_state
-    )
     pause
     goto menu
 )
 
 if "%choice%"=="2" (
-    call :log "▶ Запуск adb_test.bat"
-    call "%SCRIPT_DIR%adb_test.bat"
-    if errorlevel 1 call :log "❌ Ошибка при запуске adb_test.bat"
+    call "%SCRIPT_DIR%\adb_test.bat"
     pause
     goto menu
 )
 
 if "%choice%"=="3" (
-    call :log "💾 Создание резервной копии..."
-    call "%SCRIPT_DIR%backupzip.bat"
-    if errorlevel 1 call :log "❌ Ошибка при запуске backupzip.bat"
+    call "%SCRIPT_DIR%\backupzip.bat"
     pause
     goto menu
 )
 
 if "%choice%"=="4" (
-    call :log "♻ Восстановление из резервной копии..."
-    call "%SCRIPT_DIR%restorezip.bat"
-    if errorlevel 1 call :log "❌ Ошибка при запуске restorezip.bat"
+    call "%SCRIPT_DIR%\restorezip.bat"
     pause
     goto menu
 )
 
 if "%choice%"=="5" (
-    call :log "🖥 Запуск ADB-консоли"
-    cmd
+    call :install_all_apks
+    pause
     goto menu
 )
 
 if "%choice%"=="6" (
-    call :log "📦 Установка всех APK из %APK_DIR%"
-    for %%A in ("%APK_DIR%\*.apk") do (
-        call :install_apk "%%A"
-    )
+    call :install_single_apk
     pause
     goto menu
 )
 
 if "%choice%"=="7" (
-    call :cleanup_logs
+    call :get_installed_apps
     pause
     goto menu
 )
 
 if "%choice%"=="8" (
-    call :restart_adb_server
+    call :uninstall_single_app
     pause
     goto menu
 )
 
 if "%choice%"=="9" (
-    call :log "📱 Получение списка приложений..."
-    call :get_installed_apps
+    call :uninstall_installed_apps
     pause
     goto menu
 )
 
 if "%choice%"=="10" (
-    call :log "📱 Получение списка приложений..."
-    call :get_installed_apps
-    set /p package="Введите имя пакета для удаления: "
-    call :uninstall_app "%package%"
-    pause
-    goto menu
-)
-
-if "%choice%"=="11" (
-    set /p confirm="Вы уверены, что хотите удалить ВСЕ пользовательские приложения? (y/n): "
-    if /i "%confirm%"=="y" (
-        call :uninstall_all_apps
-    ) else (
-        call :log "❌ Операция отменена"
-    )
-    pause
-    goto menu
-)
-
-if "%choice%"=="12" (
-    set /p confirm="Вы уверены, что хотите удалить приложения из %APK_DIR%? (y/n): "
-    if /i "%confirm%"=="y" (
-        call :uninstall_installed_apps
-    ) else (
-        call :log "❌ Операция отменена"
-    )
+    call :cleanup_logs
     pause
     goto menu
 )
 
 if "%choice%"=="0" (
-    call :log "🚪 Выход из меню"
     exit /b 0
 )
 
-call :log "Неверный выбор: %choice%"
-echo Неверный выбор. Повторите попытку.
+echo Неверный выбор
 pause
 goto menu
 
@@ -168,6 +124,79 @@ if errorlevel 1 (
     exit /b 1
 )
 
-if exist art.txt type art.txt
+if exist "%SCRIPT_DIR%\art.txt" type "%SCRIPT_DIR%\art.txt"
 call :log "🔄 Запуск ADB-меню"
-goto menu 
+goto menu
+
+:: Функция установки одного APK
+:install_single_apk
+set "apk_count=0"
+for %%A in ("%APK_DIR%\*.apk") do (
+    set /a "apk_count+=1"
+    set "apk_file[!apk_count!]=%%A"
+)
+
+if !apk_count! equ 0 (
+    call :log "❌ APK файлы не найдены"
+    exit /b 1
+)
+
+echo Доступные APK файлы:
+for /l %%i in (1,1,!apk_count!) do (
+    echo %%i. %%~nxapk_file[%%i]
+)
+
+set /p choice="Выберите номер APK для установки: "
+if !choice! lss 1 (
+    call :log "❌ Неверный выбор"
+    exit /b 1
+)
+if !choice! gtr !apk_count! (
+    call :log "❌ Неверный выбор"
+    exit /b 1
+)
+
+call :install_apk "!apk_file[%choice%]!"
+exit /b 0
+
+:: Функция удаления одного приложения
+:uninstall_single_app
+set "temp_file=%TEMP%\installed_apps.txt"
+adb shell pm list packages -3 > "!temp_file!"
+if errorlevel 1 (
+    call :log "❌ Ошибка получения списка приложений"
+    exit /b 1
+)
+
+set "app_count=0"
+for /f "tokens=2 delims=:" %%a in ('type "!temp_file!"') do (
+    set /a "app_count+=1"
+    set "app_name[!app_count!]=%%a"
+)
+
+if !app_count! equ 0 (
+    call :log "❌ Пользовательские приложения не найдены"
+    del "!temp_file!"
+    exit /b 1
+)
+
+echo Установленные приложения:
+for /l %%i in (1,1,!app_count!) do (
+    echo %%i. !app_name[%%i]!
+)
+
+set /p choice="Выберите номер приложения для удаления: "
+if !choice! lss 1 (
+    call :log "❌ Неверный выбор"
+    del "!temp_file!"
+    exit /b 1
+)
+if !choice! gtr !app_count! (
+    call :log "❌ Неверный выбор"
+    del "!temp_file!"
+    exit /b 1
+)
+
+call :uninstall_app "!app_name[%choice%]!"
+del "!temp_file!"
+exit /b 0 

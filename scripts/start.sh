@@ -12,100 +12,141 @@ source "$SCRIPT_DIR/config.sh"
 source "$SCRIPT_DIR/logger.sh"
 source "$SCRIPT_DIR/adb_utils.sh"
 
+# Проверка наличия ADB
+if ! command -v adb &> /dev/null; then
+    echo "❌ ADB не найден в системе"
+    exit 1
+fi
+
 # Основное меню
-show_menu() {
+while true; do
     clear
     echo "=========================================="
     echo "         МЕНЮ ADB-СКРИПТА (Linux)"
     echo "=========================================="
-    echo "1. Проверить ADB-соединение по USB"
-    echo "2. Запустить adb_test.sh"
-    echo "3. Сделать резервную копию (backupzip.sh)"
-    echo "4. Восстановить из копии (restorezip.sh)"
-    echo "5. Открыть ADB-консоль"
-    echo "6. Установить все APK из: $APK_DIR"
-    echo "7. Очистить логи"
-    echo "8. Перезапустить ADB сервер"
-    echo "9. Список установленных приложений"
-    echo "10. Удалить приложение"
-    echo "11. Удалить все пользовательские приложения"
-    echo "12. Удалить приложения из $APK_DIR"
+    echo "1. Проверить ADB соединение"
+    echo "2. Запустить тест"
+    echo "3. Создать резервную копию"
+    echo "4. Восстановить из копии"
+    echo "5. Установить все APK"
+    echo "6. Установить один APK"
+    echo "7. Список установленных приложений"
+    echo "8. Удалить приложение"
+    echo "9. Удалить приложения из apps_to_install"
+    echo "10. Очистить логи"
     echo "0. Выход"
     echo "=========================================="
-    read -p "Выберите действие (0-12): " choice
+
+    read -p "Выберите действие (0-10): " choice
 
     case $choice in
         1)
-            log_info "Проверка ADB соединения..."
             check_adb_connection
+            read -p "Нажмите Enter для продолжения..."
             ;;
         2)
-            log_info "▶ Запуск adb_test.sh"
             "$SCRIPT_DIR/adb_test.sh"
+            read -p "Нажмите Enter для продолжения..."
             ;;
         3)
-            log_info "💾 Создание резервной копии..."
             "$SCRIPT_DIR/backupzip.sh"
+            read -p "Нажмите Enter для продолжения..."
             ;;
         4)
-            log_info "♻ Восстановление из резервной копии..."
             "$SCRIPT_DIR/restorezip.sh"
+            read -p "Нажмите Enter для продолжения..."
             ;;
         5)
-            log_info "🖥 Запуск ADB-консоли"
-            bash
+            install_all_apks
+            read -p "Нажмите Enter для продолжения..."
             ;;
         6)
-            log_info "📦 Установка всех APK из $APK_DIR"
-            install_all_apks
+            install_single_apk
+            read -p "Нажмите Enter для продолжения..."
             ;;
         7)
-            log_info "🗑️ Очистка логов..."
-            cleanup_logs
+            get_installed_apps
+            read -p "Нажмите Enter для продолжения..."
             ;;
         8)
-            log_info "🔄 Перезапуск ADB сервера..."
-            restart_adb_server
+            uninstall_single_app
+            read -p "Нажмите Enter для продолжения..."
             ;;
         9)
-            log_info "📱 Получение списка приложений..."
-            get_installed_apps
+            uninstall_installed_apps
+            read -p "Нажмите Enter для продолжения..."
             ;;
         10)
-            log_info "📱 Получение списка приложений..."
-            get_installed_apps
-            read -p "Введите имя пакета для удаления: " package
-            uninstall_app "$package"
-            ;;
-        11)
-            read -p "Вы уверены, что хотите удалить ВСЕ пользовательские приложения? (y/n): " confirm
-            if [[ $confirm == [yY] ]]; then
-                uninstall_all_apps
-            else
-                log_info "❌ Операция отменена"
-            fi
-            ;;
-        12)
-            read -p "Вы уверены, что хотите удалить приложения из $APK_DIR? (y/n): " confirm
-            if [[ $confirm == [yY] ]]; then
-                uninstall_installed_apps
-            else
-                log_info "❌ Операция отменена"
-            fi
+            cleanup_logs
+            read -p "Нажмите Enter для продолжения..."
             ;;
         0)
-            log_info "🚪 Выход из меню"
             exit 0
             ;;
         *)
-            log_error "Неверный выбор: $choice"
-            echo "Неверный выбор. Повторите попытку."
+            echo "Неверный выбор"
+            read -p "Нажмите Enter для продолжения..."
             ;;
     esac
-    
-    read -p "Нажмите Enter для продолжения..."
-    show_menu
+done
+
+# Функция установки одного APK
+install_single_apk() {
+    local apk_files=("$APK_DIR"/*.apk)
+    if [ ${#apk_files[@]} -eq 0 ]; then
+        log "❌ APK файлы не найдены"
+        return 1
+    fi
+
+    echo "Доступные APK файлы:"
+    for i in "${!apk_files[@]}"; do
+        echo "$((i+1)). $(basename "${apk_files[$i]}")"
+    done
+
+    read -p "Выберите номер APK для установки: " choice
+    if ! [[ "$choice" =~ ^[0-9]+$ ]] || [ "$choice" -lt 1 ] || [ "$choice" -gt ${#apk_files[@]} ]; then
+        log "❌ Неверный выбор"
+        return 1
+    fi
+
+    install_apk "${apk_files[$((choice-1))]}"
 }
 
-# Запуск основного меню
-show_menu 
+# Функция удаления одного приложения
+uninstall_single_app() {
+    local temp_file=$(mktemp)
+    adb shell pm list packages -3 > "$temp_file"
+    if [ $? -ne 0 ]; then
+        log "❌ Ошибка получения списка приложений"
+        rm "$temp_file"
+        return 1
+    fi
+
+    local app_count=0
+    local app_names=()
+    while IFS=: read -r _ package; do
+        app_names+=("$package")
+        ((app_count++))
+    done < "$temp_file"
+
+    if [ $app_count -eq 0 ]; then
+        log "❌ Пользовательские приложения не найдены"
+        rm "$temp_file"
+        return 1
+    fi
+
+    echo "Установленные приложения:"
+    for i in "${!app_names[@]}"; do
+        echo "$((i+1)). ${app_names[$i]}"
+    done
+
+    read -p "Выберите номер приложения для удаления: " choice
+    if ! [[ "$choice" =~ ^[0-9]+$ ]] || [ "$choice" -lt 1 ] || [ "$choice" -gt $app_count ]; then
+        log "❌ Неверный выбор"
+        rm "$temp_file"
+        return 1
+    fi
+
+    uninstall_app "${app_names[$((choice-1))]}"
+    rm "$temp_file"
+} 

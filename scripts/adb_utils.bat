@@ -3,17 +3,17 @@ setlocal enabledelayedexpansion
 
 :: === Настройки ===
 set "SCRIPT_DIR=%~dp0"
-set "LOG_DIR=%SCRIPT_DIR%logs"
+set "LOG_DIR=%SCRIPT_DIR%\logs"
 set "LOG_FILE=%LOG_DIR%\adb_menu.log"
-set "APK_DIR=%SCRIPT_DIR%..\apps_to_install"
-set "BACKUP_DIR=%SCRIPT_DIR%backup"
+set "APK_DIR=%SCRIPT_DIR%\..\apps_to_install"
+set "BACKUP_DIR=%SCRIPT_DIR%\backup"
 set "MAX_LOG_SIZE=10485760"
 set "MAX_LOG_FILES=5"
 set "timestamp=[%DATE% %TIME%]"
 
 :: Подключение общих функций
-call "%SCRIPT_DIR%config.bat"
-call "%SCRIPT_DIR%logger.bat"
+call "%SCRIPT_DIR%\config.bat"
+call "%SCRIPT_DIR%\logger.bat"
 
 :: Функция ротации логов
 :rotate_logs
@@ -203,53 +203,53 @@ if errorlevel 1 (
     call :log "❌ Ошибка получения списка приложений"
     exit /b 1
 )
-type "!temp_file!"
+
+echo Установленные приложения:
+for /f "tokens=2 delims=:" %%a in ('type "!temp_file!"') do (
+    echo - %%a
+)
+
 del "!temp_file!"
 exit /b 0
 
-:: Удаление одного приложения
+:: Удаление приложения
 :uninstall_app
 set "package_name=%~1"
-call :log "🗑️ Удаление приложения: %package_name%"
-adb uninstall "%package_name%"
+call :log "Удаление приложения: !package_name!"
+adb uninstall "!package_name!"
 if errorlevel 1 (
-    call :log "❌ Ошибка удаления: %package_name%"
+    call :log "❌ Ошибка удаления: !package_name!"
     exit /b 1
 )
-call :log "✅ Удалено: %package_name%"
+call :log "✅ Удалено: !package_name!"
 exit /b 0
 
-:: Удаление всех пользовательских приложений
-:uninstall_all_apps
-call :log "🗑️ Удаление всех пользовательских приложений..."
-set "error=0"
-for /f "tokens=2 delims=:" %%a in ('adb shell pm list packages -3') do (
-    call :uninstall_app "%%a"
-    if errorlevel 1 set "error=1"
-)
-if %error% equ 0 (
-    call :log "✅ Все приложения удалены"
-    exit /b 0
-) else (
-    call :log "❌ Ошибка при удалении приложений"
+:: Удаление приложений из apps_to_install
+:uninstall_installed_apps
+call :check_apk_files
+if errorlevel 1 exit /b 1
+
+set "temp_file=%TEMP%\installed_apps.txt"
+adb shell pm list packages -3 > "!temp_file!"
+if errorlevel 1 (
+    call :log "❌ Ошибка получения списка приложений"
     exit /b 1
 )
 
-:: Удаление приложений из app_to_install
-:uninstall_installed_apps
-call :log "🗑️ Удаление приложений из %APK_DIR%..."
-set "error=0"
+set "uninstalled_count=0"
 for %%A in ("%APK_DIR%\*.apk") do (
-    set "apk_name=%%~nA"
-    for /f "tokens=2 delims=:" %%a in ('adb shell pm list packages -3 ^| findstr /i "!apk_name!"') do (
-        call :uninstall_app "%%a"
-        if errorlevel 1 set "error=1"
+    for /f "tokens=2 delims=:" %%a in ('type "!temp_file!"') do (
+        if "%%~nA"=="%%a" (
+            call :uninstall_app "%%a"
+            set /a "uninstalled_count+=1"
+        )
     )
 )
-if %error% equ 0 (
-    call :log "✅ Все приложения из %APK_DIR% удалены"
-    exit /b 0
+
+del "!temp_file!"
+if !uninstalled_count! equ 0 (
+    call :log "ℹ️ Нет установленных приложений из apps_to_install"
 ) else (
-    call :log "❌ Ошибка при удалении приложений"
-    exit /b 1
-) 
+    call :log "✅ Удалено приложений: !uninstalled_count!"
+)
+exit /b 0 
