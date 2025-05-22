@@ -48,4 +48,18 @@ log_debug() {
     if [ "${DEBUG:-false}" = "true" ]; then
         log "$LOG_LEVEL_DEBUG" "$1"
     fi
+}
+
+# Функция очистки логов
+cleanup_logs() {
+    log_info "Очистка старых логов..."
+    for i in $(seq $MAX_LOG_FILES -1 1); do
+        if [ -f "$LOG_FILE.$i" ]; then
+            rm "$LOG_FILE.$i"
+        fi
+    done
+    if [ -f "$LOG_FILE" ]; then
+        rm "$LOG_FILE"
+    fi
+    log_info "✅ Логи очищены"
 } 
