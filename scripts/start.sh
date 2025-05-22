@@ -246,6 +246,7 @@ while true; do
     echo "8. Удалить приложение"
     echo "9. Удалить приложения из apps_to_install"
     echo "10. Очистить логи"
+    echo "11. Запустить ADB консоль"
     echo "0. Выход"
     echo "=========================================="
 
@@ -292,6 +293,11 @@ while true; do
             cleanup_logs
             read -p "Нажмите Enter для продолжения..."
             ;;
+        11)
+            log "🖥 Запуск ADB-консоли"
+            cd ../adb
+            bash
+            ;;
         0)
             exit 0
             ;;
@@ -300,4 +306,4 @@ while true; do
             read -p "Нажмите Enter для продолжения..."
             ;;
     esac
-done 
+done

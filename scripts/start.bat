@@ -45,6 +45,7 @@ echo 7. Список установленных приложений
 echo 8. Удалить приложение
 echo 9. Удалить приложения из apps_to_install
 echo 10. Очистить логи
+echo 11. Запустить ADB консоль
 echo 0. Выход
 echo ==========================================
 set /p choice="Выберите действие (0-10): "
@@ -109,6 +110,12 @@ if "%choice%"=="10" (
     goto menu
 )
 
+if "%choice%"=="11" (
+    cd ..\adb
+    cmd
+    goto menu
+)
+
 if "%choice%"=="0" (
     exit /b 0
 )
@@ -125,8 +132,6 @@ if errorlevel 1 (
 )
 
 if exist "%SCRIPT_DIR%\art.txt" type "%SCRIPT_DIR%\art.txt"
-call :log "🔄 Запуск ADB-меню"
-goto menu
 
 :: Функция установки одного APK
 :install_single_apk
@@ -199,4 +204,4 @@ if !choice! gtr !app_count! (
 
 call :uninstall_app "!app_name[%choice%]!"
 del "!temp_file!"
-exit /b 0 
+exit /b 0
