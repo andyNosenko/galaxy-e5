@@ -193,6 +193,37 @@ cleanup_old_backups() {
     return 0
 }
 
+# Функция получения списка установленных приложений
+get_installed_apps() {
+    local temp_file=$(mktemp)
+    adb shell pm list packages -3 > "$temp_file"
+    if [ $? -ne 0 ]; then
+        log "❌ Ошибка получения списка приложений"
+        rm "$temp_file"
+        return 1
+    fi
+
+    local found_apps=0
+    echo "Установленные приложения из apps_to_install:"
+    for apk in "$APK_DIR"/*.apk; do
+        local apk_name=$(basename "$apk" .apk)
+        while IFS=: read -r _ package; do
+            if [ "$apk_name" = "$package" ]; then
+                echo "- $package"
+                ((found_apps++))
+            fi
+        done < "$temp_file"
+    done
+
+    rm "$temp_file"
+    if [ $found_apps -eq 0 ]; then
+        log "ℹ️ Нет установленных приложений из apps_to_install"
+    else
+        log "📦 Найдено установленных приложений: $found_apps"
+    fi
+    return 0
+}
+
 # Проверка наличия ADB
 if ! command -v adb &> /dev/null; then
     echo "❌ ADB не найден в системе"
