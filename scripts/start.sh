@@ -13,6 +13,11 @@ source "$SCRIPT_DIR/config.sh"
 source "$SCRIPT_DIR/logger.sh"
 source "$SCRIPT_DIR/adb_utils.sh"
 
+if [ -f "$SCRIPT_DIR/art.txt" ]; then
+    cat "$SCRIPT_DIR/art.txt"
+    sleep 2
+fi
+
 # Функция установки одного APK
 install_single_apk() {
     local apk_files=("$APK_DIR"/*.apk)
@@ -294,7 +299,7 @@ while true; do
             read -p "Нажмите Enter для продолжения..."
             ;;
         11)
-            log "🖥 Запуск ADB-консоли"
+            log "Запуск ADB-консоли"
             cd ../adb
             bash
             ;;

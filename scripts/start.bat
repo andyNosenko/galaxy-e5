@@ -1,8 +1,8 @@
 @echo off
-chcp 65001 > nul
+chcp 1251 > nul
 setlocal enabledelayedexpansion
 
-:: === РќР°СЃС‚СЂРѕР№РєРё ===
+:: === Настройки ===
 set "SCRIPT_DIR=%~dp0"
 set "LOG_DIR=%SCRIPT_DIR%\logs"
 set "LOG_FILE=%LOG_DIR%\adb_menu.log"
@@ -10,45 +10,50 @@ set "APK_DIR=%SCRIPT_DIR%\..\apps_to_install"
 set "BACKUP_DIR=%SCRIPT_DIR%\backup"
 set "timestamp=[%DATE% %TIME%]"
 
-:: РЎРѕР·РґР°РЅРёРµ РЅРµРѕР±С…РѕРґРёРјС‹С… РґРёСЂРµРєС‚РѕСЂРёР№
+:: Создание необходимых директорий
 if not exist "%LOG_DIR%" mkdir "%LOG_DIR%"
 if not exist "%APK_DIR%" mkdir "%APK_DIR%"
 if not exist "%BACKUP_DIR%" mkdir "%BACKUP_DIR%"
 
-:: РџРѕРґРєР»СЋС‡РµРЅРёРµ РѕР±С‰РёС… С„СѓРЅРєС†РёР№
+:: Подключение общих функций
 call "%SCRIPT_DIR%\config.bat"
 call "%SCRIPT_DIR%\logger.bat"
 call "%SCRIPT_DIR%\adb_utils.bat"
 
-:: РџСЂРѕРІРµСЂРєР° Р·Р°РІРёСЃРёРјРѕСЃС‚РµР№
+:: Проверка зависимостей
 :check_dependencies
 where adb >nul 2>nul
 if errorlevel 1 (
-    call :log "вќЊ ADB РЅРµ РЅР°Р№РґРµРЅ РІ СЃРёСЃС‚РµРјРµ"
+    call :log "ADB не найден в системе"
     exit /b 1
 )
 exit /b 0
 
-:: РћСЃРЅРѕРІРЅРѕРµ РјРµРЅСЋ
+if exist art.txt (
+    type art.txt
+    timeout /t 2 > nul
+)
+
+:: Основное меню
 :menu
 cls
 echo ==========================================
-echo         РњР•РќР® ADB-РЎРљР РРџРўРђ (Windows)
+echo         МЕНЮ ADB-СКРИПТА (Windows)
 echo ==========================================
-echo 1. РџСЂРѕРІРµСЂРёС‚СЊ ADB СЃРѕРµРґРёРЅРµРЅРёРµ
-echo 2. Р—Р°РїСѓСЃС‚РёС‚СЊ С‚РµСЃС‚
-echo 3. РЎРѕР·РґР°С‚СЊ СЂРµР·РµСЂРІРЅСѓСЋ РєРѕРїРёСЋ
-echo 4. Р’РѕСЃСЃС‚Р°РЅРѕРІРёС‚СЊ РёР· РєРѕРїРёРё
-echo 5. РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РІСЃРµ APK
-echo 6. РЈСЃС‚Р°РЅРѕРІРёС‚СЊ РѕРґРёРЅ APK
-echo 7. РЎРїРёСЃРѕРє СѓСЃС‚Р°РЅРѕРІР»РµРЅРЅС‹С… РїСЂРёР»РѕР¶РµРЅРёР№
-echo 8. РЈРґР°Р»РёС‚СЊ РїСЂРёР»РѕР¶РµРЅРёРµ
-echo 9. РЈРґР°Р»РёС‚СЊ РїСЂРёР»РѕР¶РµРЅРёСЏ РёР· apps_to_install
-echo 10. РћС‡РёСЃС‚РёС‚СЊ Р»РѕРіРё
-echo 11. Р—Р°РїСѓСЃС‚РёС‚СЊ ADB РєРѕРЅСЃРѕР»СЊ
-echo 0. Р’С‹С…РѕРґ
+echo 1. Проверить ADB соединение
+echo 2. Запустить тест
+echo 3. Создать резервную копию
+echo 4. Восстановить из копии
+echo 5. Установить все APK
+echo 6. Установить один APK
+echo 7. Список установленных приложений
+echo 8. Удалить приложение
+echo 9. Удалить приложения из apps_to_install
+echo 10. Очистить логи
+echo 11. Запустить ADB консоль
+echo 0. Выход
 echo ==========================================
-set /p choice="Р’С‹Р±РµСЂРёС‚Рµ РґРµР№СЃС‚РІРёРµ (0-10): "
+set /p choice="Выберите действие (0-11): "
 
 if "%choice%"=="1" (
     call :check_adb_connection
@@ -120,11 +125,11 @@ if "%choice%"=="0" (
     exit /b 0
 )
 
-echo РќРµРІРµСЂРЅС‹Р№ РІС‹Р±РѕСЂ
+echo Неверный выбор
 pause
 goto menu
 
-:: Р—Р°РїСѓСЃРє РѕСЃРЅРѕРІРЅРѕРіРѕ РјРµРЅСЋ
+:: Запуск основного меню
 call :check_dependencies
 if errorlevel 1 (
     pause
@@ -133,7 +138,7 @@ if errorlevel 1 (
 
 if exist "%SCRIPT_DIR%\art.txt" type "%SCRIPT_DIR%\art.txt"
 
-:: Р¤СѓРЅРєС†РёСЏ СѓСЃС‚Р°РЅРѕРІРєРё РѕРґРЅРѕРіРѕ APK
+:: Функция установки одного APK
 :install_single_apk
 set "apk_count=0"
 for %%A in ("%APK_DIR%\*.apk") do (
@@ -142,34 +147,34 @@ for %%A in ("%APK_DIR%\*.apk") do (
 )
 
 if !apk_count! equ 0 (
-    call :log "вќЊ APK С„Р°Р№Р»С‹ РЅРµ РЅР°Р№РґРµРЅС‹"
+    call :log "APK файлы не найдены"
     exit /b 1
 )
 
-echo Р”РѕСЃС‚СѓРїРЅС‹Рµ APK С„Р°Р№Р»С‹:
+echo Доступные APK файлы:
 for /l %%i in (1,1,!apk_count!) do (
     echo %%i. %%~nxapk_file[%%i]
 )
 
-set /p choice="Р’С‹Р±РµСЂРёС‚Рµ РЅРѕРјРµСЂ APK РґР»СЏ СѓСЃС‚Р°РЅРѕРІРєРё: "
+set /p choice="Выберите номер APK для установки: "
 if !choice! lss 1 (
-    call :log "вќЊ РќРµРІРµСЂРЅС‹Р№ РІС‹Р±РѕСЂ"
+    call :log "Неверный выбор"
     exit /b 1
 )
 if !choice! gtr !apk_count! (
-    call :log "вќЊ РќРµРІРµСЂРЅС‹Р№ РІС‹Р±РѕСЂ"
+    call :log "Неверный выбор"
     exit /b 1
 )
 
 call :install_apk "!apk_file[%choice%]!"
 exit /b 0
 
-:: Р¤СѓРЅРєС†РёСЏ СѓРґР°Р»РµРЅРёСЏ РѕРґРЅРѕРіРѕ РїСЂРёР»РѕР¶РµРЅРёСЏ
+:: Функция удаления одного приложения
 :uninstall_single_app
 set "temp_file=%TEMP%\installed_apps.txt"
 adb shell pm list packages -3 > "!temp_file!"
 if errorlevel 1 (
-    call :log "вќЊ РћС€РёР±РєР° РїРѕР»СѓС‡РµРЅРёСЏ СЃРїРёСЃРєР° РїСЂРёР»РѕР¶РµРЅРёР№"
+    call :log "Ошибка получения списка приложений"
     exit /b 1
 )
 
@@ -180,24 +185,24 @@ for /f "tokens=2 delims=:" %%a in ('type "!temp_file!"') do (
 )
 
 if !app_count! equ 0 (
-    call :log "вќЊ РџРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёРµ РїСЂРёР»РѕР¶РµРЅРёСЏ РЅРµ РЅР°Р№РґРµРЅС‹"
+    call :log "Пользовательские приложения не найдены"
     del "!temp_file!"
     exit /b 1
 )
 
-echo РЈСЃС‚Р°РЅРѕРІР»РµРЅРЅС‹Рµ РїСЂРёР»РѕР¶РµРЅРёСЏ:
+echo Установленные приложения:
 for /l %%i in (1,1,!app_count!) do (
     echo %%i. !app_name[%%i]!
 )
 
-set /p choice="Р’С‹Р±РµСЂРёС‚Рµ РЅРѕРјРµСЂ РїСЂРёР»РѕР¶РµРЅРёСЏ РґР»СЏ СѓРґР°Р»РµРЅРёСЏ: "
+set /p choice="Выберите номер приложения для удаления: "
 if !choice! lss 1 (
-    call :log "вќЊ РќРµРІРµСЂРЅС‹Р№ РІС‹Р±РѕСЂ"
+    call :log "Неверный выбор"
     del "!temp_file!"
     exit /b 1
 )
 if !choice! gtr !app_count! (
-    call :log "вќЊ РќРµРІРµСЂРЅС‹Р№ РІС‹Р±РѕСЂ"
+    call :log "Неверный выбор"
     del "!temp_file!"
     exit /b 1
 )
