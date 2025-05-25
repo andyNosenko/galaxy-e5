@@ -45,7 +45,7 @@ select_backup_file() {
 restore_backup() {
     local backup_file="$1"
     local folder_name
-    folder_name=$(basename "$backup_file" | sed -E 's/_[0-9]{8}_[0-9]{6}\.tar$//')
+    folder_name=$(basename "$backup_file" | sed -E 's/_[0-9]{8}_[0-9]{6}\.tar$//' | sed -E 's/_.*$//')
 
     log_info "Начало восстановления из копии: $(basename "$backup_file")"
 

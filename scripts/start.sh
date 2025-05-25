@@ -42,42 +42,80 @@ install_single_apk() {
 
 # Функция удаления одного приложения
 uninstall_single_app() {
-    local temp_file=$(mktemp)
-    adb shell pm list packages -3 > "$temp_file"
-    if [ $? -ne 0 ]; then
+    local apk_dir="$APK_DIR"
+    local temp_file
+    temp_file=$(mktemp)
+
+    # Получаем список установленных пакетов (user 0)
+    if ! adb shell pm list packages -3 --user 0 | sed 's/^package://g' > "$temp_file"; then
         log "❌ Ошибка получения списка приложений"
         rm "$temp_file"
         return 1
     fi
 
-    local app_count=0
-    local app_names=()
-    while IFS=: read -r _ package; do
-        app_names+=("$package")
-        ((app_count++))
+    local apk_path apk_name cleaned_apk_name installed_pkg cleaned_pkg
+    declare -a matched_apps=()
+
+    # Функция для очистки имени: в нижний регистр, удалить пробелы, цифры, знаки пунктуации
+    clean_name() {
+        echo "$1" | tr '[:upper:]' '[:lower:]' | tr -d ' .-_v0123456789'
+    }
+
+    echo "🔍 Поиск установленных приложений, соответствующих APK в '$apk_dir'..."
+
+    while IFS= read -r installed_pkg; do
+        cleaned_pkg=$(clean_name "$installed_pkg")
+
+        for apk_path in "$apk_dir"/*.apk; do
+            [ -e "$apk_path" ] || continue
+
+            apk_name=$(basename "$apk_path" .apk)
+            cleaned_apk_name=$(clean_name "$apk_name")
+
+            # Проверяем частичное совпадение: либо apk_name в пакете, либо пакет в apk_name
+            if [[ "$cleaned_pkg" == *"$cleaned_apk_name"* ]] || [[ "$cleaned_apk_name" == *"$cleaned_pkg"* ]]; then
+                # Добавляем если ещё нет
+                if [[ ! " ${matched_apps[*]} " =~ " $installed_pkg " ]]; then
+                    matched_apps+=("$installed_pkg")
+                fi
+                break
+            fi
+        done
     done < "$temp_file"
 
-    if [ $app_count -eq 0 ]; then
-        log "❌ Пользовательские приложения не найдены"
+    if [ ${#matched_apps[@]} -eq 0 ]; then
+        log "❌ Подходящие установленные приложения не найдены"
         rm "$temp_file"
         return 1
     fi
 
-    echo "Установленные приложения:"
-    for i in "${!app_names[@]}"; do
-        echo "$((i+1)). ${app_names[$i]}"
+    echo "📱 Найденные установленные приложения:"
+    for i in "${!matched_apps[@]}"; do
+        echo "$((i+1)). ${matched_apps[$i]}"
     done
+    echo "0. Отмена"
 
-    read -p "Выберите номер приложения для удаления: " choice
-    if ! [[ "$choice" =~ ^[0-9]+$ ]] || [ "$choice" -lt 1 ] || [ "$choice" -gt $app_count ]; then
+    read -rp "Выберите номер приложения для удаления: " choice
+
+    if [[ -z "$choice" || "$choice" == "0" ]]; then
+        log "🚫 Удаление отменено"
+        rm "$temp_file"
+        return 0
+    fi
+
+    if ! [[ "$choice" =~ ^[0-9]+$ ]] || [ "$choice" -lt 1 ] || [ "$choice" -gt ${#matched_apps[@]} ]; then
         log "❌ Неверный выбор"
         rm "$temp_file"
         return 1
     fi
 
-    uninstall_app "${app_names[$((choice-1))]}"
+    uninstall_app "${matched_apps[$((choice-1))]}"
+
     rm "$temp_file"
 }
+
+
+
 
 # Функция удаления приложений из apps_to_install
 uninstall_installed_apps() {
@@ -87,32 +125,66 @@ uninstall_installed_apps() {
     fi
 
     local temp_file=$(mktemp)
-    adb shell pm list packages -3 > "$temp_file"
-    if [ $? -ne 0 ]; then
+
+    # Получаем список всех установленных пакетов (user 0)
+    if ! adb shell pm list packages -3 --user 0 | sed 's/^package://g' > "$temp_file"; then
         log "❌ Ошибка получения списка приложений"
         rm "$temp_file"
         return 1
     fi
 
-    local uninstalled_count=0
+    clean_name() {
+        echo "$1" | tr '[:upper:]' '[:lower:]' | tr -d ' .-_v0123456789'
+    }
+
+    local apk_name cleaned_apk_name installed_pkg cleaned_pkg
+    declare -a matched_pkgs=()
+
+    # Собираем список подходящих пакетов
     for apk in "$APK_DIR"/*.apk; do
-        local apk_name=$(basename "$apk" .apk)
-        while IFS=: read -r _ package; do
-            if [ "$apk_name" = "$package" ]; then
-                uninstall_app "$package"
-                ((uninstalled_count++))
+        [ -e "$apk" ] || continue
+        apk_name=$(basename "$apk" .apk)
+        cleaned_apk_name=$(clean_name "$apk_name")
+
+        while IFS= read -r installed_pkg; do
+            cleaned_pkg=$(clean_name "$installed_pkg")
+
+            if [[ "$cleaned_pkg" == *"$cleaned_apk_name"* ]] || [[ "$cleaned_apk_name" == *"$cleaned_pkg"* ]]; then
+                # Добавляем в список, если ещё нет
+                if [[ ! " ${matched_pkgs[*]} " =~ " $installed_pkg " ]]; then
+                    matched_pkgs+=("$installed_pkg")
+                fi
             fi
         done < "$temp_file"
     done
 
     rm "$temp_file"
-    if [ $uninstalled_count -eq 0 ]; then
-        log "ℹ️ Нет установленных приложений из apps_to_install"
-    else
-        log "✅ Удалено приложений: $uninstalled_count"
+
+    if [ ${#matched_pkgs[@]} -eq 0 ]; then
+        log "ℹ️ Нет установленных приложений из $APK_DIR"
+        return 0
     fi
+
+    echo "📱 Найдены установленные приложения, соответствующие APK:"
+    for pkg in "${matched_pkgs[@]}"; do
+        echo "- $pkg"
+    done
+
+    read -rp "Подтвердите удаление всех перечисленных приложений? (y/N): " confirm
+    if [[ "$confirm" != [Yy] ]]; then
+        log "🚫 Удаление отменено"
+        return 0
+    fi
+
+    local uninstalled_count=0
+    for pkg in "${matched_pkgs[@]}"; do
+        uninstall_app "$pkg" && ((uninstalled_count++))
+    done
+
+    log "✅ Удалено приложений: $uninstalled_count"
     return 0
 }
+
 
 # Функция проверки зависимостей
 check_dependencies() {
