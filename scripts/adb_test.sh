@@ -17,7 +17,9 @@ source "$SCRIPT_DIR/adb_utils.sh"
 # Проверка ADB соединения
 check_adb_connection() {
     log_info "Проверка ADB соединения..."
-    if ! adb devices | grep -q "device$"; then
+    local devices
+    devices=$(adb devices | grep -v "List" | grep -v "^$" | wc -l)
+    if [ "$devices" -eq 0 ]; then
         log_error "ADB устройство не найдено"
         return 1
     fi

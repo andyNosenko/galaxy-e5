@@ -8,7 +8,9 @@ source "$SCRIPT_DIR/logger.sh"
 # Проверка ADB соединения
 check_adb_connection() {
     log_info "Проверка ADB соединения..."
-    if ! adb devices | grep -q "device$"; then
+    local devices
+    devices=$(adb devices | grep -v "List" | grep -v "^$" | wc -l)
+    if [ "$devices" -eq 0 ]; then
         log_error "ADB устройство не найдено"
         return 1
     fi
@@ -42,7 +44,7 @@ get_battery_level() {
 check_device_space() {
     local required_space=1024 # 1GB в MB
     local available_space
-    
+
     available_space=$(adb shell df /data | awk 'NR==2 {print $4}')
     if [ "$available_space" -lt "$required_space" ]; then
         log_error "Недостаточно места на устройстве"
@@ -57,10 +59,10 @@ check_apk_version() {
     local package_name=$(basename "$apk_file" .apk)
     local installed_version
     local new_version
-    
+
     installed_version=$(adb shell pm dump "$package_name" 2>/dev/null | grep "versionName" | cut -d'=' -f2)
     new_version=$(aapt dump badging "$apk_file" 2>/dev/null | grep "versionName" | cut -d'=' -f2 | tr -d "'")
-    
+
     if [ -n "$installed_version" ] && [ -n "$new_version" ]; then
         if [ "$installed_version" = "$new_version" ]; then
             log_info "ℹ️ Версия $(basename "$apk_file") уже установлена: $new_version"
@@ -76,12 +78,12 @@ check_apk_version() {
 # Установка APK
 install_apk() {
     local apk_file="$1"
-    
+
     if check_apk_version "$apk_file"; then
         log_info "ℹ️ Пропуск: $(basename "$apk_file") (уже установлена последняя версия)"
         return 0
     fi
-    
+
     log_info "Установка: $(basename "$apk_file")"
     if adb install -g -r "$apk_file"; then
         log_info "✅ Установлен: $(basename "$apk_file")"
@@ -125,7 +127,7 @@ check_apk_files() {
             ((apk_count++))
         fi
     done
-    
+
     if [ $apk_count -eq 0 ]; then
         log_error "❌ APK файлы не найдены в $APK_DIR"
         return 1
@@ -137,7 +139,7 @@ check_apk_files() {
 # Установка всех APK файлов
 install_all_apks() {
     check_apk_files || return 1
-    
+
     log_info "📦 Установка всех APK файлов..."
     for apk in "$APK_DIR"/*.apk; do
         if [ -f "$apk" ]; then
@@ -187,7 +189,7 @@ get_installed_apps() {
 uninstall_app() {
     local package_name="$1"
     log_info "🗑️ Удаление приложения: $package_name"
-    
+
     if adb uninstall "$package_name"; then
         log_info "✅ Удалено: $package_name"
         return 0
@@ -201,7 +203,7 @@ uninstall_app() {
 uninstall_installed_apps() {
     log_info "🗑️ Удаление приложений из $APK_DIR..."
     local error=0
-    
+
     for apk in "$APK_DIR"/*.apk; do
         if [ -f "$apk" ]; then
             local apk_name=$(basename "$apk" .apk)
@@ -215,7 +217,7 @@ uninstall_installed_apps() {
             done < <(adb shell pm list packages -3)
         fi
     done
-    
+
     if [ $error -eq 0 ]; then
         log_info "✅ Все приложения из $APK_DIR удалены"
         return 0
@@ -223,4 +225,4 @@ uninstall_installed_apps() {
         log_error "❌ Ошибка при удалении приложений"
         return 1
     fi
-} 
+}
