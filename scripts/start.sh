@@ -319,15 +319,16 @@ while true; do
     echo "4. Восстановить из копии"
     echo "5. Установить все APK"
     echo "6. Установить один APK"
-    echo "7. Список установленных приложений"
-    echo "8. Удалить приложение"
-    echo "9. Удалить приложения из apps_to_install"
-    echo "10. Очистить логи"
-    echo "11. Запустить ADB консоль"
+    echo "7. Удалить приложение"
+    echo "8. Удалить приложения из apps_to_install"
+    echo "9. Очистить логи"
+    echo "10. Запустить ADB консоль"
+    echo "11. Обновить framework"
+    echo "12. Восстановить framework"
     echo "0. Выход"
     echo "=========================================="
 
-    read -p "Выберите действие (0-10): " choice
+    read -p "Выберите действие (0-12): " choice
 
     case $choice in
         1)
@@ -355,25 +356,31 @@ while true; do
             read -p "Нажмите Enter для продолжения..."
             ;;
         7)
-            get_installed_apps
-            read -p "Нажмите Enter для продолжения..."
-            ;;
-        8)
             uninstall_single_app
             read -p "Нажмите Enter для продолжения..."
             ;;
-        9)
+        8)
             uninstall_installed_apps
             read -p "Нажмите Enter для продолжения..."
             ;;
-        10)
+        9)
             cleanup_logs
             read -p "Нажмите Enter для продолжения..."
             ;;
-        11)
+        10)
             log "Запуск ADB-консоли"
             cd ../adb
             bash
+            ;;
+        11)
+            log_info "🔄 Обновление framework..."
+            "$SCRIPT_DIR/update_framework.sh" || log_error "❌ Ошибка при обновлении framework"
+            read -p "Нажмите Enter для продолжения..."
+            ;;
+        12)
+            log_info "🔧 Восстановление framework..."
+            "$SCRIPT_DIR/repair_framework.sh" || log_error "❌ Ошибка при восстановлении framework"
+            read -p "Нажмите Enter для продолжения..."
             ;;
         0)
             exit 0
