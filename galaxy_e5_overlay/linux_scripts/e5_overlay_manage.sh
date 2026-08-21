@@ -94,9 +94,9 @@ install_overlay() {
   log "Install: $pkg"
 
   adb push "$host_apk" "$remote"
-  if adb_shell pm install -r -g --user 0 "$remote" | rg -q "Success"; then
+  if adb_shell pm install -r -g "$remote" | rg -q "Success"; then
     log "  pm install: OK"
-  elif adb install -r -g --user 0 "$host_apk" 2>&1 | rg -q "Success"; then
+  elif adb install -r -g "$host_apk" 2>&1 | rg -q "Success"; then
     log "  adb install: OK"
   else
     echo "[ERROR] Failed to install $pkg" >&2
@@ -107,7 +107,7 @@ install_overlay() {
   adb_shell rm -f "$remote" || true
 
   # Enable static overlay explicitly (safe if already enabled)
-  adb_shell cmd overlay enable --user 0 "$pkg" >/dev/null 2>&1 || true
+  adb_shell cmd overlay enable "$pkg" >/dev/null 2>&1 || true
 
   if package_installed "$pkg"; then
     log "  package present: OK"
@@ -120,7 +120,7 @@ install_overlay() {
 disable_overlay() {
   local pkg="$1"
   log "Disable overlay: $pkg"
-  adb_shell cmd overlay disable --user 0 "$pkg" >/dev/null 2>&1 || true
+  adb_shell cmd overlay disable "$pkg" >/dev/null 2>&1 || true
 }
 
 uninstall_overlay_clean() {
@@ -130,9 +130,9 @@ uninstall_overlay_clean() {
   disable_overlay "$pkg"
 
   if package_installed "$pkg"; then
-    if adb_shell pm uninstall --user 0 "$pkg" | rg -q "Success"; then
+    if adb_shell pm uninstall "$pkg" | rg -q "Success"; then
       log "  pm uninstall: OK"
-    elif adb_shell cmd package uninstall --user 0 "$pkg" | rg -q "Success"; then
+    elif adb_shell cmd package uninstall "$pkg" | rg -q "Success"; then
       log "  cmd package uninstall: OK"
     else
       echo "[ERROR] Failed to uninstall $pkg" >&2
