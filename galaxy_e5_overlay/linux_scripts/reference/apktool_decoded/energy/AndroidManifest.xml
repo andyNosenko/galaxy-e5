@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="36" android:compileSdkVersionCodename="16" package="com.flyme.auto.energy.ru" platformBuildVersionCode="36" platformBuildVersionName="16">
+    <overlay android:isStatic="true" android:priority="1" android:targetPackage="com.flyme.auto.energy"/>
+    <application android:extractNativeLibs="false"/>
+</manifest>

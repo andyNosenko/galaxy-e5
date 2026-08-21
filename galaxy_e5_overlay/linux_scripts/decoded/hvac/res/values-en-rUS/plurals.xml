@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="exo_controls_fastforward_by_amount_description">
+        <item quantity="one">Вперед на %d сек.</item>
+        <item quantity="few">Вперед на %d сек.</item>
+        <item quantity="many">Вперед на %d сек.</item>
+        <item quantity="other">Вперед на %d сек.</item>
+    </plurals>
+    <plurals name="exo_controls_rewind_by_amount_description">
+        <item quantity="one">Назад на %d сек.</item>
+        <item quantity="few">Назад на %d сек.</item>
+        <item quantity="many">Назад на %d сек.</item>
+        <item quantity="other">Назад на %d сек.</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d новое уведомление</item>
+        <item quantity="few">%d новых уведомления</item>
+        <item quantity="many">%d новых уведомлений</item>
+        <item quantity="other">%d новых уведомлений</item>
+    </plurals>
+</resources>

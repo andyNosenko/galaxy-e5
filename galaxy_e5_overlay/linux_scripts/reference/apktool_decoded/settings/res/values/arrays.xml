@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="default_wakeup_words">
+        <item>Привет, Galaxy</item>
+        <item>Привет, Geely</item>
+        <item>Galaxy</item>
+        <item>Geely</item>
+    </string-array>
+</resources>

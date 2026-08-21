@@ -1,0 +1,50 @@
+{
+  "energy": {
+    "package": "com.flyme.auto.energy.ru",
+    "minSdkVersion": null,
+    "targetSdkVersion": null,
+    "stringFiles": [
+      "res/values-en-rUS/strings.xml",
+      "res/values-zh-rCN/strings.xml",
+      "res/values/strings.xml"
+    ],
+    "stringCounts": {
+      "res/values-en-rUS/strings.xml": 525,
+      "res/values-zh-rCN/strings.xml": 525,
+      "res/values/strings.xml": 525
+    },
+    "defaultValuesStringCount": 525
+  },
+  "hvac": {
+    "package": "com.flyme.auto.hvac.ru",
+    "minSdkVersion": null,
+    "targetSdkVersion": null,
+    "stringFiles": [
+      "res/values-en-rUS/strings.xml",
+      "res/values-zh-rCN/strings.xml",
+      "res/values/strings.xml"
+    ],
+    "stringCounts": {
+      "res/values-en-rUS/strings.xml": 401,
+      "res/values-zh-rCN/strings.xml": 401,
+      "res/values/strings.xml": 401
+    },
+    "defaultValuesStringCount": 401
+  },
+  "settings": {
+    "package": "com.flyme.auto.settings.ru",
+    "minSdkVersion": null,
+    "targetSdkVersion": null,
+    "stringFiles": [
+      "res/values-en-rUS/strings.xml",
+      "res/values-zh-rCN/strings.xml",
+      "res/values/strings.xml"
+    ],
+    "stringCounts": {
+      "res/values-en-rUS/strings.xml": 970,
+      "res/values-zh-rCN/strings.xml": 970,
+      "res/values/strings.xml": 970
+    },
+    "defaultValuesStringCount": 970
+  }
+}

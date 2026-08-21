@@ -1,0 +1,349 @@
+SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones
+SOFTWARE\Microsoft\Windows\CurrentVersion\Time Zones
+Winsock.dll version out of range
+zlib returned Z_VERSION_ERROR: compile time and runtime zlib implementations differ
+incompatible version
+installer-starshine-1.8.0.exe
+__svm_version_info
+__svm_vm_java_version
+GetFileVersionInfoSizeW
+GetFileVersionInfoW
+VERSION.dll
+GetVersionExA
+DeleteFileW
+RemoveDirectoryW
+com.oracle.svm.core.VM.Java.Version=17.0.18
+com.oracle.svm.core.VM.Target.Libraries=ncrypt|crypt32|version
+GetVersionExA
+META-INF/version-control-info.textprotoKO
+i~~D8{"backend":"dex","compilation-mode":"release","has-checksums":false,"min-api":28,"version":"8.13.19"}
+META-INF/version-control-info.textprotoPK
+META-INF/version-control-info.textprotoKO
+i~~D8{"backend":"dex","compilation-mode":"release","has-checksums":false,"min-api":28,"version":"8.13.19"}
+META-INF/version-control-info.textprotoPK
+GetVersionExA
+remount
+This might be an indicator of improper build time initialization, or of a non-compatible JDK version.
+  "version": "starshine-1.8.0",
+android.os.Build$VERSION. This exception was synthesized during native image building from a call to java.lang.Class.forName(String) with constant arguments.
+com.oracle.svm.core.jdk.JDKVersionSpecificResourceBuilderJDK11OrLaterFeature_ServiceRegistration
+com.oracle.svm.core.jdk.JDKVersionSpecificResourceBuilderJDK11OrLaterFeature_ServiceRegistration
+org.graalvm.compiler.replacements.nodes.PluginFactory_ArrayCopyWithConversionsNode
+Ljava/lang/Object;Ljava/lang/Comparable<Ljava/lang/module/ModuleDescriptor$Version;>;
+com.oracle.svm.core.c.CTypeConversionSupportImplFeature_ServiceRegistration
+RC2 parameter parsing error: version number out of legal range (0-1024): 
+com.oracle.svm.core.c.CTypeConversionSupportImplFeature_ServiceRegistration
+kotlin.internal.jdk7.JDK7PlatformImplementations$ReflectSdkVersion
+installer.Uninstaller$$Lambda$658c531288fcd1eb8d6f065ed08b2abab9d5d7d3
+org.graalvm.nativeimage.c.type.CTypeConversion$CCharPointerHolder
+Lkotlin/internal/jdk7/JDK7PlatformImplementations$ReflectSdkVersion;
+com.oracle.svm.core.jfr.traceid.PluginFactory_JfrTraceIdMap
+com.oracle.svm.core.jfr.traceid.PluginFactory_JfrTraceIdMap
+' is deprecated and might be removed from future versions
+com.oracle.svm.core.windows.headers.SysinfoAPI$OSVERSIONINFOEXA
+JNIFunctions_GetVersion_ec69fb66b68d251a7ca799a4d255971fcb495799
+sun.util.cldr.CLDRBaseLocaleDataMetaInfo$TZCanonicalIDMapHolder
+jdk.tools.jlink.internal.plugins.VendorVersionPlugin
+org.graalvm.nativeimage.impl.CTypeConversionSupport
+com.oracle.svm.core.c.CTypeConversionSupportImpl$1
+kotlin.text.StringsKt__StringNumberConversionsJVMKt
+screenFloatValue$StringsKt__StringNumberConversionsJVMKt
+org.graalvm.compiler.serviceprovider.JavaVersionUtil
+org.graalvm.compiler.core.common.util.TypeConversion
+javax.sound.sampled.spi.FormatConversionProvider
+Debug metadata version mismatch. Expected: 
+Unexpected failure of digit conversion of 
+FormatFlagsConversionMismatchException.java
+java.util.FormatFlagsConversionMismatchException
+java.util.IllegalFormatConversionException
+java.util.UnknownFormatConversionException
+com.oracle.svm.core.c.CTypeConversionSupportImpl
+org.graalvm.nativeimage.c.type.CTypeConversion
+kotlin.text.StringsKt__StringNumberConversionsKt
+java.lang.module.ModuleDescriptor$Version
+java.lang.module.ModuleDescriptor$Version
+com.oracle.svm.core.jni.headers.JNIVersion
+Result from digit conversion too large!
+IllegalFormatConversionException.java
+UnknownFormatConversionException.java
+========= RRO Uninstaller =========
+arrayCopyWithConversionsDynamicStrides
+COROUTINES_DEBUG_METADATA_VERSION
+Indefinite len conversion failed
+Unsupported JNI version 0x
+java.vm.specification.version
+java.specification.version
+CTypeConversionSupportImpl.java
+CTypeConversionSupport.java
+StringNumberConversions.kt
+StringNumberConversionsJVM.kt
+installer.BaseOverlayOperation
+arrayCopyWithConversionsS4S4
+arrayCopyWithConversionsS4S2
+arrayCopyWithConversionsS4S1
+arrayCopyWithConversionsS2S4
+arrayCopyWithConversionsS2S2
+arrayCopyWithConversionsS2S1
+arrayCopyWithConversionsS1S4
+arrayCopyWithConversionsS1S2
+arrayCopyWithConversionsS1S1
+Linstaller/BaseOverlayOperation;
+checkDebugMetadataVersion
+java.lang.Package$VersionInfo
+java.util.Formatter$Conversion
+AppsConfig(version=
+ReflectSdkVersion
+Conversion = '%s'
+Provider.id version
+java.class.version
+java.version.date
+java.vendor.version
+java.runtime.version
+CTypeConversion.java
+BaseOverlayOperation.kt
+dropModuleVersion
+exactDecimalConversion
+rawCompiledVersion
+cachedOsNameAndVersion
+Linstaller/Uninstaller;
+apiVersionIsAtLeast
+installer.Uninstaller
+ReflectSdkVersion
+GetFileVersionInfoW
+GetFileVersionInfoSizeW
+checkSupportedJNIVersion
+getOverlayDirPath
+getRadixConversionCache
+getOsNameAndVersion
+JavaVersionUtil.java
+TypeConversion.java
+TZCanonicalIDMapHolder
+installer.Uninstaller
+Conversion = 
+, version: 
+ version 
+java.vm.version
+java.version
+os.version
+GetVersion
+versionStr
+compiledVersion
+rawVersionString
+moduleVersion
+specVersion
+versionInfo
+bytecodeVersion
+metadataVersion
+versionId
+getVersion
+sdkVersion
+GetVersionExA
+osVersionValue
+serialVersionUID
+failConversion
+toNameAndVersion
+conversion
+parseVersionStr
+uninstallOverlay
+switchMode
+installOverlay
+VersionInfo
+Conversion
+JNIVersion.java
+Version: 
+--uninstall
+Uninstaller.kt
+version
+remount
+version:
+oidMap
+Version
+/vendor/overlay/
+Version: 
+Version: 
+META-INF/version-control-info.textprotoKO
+latest_app_version
+system_version_title
+i~~D8{"backend":"dex","compilation-mode":"release","has-checksums":false,"min-api":28,"version":"8.13.19"}
+latest_app_version
+system_version_title
+META-INF/version-control-info.textprotoPK
+host:version
+cannot parse version string: %s
+adb server version (%d) doesn't match this client (%d); killing...
+Failed to get bugreportz version, which is only available on devices running Android 7.0 or later.
+Failed to get bugreportz version: 'bugreportz -v' returned '%s' (code %d).
+failed to check server version: %s
+remount
+--version
+version
+ version                  show version num
+app installation (see also `adb shell cmd package help`):
+     -d: allow version code downgrade (debuggable packages only)
+     --fastdeploy: use fast deploy
+     --no-fastdeploy: prevent use of fast deploy
+     --date-check-agent: update deployment agent when local version is newer and using fast deploy
+     --version-check-agent: update deployment agent when local version has different version code and using fast deploy
+ remount [-R]
+      remount partitions read-write. if a reboot is required, -R will
+sion-check-agent--version-check---date-check-agent
+Fast Deploy is only compatible with devices of API version %d or higher, ignoring.
+exec:cmd package
+If you truly wish to continue, execute 'adb shell pm uninstall -k'
+cmd package
+If you truly wish to continue, execute 'adb shell cmd package uninstall -k'.
+--fastdeploy
+--no-fastdeploy
+--version-check-agent
+--fastdeploy doesn't support .apex files
+/data/local/tmp/deployagent dump 3 %s
+Device agent version is old (%ld), re-deploying
+After update agent version remains old: %s
+shell:/data/local/tmp/deployagent apply - -pm %s
+shell:/data/local/tmp/deployagent apply - -o %s
+getprop ro.build.version.sdk
+/data/local/tmp/deployagent.jar
+/data/local/tmp/deployagent
+chmod 777 %s
+Failed to push fastdeploy agent to device.
+FASTDEPLOY
+com.android.fastdeploy.APKDump.name
+com.android.fastdeploy.APKDump.absolute_path
+com.android.fastdeploy.APKDump
+com.android.fastdeploy.APKEntry
+com.android.fastdeploy.APKMetaData.absolute_path
+com.android.fastdeploy.APKMetaData
+Android Debug Bridge version %d.%d.%d
+Version %s-%s
+version
+remount_shell
+mdns daemon version [Openscreen discovery 0.0.0]
+mdns daemon version [adb discovery 0.0.0]
+RtlGetVersion
+<Could not get handle to RtlGetVersion in ntdll.dll>
+version
+build_version_sdk_full
+_build_version_sdk_full*
+adb.proto.AdbServerStatus.version
+adb.proto.MdnsService.build_version_sdk_full
+.frro@idmap
+idmap: too small to contain any mapping
+idmap: target package ID is invalid (%02x)
+idmap: no mappings
+idmap: too many mappings. Only 255 are possible but %u are present
+Unable to get buffer of idmap asset file
+Overlay is broken
+idmap: unexpected NULL parameter
+idmap: target path exceeds idmap file format limit of 255 chars
+idmap: overlay path exceeds idmap file format limit of 255 chars
+idmap: invalid overlay package
+idmap: invalid target package
+idmap: no matching resources
+idmap: header is not word aligned
+idmap: header too small (%d bytes)
+idmap: no magic found in header (is 0x%08x, expected 0x%08x)
+idmap: version mismatch in header (is 0x%08x, expected 0x%08x)
+idmap: entry header is not word aligned
+idmap: entry header is too small (%u bytes)
+idmap: invalid type map (%u -> %u)
+idmap: too small (%u bytes) for the number of entries (%u)
+ERROR_headerVersion_wrong
+Installed zlib is not compatible with linked version (%s)
+: no conversion
+  Unknown pseudo relocation protocol version %d.
+packages/modules/adb/fastdeploy/deploypatchgenerator/apk_archive.cpp
+version
+Conversion of received record failed with error: 
+Version not supported
+profileservicedefaulthimselfdetailscontentsupportstartedmessagesuccessfashion<title>countryaccountcreatedstoriesresultsrunningprocesswritingobjectsvisiblewelcomearticleunknownnetworkcompanydynamicbrowserprivacyproblemServicerespectdisplayrequestreservewebsitehistoryfriendsoptionsworkingversionmillionchannelwindow.addressvisitedweathercorrectproductedirectforwardyou canremovedsubjectcontrolarchivecurrentreadinglibrarylimitedmanagerfurthersummarymachineminutesprivatecontextprogramsocietynumberswrittenenabledtriggersourcesloadingelementpartnerfinallyperfectmeaningsystemskeepingculture&quot;,journalprojectsurfaces&quot;expiresreviewsbalanceEnglishContentthroughPlease opinioncontactaverageprimaryvillageSpanishgallerydeclinemeetingmissionpopularqualitymeasuregeneralspeciessessionsectionwriterscounterinitialreportsfiguresmembersholdingdisputeearlierexpressdigitalpictureAnothermarriedtrafficleadingchangedcentralvictoryimages/reasonsstudiesfeaturelistingmust beschoolsVersionusuallyepisodeplayinggrowingobviousoverlaypresentactions</ul>
+<title>versionssaturdayterminalitempropengineersectionsdesignerproposal="false"Espa
+<!-- interviewWith the copies ofconsensuswas builtVenezuela(formerlythe statepersonnelstrategicfavour ofinventionWikipediacontinentvirtuallywhich wasprincipleComplete identicalshow thatprimitiveaway frommolecularpreciselydissolvedUnder theversion=">&nbsp;</It is the This is will haveorganismssome timeFriedrichwas firstthe only fact thatform id="precedingTechnicalphysicistoccurs innavigatorsection">span id="sought tobelow thesurviving}</style>his deathas in thecaused bypartiallyexisting using thewas givena list oflevels ofnotion ofOfficial dismissedscientistresemblesduplicateexplosiverecoveredall othergalleries{padding:people ofregion ofaddressesassociateimg alt="in modernshould bemethod ofreportingtimestampneeded tothe Greatregardingseemed toviewed asimpact onidea thatthe Worldheight ofexpandingThese arecurrent">carefullymaintainscharge ofClassicaladdressedpredictedownership<div id="right">
+pieces ofcompetingReferencetennesseewhich has version=</span> <</header>gives thehistorianvalue="">padding:0view thattogether,the most was foundsubset ofattack onchildren,points ofpersonal position:allegedlyClevelandwas laterand afterare givenwas stillscrollingdesign ofmakes themuch lessAmericans.
+  conversionabout the </p></div>integrated" lang="enPortuguesesubstituteindividualimpossiblemultimediaalmost allpx solid #apart fromsubject toin Englishcriticizedexcept forguidelinesoriginallyremarkablethe secondh2 class="<a title="(includingparametersprohibited= "http://dictionaryperceptionrevolutionfoundationpx;height:successfulsupportersmillenniumhis fatherthe &quot;no-repeat;commercialindustrialencouragedamount of unofficialefficiencyReferencescoordinatedisclaimerexpeditiondevelopingcalculatedsimplifiedlegitimatesubstring(0" class="completelyillustratefive yearsinstrumentPublishing1" class="psychologyconfidencenumber of absence offocused onjoined thestructurespreviously></iframe>once againbut ratherimmigrantsof course,a group ofLiteratureUnlike the</a>&nbsp;
+<div id="illustratedengineeringterritoriesauthoritiesdistributed6" height="sans-serif;capable of disappearedinteractivelooking forit would beAfghanistanwas createdMath.floor(surroundingcan also beobservationmaintenanceencountered<h2 class="more recentit has beeninvasion of).getTime()fundamentalDespite the"><div id="inspirationexaminationpreparationexplanation<input id="</a></span>versions ofinstrumentsbefore the  = 'http://Descriptionrelatively .substring(each of theexperimentsinfluentialintegrationmany peopledue to the combinationdo not haveMiddle East<noscript><copyright" perhaps theinstitutionin Decemberarrangementmost famouspersonalitycreation oflimitationsexclusivelysovereignty-content">
+<div id="incorporate;</script><attachEventbecame the " target="_carried outSome of thescience andthe time ofContainer">maintainingChristopherMuch of thewritings of" height="2size of theversion of mixture of between theExamples ofeducationalcompetitive onsubmit="director ofdistinctive/DTD XHTML relating totendency toprovince ofwhich woulddespite thescientific legislature.innerHTML allegationsAgriculturewas used inapproach tointelligentyears later,sans-serifdeterminingPerformanceappearances, which is foundationsabbreviatedhigher thans from the individual composed ofsupposed toclaims thatattributionfont-size:1elements ofHistorical his brotherat the timeanniversarygoverned byrelated to ultimately innovationsit is stillcan only bedefinitionstoGMTStringA number ofimg class="Eventually,was changedoccurred inneighboringdistinguishwhen he wasintroducingterrestrialMany of theargues thatan Americanconquest ofwidespread were killedscreen and In order toexpected todescendantsare locatedlegislativegenerations backgroundmost peopleyears afterthere is nothe highestfrequently they do notargued thatshowed thatpredominanttheologicalby the timeconsideringshort-lived</span></a>can be usedvery littleone of the had alreadyinterpretedcommunicatefeatures ofgovernment,</noscript>entered the" height="3Independentpopulationslarge-scale. Although used in thedestructionpossibilitystarting intwo or moreexpressionssubordinatelarger thanhistory and</option>
+Continentaleliminatingwill not bepractice ofin front ofsite of theensure thatto create amississippipotentiallyoutstandingbetter thanwhat is nowsituated inmeta name="TraditionalsuggestionsTranslationthe form ofatmosphericideologicalenterprisescalculatingeast of theremnants ofpluginspage/index.php?remained intransformedHe was alsowas alreadystatisticalin favor ofMinistry ofmovement offormulationis required<link rel="This is the <a href="/popularizedinvolved inare used toand severalmade by theseems to belikely thatPalestiniannamed afterit had beenmost commonto refer tobut this isconsecutivetemporarilyIn general,conventionstakes placesubdivisionterritorialoperationalpermanentlywas largelyoutbreak ofin the pastfollowing a xmlns:og="><a class="class="textConversion may be usedmanufactureafter beingclearfix">
+return false;">).style.displaybecause of the document.cookie<form action="/}body{margin:0;Encyclopedia ofversion of the .createElement(name" content="</div>
+link rel="icon" ' alt='' class='formation of theversions of the </a></div></div>/page>
+keywords" content="w3.org/1999/xhtml"><a target="_blank" text/html; charset=" target="_blank"><table cellpadding="autocomplete="off" text-align: center;to last version by background-color: #" href="http://www./div></div><div id=<a href="#" class=""><img src="http://cript" src="http://
+protocol_version
+external/boringssl/src/ssl/ssl_versions.cc
+documentVersion
+version
+version
+BAD_VERSION
+UNSUPPORTED_PROC_TYPE_VERSION
+BAD_PKCS7_VERSION
+BAD_PKCS12_VERSION
+NO_SUPPORTED_VERSIONS_ENABLED
+OLD_SESSION_VERSION_NOT_RETURNED
+SECOND_SERVERHELLO_VERSION_MISMATCH
+SSL_CTX_HAS_NO_DEFAULT_SSL_VERSION
+TLSV1_ALERT_PROTOCOL_VERSION
+UNKNOWN_SSL_VERSION
+WRONG_SSL_VERSION
+WRONG_VERSION_NUMBER
+WRONG_VERSION_ON_EARLY_DATA
+INVALID_FIELD_FOR_VERSION
+INVALID_VERSION
+version
+failed to detect Windows version
+Windows version is too old
+get_windows_version
+This program requires version 
+ of the Protocol Buffer runtime library, but the installed version is 
+.  Please update your library.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
+This program was compiled against version 
+ of the Protocol Buffer runtime library, which is not compatible with the installed version (
+).  Contact the program author for an update.  If you compiled the program yourself, make sure that your headers are from the same version of Protocol Buffers as your link-time library.  (Version verification failed in "
+incompatible version
+PairingPacketHeader version mismatch (us=
+ConversionOperatorType
+ConversionExpr
+PointerToMemberConversionExpr
+N12_GLOBAL__N_116itanium_demangle14ConversionExprE
+N12_GLOBAL__N_116itanium_demangle29PointerToMemberConversionExprE
+N12_GLOBAL__N_116itanium_demangle22ConversionOperatorTypeE
+LibK_GetVersion
+libusbK DLL found, version: %d.%d.%d.%d
+libusbK DLL found, version unknown
+%8sVersion: %ld (0x%lx)
+EC_GROUP_set_point_conversion_form
+FIPS_version
+OpenSSL_version
+OpenSSL_version_num
+SSL_CIPHER_get_max_version
+SSL_CIPHER_get_min_version
+SSL_CIPHER_get_version
+SSL_CTX_get_max_proto_version
+SSL_CTX_get_min_proto_version
+SSL_CTX_set_max_proto_version
+SSL_CTX_set_min_proto_version
+SSL_CTX_set_record_protocol_version
+SSL_SESSION_get_protocol_version
+SSL_SESSION_get_version
+SSL_SESSION_set_protocol_version
+SSL_get_all_version_names
+SSL_get_max_proto_version
+SSL_get_min_proto_version
+SSL_get_version
+SSL_set_max_proto_version
+SSL_set_min_proto_version
+SSL_version
+SSLeay_version
+X509_CRL_get_version
+X509_CRL_set_version
+X509_REQ_get_version
+X509_get_version
+X509_set_version
+GetVersionExA
+VerifyVersionInfoA
+_wchmod
+/mnt/disks/build-disk/src/googleplex-android/sdk-release/out/soong/.intermediates/packages/modules/adb/adb/windows_x86/unversioned/adb.pdb
+META-INF/MANIFEST.MFManifest-Version: 1.0
+export CLASSPATH=$base/deployagent.jar
+exec app_process $base com.android.fastdeploy.DeployAgent "$@"
+com.android.fastdeploy.APKDumpnameabsolute_path
+com.android.fastdeploy.APKMetaDataabsolute_path
+adb.proto.AdbServerStatusversionbuildexecutable_absolute_pathlog_absolute_pathostrace_levelkeystore_pathknown_hosts_path
+adb.proto.MdnsServiceinstanceservicedomainipv4ipv6product_modelbuild_version_sdk_full

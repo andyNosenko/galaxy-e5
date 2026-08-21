@@ -1,0 +1,3399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+      Русская локаль для overlay. Редактируйте текст в <string>.
+      original[...] — оригинал с авто (справка).
+      При первом создании в <string> подставляется оригинал.
+    -->
+
+    <!-- original[values]: На главную -->
+    <!-- original[values-zh-rCN]: На главную -->
+    <!-- original[values-en-rUS]: На главную -->
+    <!-- starshine: На главную -->
+    <string name="abc_action_bar_home_description">На главную</string>
+
+    <!-- original[values]: Вверх -->
+    <!-- original[values-zh-rCN]: Вверх -->
+    <!-- original[values-en-rUS]: Вверх -->
+    <!-- starshine: Вверх -->
+    <string name="abc_action_bar_up_description">Вверх</string>
+
+    <!-- original[values]: Другие параметры -->
+    <!-- original[values-zh-rCN]: Другие параметры -->
+    <!-- original[values-en-rUS]: Другие параметры -->
+    <!-- starshine: Другие параметры -->
+    <string name="abc_action_menu_overflow_description">Другие параметры</string>
+
+    <!-- original[values]: Готово -->
+    <!-- original[values-zh-rCN]: Готово -->
+    <!-- original[values-en-rUS]: Готово -->
+    <!-- starshine: Готово -->
+    <string name="abc_action_mode_done">Готово</string>
+
+    <!-- original[values]: Смотреть все -->
+    <!-- original[values-zh-rCN]: Смотреть все -->
+    <!-- original[values-en-rUS]: Смотреть все -->
+    <!-- starshine: Смотреть все -->
+    <string name="abc_activity_chooser_view_see_all">Смотреть все</string>
+
+    <!-- original[values]: Выберите приложение -->
+    <!-- original[values-zh-rCN]: Выберите приложение -->
+    <!-- original[values-en-rUS]: Выберите приложение -->
+    <!-- starshine: Выберите приложение -->
+    <string name="abc_activitychooserview_choose_application">Выберите приложение</string>
+
+    <!-- original[values]: ВЫКЛ -->
+    <!-- original[values-zh-rCN]: ВЫКЛ -->
+    <!-- original[values-en-rUS]: ВЫКЛ -->
+    <!-- starshine: ВЫКЛ -->
+    <string name="abc_capital_off">ВЫКЛ</string>
+
+    <!-- original[values]: ВКЛ -->
+    <!-- original[values-zh-rCN]: ВКЛ -->
+    <!-- original[values-en-rUS]: ВКЛ -->
+    <!-- starshine: ВКЛ -->
+    <string name="abc_capital_on">ВКЛ</string>
+
+    <!-- original[values]: Alt+ -->
+    <!-- original[values-zh-rCN]: Alt+ -->
+    <!-- original[values-en-rUS]: Alt+ -->
+    <!-- starshine: Alt+ -->
+    <string name="abc_menu_alt_shortcut_label">Alt+</string>
+
+    <!-- original[values]: Ctrl+ -->
+    <!-- original[values-zh-rCN]: Ctrl+ -->
+    <!-- original[values-en-rUS]: Ctrl+ -->
+    <!-- starshine: Ctrl+ -->
+    <string name="abc_menu_ctrl_shortcut_label">Ctrl+</string>
+
+    <!-- original[values]: delete -->
+    <!-- original[values-zh-rCN]: delete -->
+    <!-- original[values-en-rUS]: delete -->
+    <!-- starshine: delete -->
+    <string name="abc_menu_delete_shortcut_label">delete</string>
+
+    <!-- original[values]: enter -->
+    <!-- original[values-zh-rCN]: enter -->
+    <!-- original[values-en-rUS]: enter -->
+    <!-- starshine: enter -->
+    <string name="abc_menu_enter_shortcut_label">enter</string>
+
+    <!-- original[values]: Fn+ -->
+    <!-- original[values-zh-rCN]: Fn+ -->
+    <!-- original[values-en-rUS]: Fn+ -->
+    <!-- starshine: Fn+ -->
+    <string name="abc_menu_function_shortcut_label">Fn+</string>
+
+    <!-- original[values]: Meta+ -->
+    <!-- original[values-zh-rCN]: Meta+ -->
+    <!-- original[values-en-rUS]: Meta+ -->
+    <!-- starshine: Meta+ -->
+    <string name="abc_menu_meta_shortcut_label">Meta+</string>
+
+    <!-- original[values]: Shift+ -->
+    <!-- original[values-zh-rCN]: Shift+ -->
+    <!-- original[values-en-rUS]: Shift+ -->
+    <!-- starshine: Shift+ -->
+    <string name="abc_menu_shift_shortcut_label">Shift+</string>
+
+    <!-- original[values]: пробел -->
+    <!-- original[values-zh-rCN]: пробел -->
+    <!-- original[values-en-rUS]: пробел -->
+    <!-- starshine: пробел -->
+    <string name="abc_menu_space_shortcut_label">пробел</string>
+
+    <!-- original[values]: Sym+ -->
+    <!-- original[values-zh-rCN]: Sym+ -->
+    <!-- original[values-en-rUS]: Sym+ -->
+    <!-- starshine: Sym+ -->
+    <string name="abc_menu_sym_shortcut_label">Sym+</string>
+
+    <!-- original[values]: Menu+ -->
+    <!-- original[values-zh-rCN]: Menu+ -->
+    <!-- original[values-en-rUS]: Menu+ -->
+    <!-- starshine: Menu+ -->
+    <string name="abc_prepend_shortcut_label">Menu+</string>
+
+    <!-- original[values]: Поиск… -->
+    <!-- original[values-zh-rCN]: Поиск… -->
+    <!-- original[values-en-rUS]: Поиск… -->
+    <!-- starshine: Поиск… -->
+    <string name="abc_search_hint">Поиск…</string>
+
+    <!-- original[values]: Очистить запрос -->
+    <!-- original[values-zh-rCN]: Очистить запрос -->
+    <!-- original[values-en-rUS]: Очистить запрос -->
+    <!-- starshine: Очистить запрос -->
+    <string name="abc_searchview_description_clear">Очистить запрос</string>
+
+    <!-- original[values]: Поисковый запрос -->
+    <!-- original[values-zh-rCN]: Поисковый запрос -->
+    <!-- original[values-en-rUS]: Поисковый запрос -->
+    <!-- starshine: Поисковый запрос -->
+    <string name="abc_searchview_description_query">Поисковый запрос</string>
+
+    <!-- original[values]: Поиск -->
+    <!-- original[values-zh-rCN]: Поиск -->
+    <!-- original[values-en-rUS]: Поиск -->
+    <!-- starshine: Поиск -->
+    <string name="abc_searchview_description_search">Поиск</string>
+
+    <!-- original[values]: Отправить запрос -->
+    <!-- original[values-zh-rCN]: Отправить запрос -->
+    <!-- original[values-en-rUS]: Отправить запрос -->
+    <!-- starshine: Отправить запрос -->
+    <string name="abc_searchview_description_submit">Отправить запрос</string>
+
+    <!-- original[values]: Голосовой поиск -->
+    <!-- original[values-zh-rCN]: Голосовой поиск -->
+    <!-- original[values-en-rUS]: Голосовой поиск -->
+    <!-- starshine: Голосовой поиск -->
+    <string name="abc_searchview_description_voice">Голосовой поиск</string>
+
+    <!-- original[values]: Поделиться с -->
+    <!-- original[values-zh-rCN]: Поделиться с -->
+    <!-- original[values-en-rUS]: Поделиться с -->
+    <!-- starshine: Поделиться с -->
+    <string name="abc_shareactionprovider_share_with">Поделиться с</string>
+
+    <!-- original[values]: Поделиться с %s -->
+    <!-- original[values-zh-rCN]: Поделиться с %s -->
+    <!-- original[values-en-rUS]: Поделиться с %s -->
+    <!-- starshine: Поделиться с %s -->
+    <string name="abc_shareactionprovider_share_with_application">Поделиться с %s</string>
+
+    <!-- original[values]: Свернуть -->
+    <!-- original[values-zh-rCN]: Свернуть -->
+    <!-- original[values-en-rUS]: Свернуть -->
+    <!-- starshine: Свернуть -->
+    <string name="abc_toolbar_collapse_description">Свернуть</string>
+
+    <!-- original[values]: Зарядка -->
+    <!-- original[values-zh-rCN]: Зарядка -->
+    <!-- original[values-en-rUS]: Зарядка -->
+    <!-- starshine: Зарядка -->
+    <string name="ac_charging_time_area">Зарядка</string>
+
+    <!-- original[values]: Приоритет экономии топлива -->
+    <!-- original[values-zh-rCN]: Приоритет экономии топлива -->
+    <!-- original[values-en-rUS]: Приоритет экономии топлива -->
+    <!-- starshine: Приоритет экономии топлива -->
+    <string name="adaptive_power_maintenance">Приоритет экономии топлива</string>
+
+    <!-- original[values]: Приоритет экономии топлива -->
+    <!-- original[values-zh-rCN]: Приоритет экономии топлива -->
+    <!-- original[values-en-rUS]: Приоритет экономии топлива -->
+    <!-- starshine: Приоритет экономии топлива -->
+    <string name="adaptive_power_maintenance_meth">Приоритет экономии топлива</string>
+
+    <!-- original[values]: Энергия -->
+    <!-- original[values-zh-rCN]: Энергия -->
+    <!-- original[values-en-rUS]: Энергия -->
+    <!-- starshine: Энергия -->
+    <string name="app_name">Энергия</string>
+
+    <!-- original[values]: Средняя скорость -->
+    <!-- original[values-zh-rCN]: Средняя скорость -->
+    <!-- original[values-en-rUS]: Средняя скорость -->
+    <!-- starshine: Средняя скорость -->
+    <string name="ave_speed">Средняя скорость</string>
+
+    <!-- original[values]: Средний расход -->
+    <!-- original[values-zh-rCN]: Средний расход -->
+    <!-- original[values-en-rUS]: Средний расход -->
+    <!-- starshine: Средний расход -->
+    <string name="average_fuel_consumption">Средний расход</string>
+
+    <!-- original[values]: Средний расход на 100 км -->
+    <!-- original[values-zh-rCN]: Средний расход на 100 км -->
+    <!-- original[values-en-rUS]: Средний расход на 100 км -->
+    <!-- starshine: Средний расход на 100 км -->
+    <string name="average_fuel_consumption_perhundred_kilometers">Средний расход на 100 км</string>
+
+    <!-- original[values]: Средний расход топлива -->
+    <!-- original[values-zh-rCN]: Средний расход топлива -->
+    <!-- original[values-en-rUS]: Средний расход топлива -->
+    <!-- starshine: Средний расход топлива -->
+    <string name="average_fuel_meth_consumption">Средний расход топлива</string>
+
+    <!-- original[values]: Средний расход -->
+    <!-- original[values-zh-rCN]: Средний расход -->
+    <!-- original[values-en-rUS]: Средний расход -->
+    <!-- starshine: Средний расход -->
+    <string name="average_meth_consumption">Средний расход</string>
+
+    <!-- original[values]: Средний расход -->
+    <!-- original[values-zh-rCN]: Средний расход -->
+    <!-- original[values-en-rUS]: Средний расход -->
+    <!-- starshine: Средний расход -->
+    <string name="average_power_consumption">Средний расход</string>
+
+    <!-- original[values]: Средний расход на 100 км -->
+    <!-- original[values-zh-rCN]: Средний расход на 100 км -->
+    <!-- original[values-en-rUS]: Средний расход на 100 км -->
+    <!-- starshine: Средний расход на 100 км -->
+    <string name="average_power_consumption_perhundred_kilometers">Средний расход на 100 км</string>
+
+    <!-- original[values]: вернуться к сегодняшнему дню -->
+    <!-- original[values-zh-rCN]: вернуться к сегодняшнему дню -->
+    <!-- original[values-en-rUS]: вернуться к сегодняшнему дню -->
+    <!-- starshine: вернуться к сегодняшнему дню -->
+    <string name="back_to_today">вернуться к сегодняшнему дню</string>
+
+    <!-- original[values]: неизвестная ошибка -->
+    <!-- original[values-zh-rCN]: неизвестная ошибка -->
+    <!-- original[values-en-rUS]: неизвестная ошибка -->
+    <!-- starshine: неизвестная ошибка -->
+    <string name="bar_chart_state_error_unknown">неизвестная ошибка</string>
+
+    <!-- original[values]: загрузка… -->
+    <!-- original[values-zh-rCN]: загрузка… -->
+    <!-- original[values-en-rUS]: загрузка… -->
+    <!-- starshine: загрузка… -->
+    <string name="bar_chart_state_loading">загрузка…</string>
+
+    <!-- original[values]: Нет данных -->
+    <!-- original[values-zh-rCN]: Нет данных -->
+    <!-- original[values-en-rUS]: Нет данных -->
+    <!-- starshine: Нет данных -->
+    <string name="bar_chart_state_no_data">Нет данных</string>
+
+    <!-- original[values]: Нет сети -->
+    <!-- original[values-zh-rCN]: Нет сети -->
+    <!-- original[values-en-rUS]: Нет сети -->
+    <!-- starshine: Нет сети -->
+    <string name="bar_chart_state_no_network">Нет сети</string>
+
+    <!-- original[values]: Ошибка защиты заряда -->
+    <!-- original[values-zh-rCN]: Ошибка защиты заряда -->
+    <!-- original[values-en-rUS]: Ошибка защиты заряда -->
+    <!-- starshine: Ошибка защиты заряда -->
+    <string name="battery_charge_open">Ошибка защиты заряда</string>
+
+    <!-- original[values]: Ошибка энергосбережения -->
+    <!-- original[values-zh-rCN]: Ошибка энергосбережения -->
+    <!-- original[values-en-rUS]: Ошибка энергосбережения -->
+    <!-- starshine: Ошибка энергосбережения -->
+    <string name="battery_save_open">Ошибка энергосбережения</string>
+
+    <!-- original[values]: Ошибка отчета расхода -->
+    <!-- original[values-zh-rCN]: Ошибка отчета расхода -->
+    <!-- original[values-en-rUS]: Ошибка отчета расхода -->
+    <!-- starshine: Ошибка отчета расхода -->
+    <string name="battery_soc_open">Ошибка отчета расхода</string>
+
+    <!-- original[values]: Для сохранения ресурса батареи рекомендуется полностью заряжать её раз в неделю. -->
+    <!-- original[values-zh-rCN]: Для сохранения ресурса батареи рекомендуется полностью заряжать её раз в неделю. -->
+    <!-- original[values-en-rUS]: Для сохранения ресурса батареи рекомендуется полностью заряжать её раз в неделю. -->
+    <!-- starshine: Для сохранения ресурса батареи рекомендуется полностью заряжать её раз в неделю. -->
+    <string name="battery_type_notice">Для сохранения ресурса батареи рекомендуется полностью заряжать её раз в неделю.</string>
+
+    <!-- original[values]: "Подготовка
+батареи" -->
+    <!-- original[values-zh-rCN]: "Подготовка
+батареи" -->
+    <!-- original[values-en-rUS]: "Подготовка
+батареи" -->
+    <!-- starshine: "Подготовка
+батареи" -->
+    <string name="book_travel_battery">"Подготовка
+батареи"</string>
+
+    <!-- original[values]: Оптимальная температура батареи перед поездкой -->
+    <!-- original[values-zh-rCN]: Оптимальная температура батареи перед поездкой -->
+    <!-- original[values-en-rUS]: Оптимальная температура батареи перед поездкой -->
+    <!-- starshine: Оптимальная температура батареи перед поездкой -->
+    <string name="book_travel_battery_content">Оптимальная температура батареи перед поездкой</string>
+
+    <!-- original[values]: "Подготовка батареи:
+Система достигает оптимальной температуры для увеличения запаса хода. Недоступно при низком заряде. Рекомендуется при <0°C или >40°C." -->
+    <!-- original[values-zh-rCN]: "Подготовка батареи:
+Система достигает оптимальной температуры для увеличения запаса хода. Недоступно при низком заряде. Рекомендуется при <0°C или >40°C." -->
+    <!-- original[values-en-rUS]: "Подготовка батареи:
+Система достигает оптимальной температуры для увеличения запаса хода. Недоступно при низком заряде. Рекомендуется при <0°C или >40°C." -->
+    <!-- starshine: "Подготовка батареи:
+Система достигает оптимальной температуры для увеличения запаса хода. Недоступно при низком заряде. Рекомендуется при <0°C или >40°C." -->
+    <string name="book_travel_battery_tip">"Подготовка батареи:
+Система достигает оптимальной температуры для увеличения запаса хода. Недоступно при низком заряде. Рекомендуется при &lt;0°C или &gt;40°C."</string>
+
+    <!-- original[values]: "Подготовка
+климата" -->
+    <!-- original[values-zh-rCN]: "Подготовка
+климата" -->
+    <!-- original[values-en-rUS]: "Подготовка
+климата" -->
+    <!-- starshine: "Подготовка
+климата" -->
+    <string name="book_travel_climate">"Подготовка
+климата"</string>
+
+    <!-- original[values]: Комфортная температура в салоне перед поездкой -->
+    <!-- original[values-zh-rCN]: Комфортная температура в салоне перед поездкой -->
+    <!-- original[values-en-rUS]: Комфортная температура в салоне перед поездкой -->
+    <!-- starshine: Комфортная температура в салоне перед поездкой -->
+    <string name="book_travel_climate_content">Комфортная температура в салоне перед поездкой</string>
+
+    <!-- original[values]: "Комфорт салона:
+Настройка температуры, подогрева сидений и руля перед поездкой." -->
+    <!-- original[values-zh-rCN]: "Комфорт салона:
+Настройка температуры, подогрева сидений и руля перед поездкой." -->
+    <!-- original[values-en-rUS]: "Комфорт салона:
+Настройка температуры, подогрева сидений и руля перед поездкой." -->
+    <!-- starshine: "Комфорт салона:
+Настройка температуры, подогрева сидений и руля перед поездкой." -->
+    <string name="book_travel_climate_tip">"Комфорт салона:
+Настройка температуры, подогрева сидений и руля перед поездкой."</string>
+
+    <!-- original[values]: Ошибка настройки, повторите -->
+    <!-- original[values-zh-rCN]: Ошибка настройки, повторите -->
+    <!-- original[values-en-rUS]: Ошибка настройки, повторите -->
+    <!-- starshine: Ошибка настройки, повторите -->
+    <string name="book_travel_error">Ошибка настройки, повторите</string>
+
+    <!-- original[values]: Успешно настроено -->
+    <!-- original[values-zh-rCN]: Успешно настроено -->
+    <!-- original[values-en-rUS]: Успешно настроено -->
+    <!-- starshine: Успешно настроено -->
+    <string name="book_travel_success">Успешно настроено</string>
+
+    <!-- original[values]: Установите время поездки -->
+    <!-- original[values-zh-rCN]: Установите время поездки -->
+    <!-- original[values-en-rUS]: Установите время поездки -->
+    <!-- starshine: Установите время поездки -->
+    <string name="book_travel_time">Установите время поездки</string>
+
+    <!-- original[values]: Настройка времени -->
+    <!-- original[values-zh-rCN]: Настройка времени -->
+    <!-- original[values-en-rUS]: Настройка времени -->
+    <!-- starshine: Настройка времени -->
+    <string name="book_travel_time_title">Настройка времени</string>
+
+    <!-- original[values]: "Подготовка батареи:
+Использование энергии для оптимальной температуры.
+
+Подготовка климата:
+Настройка температуры салона, подогрева сидений и руля." -->
+    <!-- original[values-zh-rCN]: "Подготовка батареи:
+Использование энергии для оптимальной температуры.
+
+Подготовка климата:
+Настройка температуры салона, подогрева сидений и руля." -->
+    <!-- original[values-en-rUS]: "Подготовка батареи:
+Использование энергии для оптимальной температуры.
+
+Подготовка климата:
+Настройка температуры салона, подогрева сидений и руля." -->
+    <!-- starshine: "Подготовка батареи:
+Использование энергии для оптимальной температуры.
+
+Подготовка климата:
+Настройка температуры салона, подогрева сидений и руля." -->
+    <string name="book_travel_tip">"Подготовка батареи:
+Использование энергии для оптимальной температуры.
+
+Подготовка климата:
+Настройка температуры салона, подогрева сидений и руля."</string>
+
+    <!-- original[values]: Сначала включите подготовку батареи или климата -->
+    <!-- original[values-zh-rCN]: Сначала включите подготовку батареи или климата -->
+    <!-- original[values-en-rUS]: Сначала включите подготовку батареи или климата -->
+    <!-- starshine: Сначала включите подготовку батареи или климата -->
+    <string name="book_travel_tip_toast">Сначала включите подготовку батареи или климата</string>
+
+    <!-- original[values]: Запланировать поездку -->
+    <!-- original[values-zh-rCN]: Запланировать поездку -->
+    <!-- original[values-en-rUS]: Запланировать поездку -->
+    <!-- starshine: Запланировать поездку -->
+    <string name="book_travel_title">Запланировать поездку</string>
+
+    <!-- original[values]: Раскрыть наполовину -->
+    <!-- original[values-zh-rCN]: Раскрыть наполовину -->
+    <!-- original[values-en-rUS]: Раскрыть наполовину -->
+    <!-- starshine: Раскрыть наполовину -->
+    <string name="bottomsheet_action_expand_halfway">Раскрыть наполовину</string>
+
+    <!-- original[values]: Ответить -->
+    <!-- original[values-zh-rCN]: Ответить -->
+    <!-- original[values-en-rUS]: Ответить -->
+    <!-- starshine: Ответить -->
+    <string name="call_notification_answer_action">Ответить</string>
+
+    <!-- original[values]: Видео -->
+    <!-- original[values-zh-rCN]: Видео -->
+    <!-- original[values-en-rUS]: Видео -->
+    <!-- starshine: Видео -->
+    <string name="call_notification_answer_video_action">Видео</string>
+
+    <!-- original[values]: Отклонить -->
+    <!-- original[values-zh-rCN]: Отклонить -->
+    <!-- original[values-en-rUS]: Отклонить -->
+    <!-- starshine: Отклонить -->
+    <string name="call_notification_decline_action">Отклонить</string>
+
+    <!-- original[values]: Завершить -->
+    <!-- original[values-zh-rCN]: Завершить -->
+    <!-- original[values-en-rUS]: Завершить -->
+    <!-- starshine: Завершить -->
+    <string name="call_notification_hang_up_action">Завершить</string>
+
+    <!-- original[values]: Входящий вызов -->
+    <!-- original[values-zh-rCN]: Входящий вызов -->
+    <!-- original[values-en-rUS]: Входящий вызов -->
+    <!-- starshine: Входящий вызов -->
+    <string name="call_notification_incoming_text">Входящий вызов</string>
+
+    <!-- original[values]: Текущий вызов -->
+    <!-- original[values-zh-rCN]: Текущий вызов -->
+    <!-- original[values-en-rUS]: Текущий вызов -->
+    <!-- starshine: Текущий вызов -->
+    <string name="call_notification_ongoing_text">Текущий вызов</string>
+
+    <!-- original[values]: Проверка вызова -->
+    <!-- original[values-zh-rCN]: Проверка вызова -->
+    <!-- original[values-en-rUS]: Проверка вызова -->
+    <!-- starshine: Проверка вызова -->
+    <string name="call_notification_screening_text">Проверка вызова</string>
+
+    <!-- original[values]: Отмена -->
+    <!-- original[values-zh-rCN]: Отмена -->
+    <!-- original[values-en-rUS]: Отмена -->
+    <!-- starshine: Отмена -->
+    <string name="cancel">Отмена</string>
+
+    <!-- original[values]: Введено: %1$d из %2$d -->
+    <!-- original[values-zh-rCN]: Введено: %1$d из %2$d -->
+    <!-- original[values-en-rUS]: Введено: %1$d из %2$d -->
+    <!-- starshine: Введено: %1$d из %2$d -->
+    <string name="character_counter_content_description">Введено: %1$d из %2$d</string>
+
+    <!-- original[values]: Лимит превышен: %1$d из %2$d -->
+    <!-- original[values-zh-rCN]: Лимит превышен: %1$d из %2$d -->
+    <!-- original[values-en-rUS]: Лимит превышен: %1$d из %2$d -->
+    <!-- starshine: Лимит превышен: %1$d из %2$d -->
+    <string name="character_counter_overflowed_content_description">Лимит превышен: %1$d из %2$d</string>
+
+    <!-- original[values]: %1$d/%2$d -->
+    <!-- original[values-zh-rCN]: %1$d/%2$d -->
+    <!-- original[values-en-rUS]: %1$d/%2$d -->
+    <!-- starshine: %1$d/%2$d -->
+    <string name="character_counter_pattern">%1$d/%2$d</string>
+
+    <!-- original[values]: Сбой зарядки -->
+    <!-- original[values-zh-rCN]: Сбой зарядки -->
+    <!-- original[values-en-rUS]: Сбой зарядки -->
+    <!-- starshine: Сбой зарядки -->
+    <string name="charge_abnormal">Сбой зарядки</string>
+
+    <!-- original[values]: Зарядка с ошибками -->
+    <!-- original[values-zh-rCN]: Зарядка с ошибками -->
+    <!-- original[values-en-rUS]: Зарядка с ошибками -->
+    <!-- starshine: Зарядка с ошибками -->
+    <string name="charge_abnormal_notification">Зарядка с ошибками</string>
+
+    <!-- original[values]: Переподключите кабель или обратитесь в сервис -->
+    <!-- original[values-zh-rCN]: Переподключите кабель или обратитесь в сервис -->
+    <!-- original[values-en-rUS]: Переподключите кабель или обратитесь в сервис -->
+    <!-- starshine: Переподключите кабель или обратитесь в сервис -->
+    <string name="charge_abnormal_notification_content">Переподключите кабель или обратитесь в сервис</string>
+
+    <!-- original[values]: Переподключите кабель или обратитесь в сервис -->
+    <!-- original[values-zh-rCN]: Переподключите кабель или обратитесь в сервис -->
+    <!-- original[values-en-rUS]: Переподключите кабель или обратитесь в сервис -->
+    <!-- starshine: Переподключите кабель или обратитесь в сервис -->
+    <string name="charge_abnormal_summary">Переподключите кабель или обратитесь в сервис</string>
+
+    <!-- original[values]: Кондиционер выкл. -->
+    <!-- original[values-zh-rCN]: Кондиционер выкл. -->
+    <!-- original[values-en-rUS]: Кондиционер выкл. -->
+    <!-- starshine: Кондиционер выкл. -->
+    <string name="charge_air_conditioner">Кондиционер выкл.</string>
+
+    <!-- original[values]: Выключить подсветку -->
+    <!-- original[values-zh-rCN]: Выключить подсветку -->
+    <!-- original[values-en-rUS]: Выключить подсветку -->
+    <!-- starshine: Выключить подсветку -->
+    <string name="charge_ambient_lighting">Выключить подсветку</string>
+
+    <!-- original[values]: Старт в %s -->
+    <!-- original[values-zh-rCN]: Старт в %s -->
+    <!-- original[values-en-rUS]: Старт в %s -->
+    <!-- starshine: Старт в %s -->
+    <string name="charge_booking_info">Старт в %s</string>
+
+    <!-- original[values]: Зарядка запланирована -->
+    <!-- original[values-zh-rCN]: Зарядка запланирована -->
+    <!-- original[values-en-rUS]: Зарядка запланирована -->
+    <!-- starshine: Зарядка запланирована -->
+    <string name="charge_booking_title">Зарядка запланирована</string>
+
+    <!-- original[values]: Выключение мультимедиа -->
+    <!-- original[values-zh-rCN]: Выключение мультимедиа -->
+    <!-- original[values-en-rUS]: Выключение мультимедиа -->
+    <!-- starshine: Выключение мультимедиа -->
+    <string name="charge_brightness">Выключение мультимедиа</string>
+
+    <!-- original[values]: "Заряжено: %s кВт·ч.
+Отключите кабель перед запуском." -->
+    <!-- original[values-zh-rCN]: "Заряжено: %s кВт·ч.
+Отключите кабель перед запуском." -->
+    <!-- original[values-en-rUS]: "Заряжено: %s кВт·ч.
+Отключите кабель перед запуском." -->
+    <!-- starshine: "Заряжено: %s кВт·ч.
+Отключите кабель перед запуском." -->
+    <string name="charge_completed_area">"Заряжено: %s кВт·ч.
+Отключите кабель перед запуском."</string>
+
+    <!-- original[values]: "Установите ток согласно сети:
+- 8 А для розеток 10 А
+- 13 А для розеток 16 А" -->
+    <!-- original[values-zh-rCN]: "Установите ток согласно сети:
+- 8 А для розеток 10 А
+- 13 А для розеток 16 А" -->
+    <!-- original[values-en-rUS]: "Установите ток согласно сети:
+- 8 А для розеток 10 А
+- 13 А для розеток 16 А" -->
+    <!-- starshine: "Установите ток согласно сети:
+- 8 А для розеток 10 А
+- 13 А для розеток 16 А" -->
+    <string name="charge_current_notice">"Установите ток согласно сети:
+- 8 А для розеток 10 А
+- 13 А для розеток 16 А"</string>
+
+    <!-- original[values]: Зарядка и отдача энергии -->
+    <!-- original[values-zh-rCN]: Зарядка и отдача энергии -->
+    <!-- original[values-en-rUS]: Зарядка и отдача энергии -->
+    <!-- starshine: Зарядка и отдача энергии -->
+    <string name="charge_discharge">Зарядка и отдача энергии</string>
+
+    <!-- original[values]: Режим электропривода -->
+    <!-- original[values-zh-rCN]: Режим электропривода -->
+    <!-- original[values-en-rUS]: Режим электропривода -->
+    <!-- starshine: Режим электропривода -->
+    <string name="charge_driving_mode">Режим электропривода</string>
+
+    <!-- original[values]: Зарядка завершена -->
+    <!-- original[values-zh-rCN]: Зарядка завершена -->
+    <!-- original[values-en-rUS]: Зарядка завершена -->
+    <!-- starshine: Зарядка завершена -->
+    <string name="charge_end">Зарядка завершена</string>
+
+    <!-- original[values]: Макс. рекуперация -->
+    <!-- original[values-zh-rCN]: Макс. рекуперация -->
+    <!-- original[values-en-rUS]: Макс. рекуперация -->
+    <!-- starshine: Макс. рекуперация -->
+    <string name="charge_energy_recovery">Макс. рекуперация</string>
+
+    <!-- original[values]: Нагрев батареи, подождите… -->
+    <!-- original[values-zh-rCN]: Нагрев батареи, подождите… -->
+    <!-- original[values-en-rUS]: Нагрев батареи, подождите… -->
+    <!-- starshine: Нагрев батареи, подождите… -->
+    <string name="charge_heating">Нагрев батареи, подождите…</string>
+
+    <!-- original[values]: Эффекты при зарядке -->
+    <!-- original[values-zh-rCN]: Эффекты при зарядке -->
+    <!-- original[values-en-rUS]: Эффекты при зарядке -->
+    <!-- starshine: Эффекты при зарядке -->
+    <string name="charge_light">Эффекты при зарядке</string>
+
+    <!-- original[values]: Внешние приборы будут использовать эффект «дыхания» -->
+    <!-- original[values-zh-rCN]: Внешние приборы будут использовать эффект «дыхания» -->
+    <!-- original[values-en-rUS]: Внешние приборы будут использовать эффект «дыхания» -->
+    <!-- starshine: Внешние приборы будут использовать эффект «дыхания» -->
+    <string name="charge_light_tip">Внешние приборы будут использовать эффект «дыхания»</string>
+
+    <!-- original[values]: Принудительная электротяга -->
+    <!-- original[values-zh-rCN]: Принудительная электротяга -->
+    <!-- original[values-en-rUS]: Принудительная электротяга -->
+    <!-- starshine: Принудительная электротяга -->
+    <string name="charge_mandatory_electric">Принудительная электротяга</string>
+
+    <!-- original[values]: Зарядка приостановлена для защиты батареи Возобновление в %s -->
+    <!-- original[values-zh-rCN]: Зарядка приостановлена для защиты батареи Возобновление в %s -->
+    <!-- original[values-en-rUS]: Зарядка приостановлена для защиты батареи Возобновление в %s -->
+    <!-- starshine: Зарядка приостановлена для защиты батареи Возобновление в %s -->
+    <string name="charge_pause">Зарядка приостановлена для защиты батареи Возобновление в %s</string>
+
+    <!-- original[values]: Кабель подключен -->
+    <!-- original[values-zh-rCN]: Кабель подключен -->
+    <!-- original[values-en-rUS]: Кабель подключен -->
+    <!-- starshine: Кабель подключен -->
+    <string name="charge_plug_connected">Кабель подключен</string>
+
+    <!-- original[values]: Неподходящий кабель. Используйте другой. -->
+    <!-- original[values-zh-rCN]: Неподходящий кабель. Используйте другой. -->
+    <!-- original[values-en-rUS]: Неподходящий кабель. Используйте другой. -->
+    <!-- starshine: Неподходящий кабель. Используйте другой. -->
+    <string name="charge_plug_mis_matched">Неподходящий кабель. Используйте другой.</string>
+
+    <!-- original[values]: Быстрая зарядка подключена -->
+    <!-- original[values-zh-rCN]: Быстрая зарядка подключена -->
+    <!-- original[values-en-rUS]: Быстрая зарядка подключена -->
+    <!-- starshine: Быстрая зарядка подключена -->
+    <string name="charge_plug_quick_charge_connected">Быстрая зарядка подключена</string>
+
+    <!-- original[values]: Кабель отдачи подключен -->
+    <!-- original[values-zh-rCN]: Кабель отдачи подключен -->
+    <!-- original[values-en-rUS]: Кабель отдачи подключен -->
+    <!-- starshine: Кабель отдачи подключен -->
+    <string name="charge_plug_state_discharge_connected">Кабель отдачи подключен</string>
+
+    <!-- original[values]: Зарядка стоп. Не подключайте два кабеля. -->
+    <!-- original[values-zh-rCN]: Зарядка стоп. Не подключайте два кабеля. -->
+    <!-- original[values-en-rUS]: Зарядка стоп. Не подключайте два кабеля. -->
+    <!-- starshine: Зарядка стоп. Не подключайте два кабеля. -->
+    <string name="charge_plug_state_multi">Зарядка стоп. Не подключайте два кабеля.</string>
+
+    <!-- original[values]: Зарядка остановлена. Отключите лишний кабель. -->
+    <!-- original[values-zh-rCN]: Зарядка остановлена. Отключите лишний кабель. -->
+    <!-- original[values-en-rUS]: Зарядка остановлена. Отключите лишний кабель. -->
+    <!-- starshine: Зарядка остановлена. Отключите лишний кабель. -->
+    <string name="charge_plug_state_multi_notification">Зарядка остановлена. Отключите лишний кабель.</string>
+
+    <!-- original[values]: Ожидание зарядки -->
+    <!-- original[values-zh-rCN]: Ожидание зарядки -->
+    <!-- original[values-en-rUS]: Ожидание зарядки -->
+    <!-- starshine: Ожидание зарядки -->
+    <string name="charge_plug_state_wait">Ожидание зарядки</string>
+
+    <!-- original[values]: Мощность зарядки -->
+    <!-- original[values-zh-rCN]: Мощность зарядки -->
+    <!-- original[values-en-rUS]: Мощность зарядки -->
+    <!-- starshine: Мощность зарядки -->
+    <string name="charge_power">Мощность зарядки</string>
+
+    <!-- original[values]: Принудительно -->
+    <!-- original[values-zh-rCN]: Принудительно -->
+    <!-- original[values-en-rUS]: Принудительно -->
+    <!-- starshine: Принудительно -->
+    <string name="charge_retention">Принудительно</string>
+
+    <!-- original[values]: Сохранение заряда включено -->
+    <!-- original[values-zh-rCN]: Сохранение заряда включено -->
+    <!-- original[values-en-rUS]: Сохранение заряда включено -->
+    <!-- starshine: Сохранение заряда включено -->
+    <string name="charge_retention_open">Сохранение заряда включено</string>
+
+    <!-- original[values]: Выключить комфорт сидений -->
+    <!-- original[values-zh-rCN]: Выключить комфорт сидений -->
+    <!-- original[values-en-rUS]: Выключить комфорт сидений -->
+    <!-- starshine: Выключить комфорт сидений -->
+    <string name="charge_seat">Выключить комфорт сидений</string>
+
+    <!-- original[values]: "Лимит скорости
+90 км/ч" -->
+    <!-- original[values-zh-rCN]: "Лимит скорости
+90 км/ч" -->
+    <!-- original[values-en-rUS]: "Лимит скорости
+90 км/ч" -->
+    <!-- starshine: "Лимит скорости
+90 км/ч" -->
+    <string name="charge_speed_limit">"Лимит скорости
+90 км/ч"</string>
+
+    <!-- original[values]: Зарядите батарею или запустите двигатель -->
+    <!-- original[values-zh-rCN]: Зарядите батарею или запустите двигатель -->
+    <!-- original[values-en-rUS]: Зарядите батарею или запустите двигатель -->
+    <!-- starshine: Зарядите батарею или запустите двигатель -->
+    <string name="charge_start_engine_notice">Зарядите батарею или запустите двигатель</string>
+
+    <!-- original[values]: Супер-энергосбережение: только просмотр -->
+    <!-- original[values-zh-rCN]: Супер-энергосбережение: только просмотр -->
+    <!-- original[values-en-rUS]: Супер-энергосбережение: только просмотр -->
+    <!-- starshine: Супер-энергосбережение: только просмотр -->
+    <string name="charge_super_energy_intelligent_driving_saved_tip">Супер-энергосбережение: только просмотр</string>
+
+    <!-- original[values]: "1. Снижение потребления за счет ограничений.
+2. Ручные настройки могут отключить режим.
+3. Принудительная электротяга снижает мощность при малом заряде.
+4. Лимит 90 км/ч не работает с круиз-контролем.
+5. Для ускорения нажмите педаль в пол (кикдаун).
+6. Снижена яркость, отключены проекция и приложения.
+7. Отключение ассистентов только в режиме «P»." -->
+    <!-- original[values-zh-rCN]: "1. Снижение потребления за счет ограничений.
+2. Ручные настройки могут отключить режим.
+3. Принудительная электротяга снижает мощность при малом заряде.
+4. Лимит 90 км/ч не работает с круиз-контролем.
+5. Для ускорения нажмите педаль в пол (кикдаун).
+6. Снижена яркость, отключены проекция и приложения.
+7. Отключение ассистентов только в режиме «P»." -->
+    <!-- original[values-en-rUS]: "1. Снижение потребления за счет ограничений.
+2. Ручные настройки могут отключить режим.
+3. Принудительная электротяга снижает мощность при малом заряде.
+4. Лимит 90 км/ч не работает с круиз-контролем.
+5. Для ускорения нажмите педаль в пол (кикдаун).
+6. Снижена яркость, отключены проекция и приложения.
+7. Отключение ассистентов только в режиме «P»." -->
+    <!-- starshine: "1. Снижение потребления за счет ограничений.
+2. Ручные настройки могут отключить режим.
+3. Принудительная электротяга снижает мощность при малом заряде.
+4. Лимит 90 км/ч не работает с круиз-контролем.
+5. Для ускорения нажмите педаль в пол (кикдаун).
+6. Снижена яркость, отключены проекция и приложения.
+7. Отключение ассистентов только в режиме «P»." -->
+    <string name="charge_super_energy_intelligent_driving_saving_notice">"1. Снижение потребления за счет ограничений.
+2. Ручные настройки могут отключить режим.
+3. Принудительная электротяга снижает мощность при малом заряде.
+4. Лимит 90 км/ч не работает с круиз-контролем.
+5. Для ускорения нажмите педаль в пол (кикдаун).
+6. Снижена яркость, отключены проекция и приложения.
+7. Отключение ассистентов только в режиме «P»."</string>
+
+    <!-- original[values]: Выберите хотя бы одну опцию -->
+    <!-- original[values-zh-rCN]: Выберите хотя бы одну опцию -->
+    <!-- original[values-en-rUS]: Выберите хотя бы одну опцию -->
+    <!-- starshine: Выберите хотя бы одну опцию -->
+    <string name="charge_super_energy_intelligent_driving_saving_tip">Выберите хотя бы одну опцию</string>
+
+    <!-- original[values]: Супер-энергосбережение: только просмотр -->
+    <!-- original[values-zh-rCN]: Супер-энергосбережение: только просмотр -->
+    <!-- original[values-en-rUS]: Супер-энергосбережение: только просмотр -->
+    <!-- starshine: Супер-энергосбережение: только просмотр -->
+    <string name="charge_super_energy_saved_tip">Супер-энергосбережение: только просмотр</string>
+
+    <!-- original[values]: Супер-энергосбережение -->
+    <!-- original[values-zh-rCN]: Супер-энергосбережение -->
+    <!-- original[values-en-rUS]: Супер-энергосбережение -->
+    <!-- starshine: Супер-энергосбережение -->
+    <string name="charge_super_energy_saving">Супер-энергосбережение</string>
+
+    <!-- original[values]: Условия не выполнены, режим изменен -->
+    <!-- original[values-zh-rCN]: Условия не выполнены, режим изменен -->
+    <!-- original[values-en-rUS]: Условия не выполнены, режим изменен -->
+    <!-- starshine: Условия не выполнены, режим изменен -->
+    <string name="charge_super_energy_saving_close_by_condition">Условия не выполнены, режим изменен</string>
+
+    <!-- original[values]: Сюжетный режим: энергосбережение выкл. -->
+    <!-- original[values-zh-rCN]: Сюжетный режим: энергосбережение выкл. -->
+    <!-- original[values-en-rUS]: Сюжетный режим: энергосбережение выкл. -->
+    <!-- starshine: Сюжетный режим: энергосбережение выкл. -->
+    <string name="charge_super_energy_saving_close_by_scenario_mode">Сюжетный режим: энергосбережение выкл.</string>
+
+    <!-- original[values]: Энергосбережение выключено -->
+    <!-- original[values-zh-rCN]: Энергосбережение выключено -->
+    <!-- original[values-en-rUS]: Энергосбережение выключено -->
+    <!-- starshine: Энергосбережение выключено -->
+    <string name="charge_super_energy_saving_close_success">Энергосбережение выключено</string>
+
+    <!-- original[values]: "1. Увеличение запаса хода за счет ограничений.
+2. Смена режима вождения отключит функцию.
+3. Лимит 90 км/ч не работает с круиз-контролем.
+4. Для обгона нажмите педаль газа в пол.
+5. При малом заряде мощность падает.
+6. Не включается при критическом заряде." -->
+    <!-- original[values-zh-rCN]: "1. Увеличение запаса хода за счет ограничений.
+2. Смена режима вождения отключит функцию.
+3. Лимит 90 км/ч не работает с круиз-контролем.
+4. Для обгона нажмите педаль газа в пол.
+5. При малом заряде мощность падает.
+6. Не включается при критическом заряде." -->
+    <!-- original[values-en-rUS]: "1. Увеличение запаса хода за счет ограничений.
+2. Смена режима вождения отключит функцию.
+3. Лимит 90 км/ч не работает с круиз-контролем.
+4. Для обгона нажмите педаль газа в пол.
+5. При малом заряде мощность падает.
+6. Не включается при критическом заряде." -->
+    <!-- starshine: "1. Увеличение запаса хода за счет ограничений.
+2. Смена режима вождения отключит функцию.
+3. Лимит 90 км/ч не работает с круиз-контролем.
+4. Для обгона нажмите педаль газа в пол.
+5. При малом заряде мощность падает.
+6. Не включается при критическом заряде." -->
+    <string name="charge_super_energy_saving_notice">"1. Увеличение запаса хода за счет ограничений.
+2. Смена режима вождения отключит функцию.
+3. Лимит 90 км/ч не работает с круиз-контролем.
+4. Для обгона нажмите педаль газа в пол.
+5. При малом заряде мощность падает.
+6. Не включается при критическом заряде."</string>
+
+    <!-- original[values]: ОК -->
+    <!-- original[values-zh-rCN]: ОК -->
+    <!-- original[values-en-rUS]: ОК -->
+    <!-- starshine: ОК -->
+    <string name="charge_super_energy_saving_ok">ОК</string>
+
+    <!-- original[values]: Энергосбережение активировано -->
+    <!-- original[values-zh-rCN]: Энергосбережение активировано -->
+    <!-- original[values-en-rUS]: Энергосбережение активировано -->
+    <!-- starshine: Энергосбережение активировано -->
+    <string name="charge_super_energy_saving_open_success">Энергосбережение активировано</string>
+
+    <!-- original[values]: Выберите хотя бы одну опцию -->
+    <!-- original[values-zh-rCN]: Выберите хотя бы одну опцию -->
+    <!-- original[values-en-rUS]: Выберите хотя бы одну опцию -->
+    <!-- starshine: Выберите хотя бы одну опцию -->
+    <string name="charge_super_energy_saving_tip">Выберите хотя бы одну опцию</string>
+
+    <!-- original[values]: Активация невозможна -->
+    <!-- original[values-zh-rCN]: Активация невозможна -->
+    <!-- original[values-en-rUS]: Активация невозможна -->
+    <!-- starshine: Активация невозможна -->
+    <string name="charge_super_energy_saving_toast_1">Активация невозможна</string>
+
+    <!-- original[values]: Выключите профильный режим -->
+    <!-- original[values-zh-rCN]: Выключите профильный режим -->
+    <!-- original[values-en-rUS]: Выключите профильный режим -->
+    <!-- starshine: Выключите профильный режим -->
+    <string name="charge_super_energy_saving_toast_2">Выключите профильный режим</string>
+
+    <!-- original[values]: Увеличение запаса хода -->
+    <!-- original[values-zh-rCN]: Увеличение запаса хода -->
+    <!-- original[values-en-rUS]: Увеличение запаса хода -->
+    <!-- starshine: Увеличение запаса хода -->
+    <string name="charge_super_energy_summary">Увеличение запаса хода</string>
+
+    <!-- original[values]: Лимит должен быть выше текущего заряда -->
+    <!-- original[values-zh-rCN]: Лимит должен быть выше текущего заряда -->
+    <!-- original[values-en-rUS]: Лимит должен быть выше текущего заряда -->
+    <!-- starshine: Лимит должен быть выше текущего заряда -->
+    <string name="charge_warn_title">Лимит должен быть выше текущего заряда</string>
+
+    <!-- original[values]: Ток: %s А -->
+    <!-- original[values-zh-rCN]: Ток: %s А -->
+    <!-- original[values-en-rUS]: Ток: %s А -->
+    <!-- starshine: Ток: %s А -->
+    <string name="charging_current">Ток: %s А</string>
+
+    <!-- original[values]: Лимит тока зарядки -->
+    <!-- original[values-zh-rCN]: Лимит тока зарядки -->
+    <!-- original[values-en-rUS]: Лимит тока зарядки -->
+    <!-- starshine: Лимит тока зарядки -->
+    <string name="charging_current_setting">Лимит тока зарядки</string>
+
+    <!-- original[values]: Рекомендовано для долговечности батареи -->
+    <!-- original[values-zh-rCN]: Рекомендовано для долговечности батареи -->
+    <!-- original[values-en-rUS]: Рекомендовано для долговечности батареи -->
+    <!-- starshine: Рекомендовано для долговечности батареи -->
+    <string name="charging_limit_summary">Рекомендовано для долговечности батареи</string>
+
+    <!-- original[values]: "Заряд >90%: скорость снижена.
+Для дальних поездок." -->
+    <!-- original[values-zh-rCN]: "Заряд >90%: скорость снижена.
+Для дальних поездок." -->
+    <!-- original[values-en-rUS]: "Заряд >90%: скорость снижена.
+Для дальних поездок." -->
+    <!-- starshine: "Заряд >90%: скорость снижена.
+Для дальних поездок." -->
+    <string name="charging_limit_summary1">"Заряд &gt;90%: скорость снижена.
+Для дальних поездок."</string>
+
+    <!-- original[values]: Лимит зарядки -->
+    <!-- original[values-zh-rCN]: Лимит зарядки -->
+    <!-- original[values-en-rUS]: Лимит зарядки -->
+    <!-- starshine: Лимит зарядки -->
+    <string name="charging_limit_title">Лимит зарядки</string>
+
+    <!-- original[values]: , осталось >24 ч -->
+    <!-- original[values-zh-rCN]: , осталось >24 ч -->
+    <!-- original[values-en-rUS]: , осталось >24 ч -->
+    <!-- starshine: , осталось >24 ч -->
+    <string name="charging_max_title">, осталось &gt;24 ч</string>
+
+    <!-- original[values]: Мощность: %s кВт -->
+    <!-- original[values-zh-rCN]: Мощность: %s кВт -->
+    <!-- original[values-en-rUS]: Мощность: %s кВт -->
+    <!-- starshine: Мощность: %s кВт -->
+    <string name="charging_power">Мощность: %s кВт</string>
+
+    <!-- original[values]: Начать зарядку -->
+    <!-- original[values-zh-rCN]: Начать зарядку -->
+    <!-- original[values-en-rUS]: Начать зарядку -->
+    <!-- starshine: Начать зарядку -->
+    <string name="charging_start">Начать зарядку</string>
+
+    <!-- original[values]: Остановить зарядку -->
+    <!-- original[values-zh-rCN]: Остановить зарядку -->
+    <!-- original[values-en-rUS]: Остановить зарядку -->
+    <!-- starshine: Остановить зарядку -->
+    <string name="charging_stop">Остановить зарядку</string>
+
+    <!-- original[values]: Напряжение: %s В -->
+    <!-- original[values-zh-rCN]: Напряжение: %s В -->
+    <!-- original[values-en-rUS]: Напряжение: %s В -->
+    <!-- starshine: Напряжение: %s В -->
+    <string name="charging_voltage">Напряжение: %s В</string>
+
+    <!-- original[values]: Текст чипа -->
+    <!-- original[values-zh-rCN]: Текст чипа -->
+    <!-- original[values-en-rUS]: Текст чипа -->
+    <!-- starshine: Текст чипа -->
+    <string name="chip_text">Текст чипа</string>
+
+    <!-- original[values]: Сброс -->
+    <!-- original[values-zh-rCN]: Сброс -->
+    <!-- original[values-en-rUS]: Сброс -->
+    <!-- starshine: Сброс -->
+    <string name="clean_data">Сброс</string>
+
+    <!-- original[values]: Очистить -->
+    <!-- original[values-zh-rCN]: Очистить -->
+    <!-- original[values-en-rUS]: Очистить -->
+    <!-- starshine: Очистить -->
+    <string name="clear_text_end_icon_content_description">Очистить</string>
+
+    <!-- original[values]: Закрыть -->
+    <!-- original[values-zh-rCN]: Закрыть -->
+    <!-- original[values-en-rUS]: Закрыть -->
+    <!-- starshine: Закрыть -->
+    <string name="close_drawer">Закрыть</string>
+
+    <!-- original[values]: Закрыть -->
+    <!-- original[values-zh-rCN]: Закрыть -->
+    <!-- original[values-en-rUS]: Закрыть -->
+    <!-- starshine: Закрыть -->
+    <string name="close_sheet">Закрыть</string>
+
+    <!-- original[values]: Отключите кабель перед запуском -->
+    <!-- original[values-zh-rCN]: Отключите кабель перед запуском -->
+    <!-- original[values-en-rUS]: Отключите кабель перед запуском -->
+    <!-- starshine: Отключите кабель перед запуском -->
+    <string name="completed_area">Отключите кабель перед запуском</string>
+
+    <!-- original[values]: ОК -->
+    <!-- original[values-zh-rCN]: ОК -->
+    <!-- original[values-en-rUS]: ОК -->
+    <!-- starshine: ОК -->
+    <string name="confirm">ОК</string>
+
+    <!-- original[values]: dd.MM.yyyy -->
+    <!-- original[values-zh-rCN]: dd.MM.yyyy -->
+    <!-- original[values-en-rUS]: dd.MM.yyyy -->
+    <!-- starshine: dd.MM.yyyy -->
+    <string name="date_format">dd.MM.yyyy</string>
+
+    <!-- original[values]: день -->
+    <!-- original[values-zh-rCN]: день -->
+    <!-- original[values-en-rUS]: день -->
+    <!-- starshine: день -->
+    <string name="day">день</string>
+
+    <!-- original[values]: Зарядка -->
+    <!-- original[values-zh-rCN]: Зарядка -->
+    <!-- original[values-en-rUS]: Зарядка -->
+    <!-- starshine: Зарядка -->
+    <string name="dc_charging_time_area">Зарядка</string>
+
+    <!-- original[values]: Неверный ввод -->
+    <!-- original[values-zh-rCN]: Неверный ввод -->
+    <!-- original[values-en-rUS]: Неверный ввод -->
+    <!-- starshine: Неверный ввод -->
+    <string name="default_error_message">Неверный ввод</string>
+
+    <!-- original[values]: Окно -->
+    <!-- original[values-zh-rCN]: Окно -->
+    <!-- original[values-en-rUS]: Окно -->
+    <!-- starshine: Окно -->
+    <string name="default_popup_window_title">Окно</string>
+
+    <!-- original[values]: по умолчанию -->
+    <!-- original[values-zh-rCN]: по умолчанию -->
+    <!-- original[values-en-rUS]: по умолчанию -->
+    <!-- starshine: по умолчанию -->
+    <string name="default_select">по умолчанию</string>
+
+    <!-- original[values]: - - -->
+    <!-- original[values-zh-rCN]: - - -->
+    <!-- original[values-en-rUS]: - - -->
+    <!-- starshine: - - -->
+    <string name="default_value">--</string>
+
+    <!-- original[values]: - - км -->
+    <!-- original[values-zh-rCN]: - - км -->
+    <!-- original[values-en-rUS]: - - км -->
+    <!-- starshine: - - км -->
+    <string name="default_widget_km_unit">-- км</string>
+
+    <!-- original[values]: Сбой отдачи энергии -->
+    <!-- original[values-zh-rCN]: Сбой отдачи энергии -->
+    <!-- original[values-en-rUS]: Сбой отдачи энергии -->
+    <!-- starshine: Сбой отдачи энергии -->
+    <string name="discharge_abnormal">Сбой отдачи энергии</string>
+
+    <!-- original[values]: Отдача с ошибками -->
+    <!-- original[values-zh-rCN]: Отдача с ошибками -->
+    <!-- original[values-en-rUS]: Отдача с ошибками -->
+    <!-- starshine: Отдача с ошибками -->
+    <string name="discharge_abnormal_notification">Отдача с ошибками</string>
+
+    <!-- original[values]: Переподключите кабель или обратитесь в сервис -->
+    <!-- original[values-zh-rCN]: Переподключите кабель или обратитесь в сервис -->
+    <!-- original[values-en-rUS]: Переподключите кабель или обратитесь в сервис -->
+    <!-- starshine: Переподключите кабель или обратитесь в сервис -->
+    <string name="discharge_abnormal_summary">Переподключите кабель или обратитесь в сервис</string>
+
+    <!-- original[values]: "Отдано: %s кВт·ч.
+Отключите кабель перед запуском." -->
+    <!-- original[values-zh-rCN]: "Отдано: %s кВт·ч.
+Отключите кабель перед запуском." -->
+    <!-- original[values-en-rUS]: "Отдано: %s кВт·ч.
+Отключите кабель перед запуском." -->
+    <!-- starshine: "Отдано: %s кВт·ч.
+Отключите кабель перед запуском." -->
+    <string name="discharge_completed_area">"Отдано: %s кВт·ч.
+Отключите кабель перед запуском."</string>
+
+    <!-- original[values]: Отключите кабель перед запуском -->
+    <!-- original[values-zh-rCN]: Отключите кабель перед запуском -->
+    <!-- original[values-en-rUS]: Отключите кабель перед запуском -->
+    <!-- starshine: Отключите кабель перед запуском -->
+    <string name="discharge_completed_summary">Отключите кабель перед запуском</string>
+
+    <!-- original[values]: Отдача завершена -->
+    <!-- original[values-zh-rCN]: Отдача завершена -->
+    <!-- original[values-en-rUS]: Отдача завершена -->
+    <!-- starshine: Отдача завершена -->
+    <string name="discharge_completed_title">Отдача завершена</string>
+
+    <!-- original[values]: Кабель отдачи подключен -->
+    <!-- original[values-zh-rCN]: Кабель отдачи подключен -->
+    <!-- original[values-en-rUS]: Кабель отдачи подключен -->
+    <!-- starshine: Кабель отдачи подключен -->
+    <string name="discharge_connected_summary">Кабель отдачи подключен</string>
+
+    <!-- original[values]: Внешняя отдача энергии -->
+    <!-- original[values-zh-rCN]: Внешняя отдача энергии -->
+    <!-- original[values-en-rUS]: Внешняя отдача энергии -->
+    <!-- starshine: Внешняя отдача энергии -->
+    <string name="discharge_connected_title">Внешняя отдача энергии</string>
+
+    <!-- original[values]: Подключите кабель отдачи -->
+    <!-- original[values-zh-rCN]: Подключите кабель отдачи -->
+    <!-- original[values-en-rUS]: Подключите кабель отдачи -->
+    <!-- starshine: Подключите кабель отдачи -->
+    <string name="discharge_disconnect_summary">Подключите кабель отдачи</string>
+
+    <!-- original[values]: Отдача завершена -->
+    <!-- original[values-zh-rCN]: Отдача завершена -->
+    <!-- original[values-en-rUS]: Отдача завершена -->
+    <!-- starshine: Отдача завершена -->
+    <string name="discharge_end">Отдача завершена</string>
+
+    <!-- original[values]: Конец отдачи энергии -->
+    <!-- original[values-zh-rCN]: Конец отдачи энергии -->
+    <!-- original[values-en-rUS]: Конец отдачи энергии -->
+    <!-- starshine: Конец отдачи энергии -->
+    <string name="discharge_end_notification">Конец отдачи энергии</string>
+
+    <!-- original[values]: Лимит достигнут, отдача завершена -->
+    <!-- original[values-zh-rCN]: Лимит достигнут, отдача завершена -->
+    <!-- original[values-en-rUS]: Лимит достигнут, отдача завершена -->
+    <!-- starshine: Лимит достигнут, отдача завершена -->
+    <string name="discharge_over_title">Лимит достигнут, отдача завершена</string>
+
+    <!-- original[values]: Подключите кабель -->
+    <!-- original[values-zh-rCN]: Подключите кабель -->
+    <!-- original[values-en-rUS]: Подключите кабель -->
+    <!-- starshine: Подключите кабель -->
+    <string name="discharge_ready_connect">Подключите кабель</string>
+
+    <!-- original[values]: Защита при разрядке -->
+    <!-- original[values-zh-rCN]: Защита при разрядке -->
+    <!-- original[values-en-rUS]: Защита при разрядке -->
+    <!-- starshine: Защита при разрядке -->
+    <string name="discharge_soc">Защита при разрядке</string>
+
+    <!-- original[values]: Превышает текущий запас хода -->
+    <!-- original[values-zh-rCN]: Превышает текущий запас хода -->
+    <!-- original[values-en-rUS]: Превышает текущий запас хода -->
+    <!-- starshine: Превышает текущий запас хода -->
+    <string name="discharge_soc_max_toast">Превышает текущий запас хода</string>
+
+    <!-- original[values]: Отдача энергии -->
+    <!-- original[values-zh-rCN]: Отдача энергии -->
+    <!-- original[values-en-rUS]: Отдача энергии -->
+    <!-- starshine: Отдача энергии -->
+    <string name="discharging">Отдача энергии</string>
+
+    <!-- original[values]: , отдано: %s кВт·ч -->
+    <!-- original[values-zh-rCN]: , отдано: %s кВт·ч -->
+    <!-- original[values-en-rUS]: , отдано: %s кВт·ч -->
+    <!-- starshine: , отдано: %s кВт·ч -->
+    <string name="discharging_energy">, отдано: %s кВт·ч</string>
+
+    <!-- original[values]: При запасе хода ниже этого значения отдача прекратится -->
+    <!-- original[values-zh-rCN]: При запасе хода ниже этого значения отдача прекратится -->
+    <!-- original[values-en-rUS]: При запасе хода ниже этого значения отдача прекратится -->
+    <!-- starshine: При запасе хода ниже этого значения отдача прекратится -->
+    <string name="discharging_notice">При запасе хода ниже этого значения отдача прекратится</string>
+
+    <!-- original[values]: , мощность: %s кВт -->
+    <!-- original[values-zh-rCN]: , мощность: %s кВт -->
+    <!-- original[values-en-rUS]: , мощность: %s кВт -->
+    <!-- starshine: , мощность: %s кВт -->
+    <string name="discharging_power">, мощность: %s кВт</string>
+
+    <!-- original[values]: ожидаемый пробег %s км -->
+    <!-- original[values-zh-rCN]: ожидаемый пробег %s км -->
+    <!-- original[values-en-rUS]: ожидаемый пробег %s км -->
+    <!-- starshine: ожидаемый пробег %s км -->
+    <string name="discharging_pre_mileage">ожидаемый пробег %s км</string>
+
+    <!-- original[values]: При достижении этого заряда внешнее питание отключится -->
+    <!-- original[values-zh-rCN]: При достижении этого заряда внешнее питание отключится -->
+    <!-- original[values-en-rUS]: При достижении этого заряда внешнее питание отключится -->
+    <!-- starshine: При достижении этого заряда внешнее питание отключится -->
+    <string name="discharging_soc_notice">При достижении этого заряда внешнее питание отключится</string>
+
+    <!-- original[values]: Лимит внешнего питания -->
+    <!-- original[values-zh-rCN]: Лимит внешнего питания -->
+    <!-- original[values-en-rUS]: Лимит внешнего питания -->
+    <!-- starshine: Лимит внешнего питания -->
+    <string name="discharging_soc_setting">Лимит внешнего питания</string>
+
+    <!-- original[values]: Остановить питание -->
+    <!-- original[values-zh-rCN]: Остановить питание -->
+    <!-- original[values-en-rUS]: Остановить питание -->
+    <!-- starshine: Остановить питание -->
+    <string name="discharging_stop">Остановить питание</string>
+
+    <!-- original[values]: Установите лимит ниже текущего заряда -->
+    <!-- original[values-zh-rCN]: Установите лимит ниже текущего заряда -->
+    <!-- original[values-en-rUS]: Установите лимит ниже текущего заряда -->
+    <!-- starshine: Установите лимит ниже текущего заряда -->
+    <string name="discharging_switch_error1">Установите лимит ниже текущего заряда</string>
+
+    <!-- original[values]: Заряд <20%, отдача недоступна -->
+    <!-- original[values-zh-rCN]: Заряд <20%, отдача недоступна -->
+    <!-- original[values-en-rUS]: Заряд <20%, отдача недоступна -->
+    <!-- starshine: Заряд <20%, отдача недоступна -->
+    <string name="discharging_switch_error2">Заряд &lt;20%, отдача недоступна</string>
+
+    <!-- original[values]: "Питание
+устройств (V2L)" -->
+    <!-- original[values-zh-rCN]: "Питание
+устройств (V2L)" -->
+    <!-- original[values-en-rUS]: "Питание
+устройств (V2L)" -->
+    <!-- starshine: "Питание
+устройств (V2L)" -->
+    <string name="discharging_switch_v2l">"Питание
+устройств (V2L)"</string>
+
+    <!-- original[values]: "Зарядка
+автомобиля (V2V)" -->
+    <!-- original[values-zh-rCN]: "Зарядка
+автомобиля (V2V)" -->
+    <!-- original[values-en-rUS]: "Зарядка
+автомобиля (V2V)" -->
+    <!-- starshine: "Зарядка
+автомобиля (V2V)" -->
+    <string name="discharging_switch_v2v">"Зарядка
+автомобиля (V2V)"</string>
+
+    <!-- original[values]: Пройденный путь -->
+    <!-- original[values-zh-rCN]: Пройденный путь -->
+    <!-- original[values-en-rUS]: Пройденный путь -->
+    <!-- starshine: Пройденный путь -->
+    <string name="drive_distance">Пройденный путь</string>
+
+    <!-- original[values]: Время в пути -->
+    <!-- original[values-zh-rCN]: Время в пути -->
+    <!-- original[values-en-rUS]: Время в пути -->
+    <!-- starshine: Время в пути -->
+    <string name="drive_duration">Время в пути</string>
+
+    <!-- original[values]: Меню -->
+    <!-- original[values-zh-rCN]: Меню -->
+    <!-- original[values-en-rUS]: Меню -->
+    <!-- starshine: Меню -->
+    <string name="dropdown_menu">Меню</string>
+
+    <!-- original[values]: Уровень заряда -->
+    <!-- original[values-zh-rCN]: Уровень заряда -->
+    <!-- original[values-en-rUS]: Уровень заряда -->
+    <!-- starshine: Уровень заряда -->
+    <string name="electric_capacity">Уровень заряда</string>
+
+    <!-- original[values]: CLTC -->
+    <!-- original[values-zh-rCN]: CLTC -->
+    <!-- original[values-en-rUS]: CLTC -->
+    <!-- starshine: CLTC -->
+    <string name="electric_cltc">CLTC</string>
+
+    <!-- original[values]: %d%% -->
+    <!-- original[values-zh-rCN]: %d%% -->
+    <!-- original[values-en-rUS]: %d%% -->
+    <!-- starshine: %d%% -->
+    <string name="electric_percent">%d%%</string>
+
+    <!-- original[values]: WLTC -->
+    <!-- original[values-zh-rCN]: WLTC -->
+    <!-- original[values-en-rUS]: WLTC -->
+    <!-- starshine: WLTC -->
+    <string name="electric_wltc">WLTC</string>
+
+    <!-- original[values]: Конец -->
+    <!-- original[values-zh-rCN]: Конец -->
+    <!-- original[values-en-rUS]: Конец -->
+    <!-- starshine: Конец -->
+    <string name="end_time">Конец</string>
+
+    <!-- original[values]: Ток: %s А -->
+    <!-- original[values-zh-rCN]: Ток: %s А -->
+    <!-- original[values-en-rUS]: Ток: %s А -->
+    <!-- starshine: Ток: %s А -->
+    <string name="energy_column_current">Ток: %s А</string>
+
+    <!-- original[values]: Заряд -->
+    <!-- original[values-zh-rCN]: Заряд -->
+    <!-- original[values-en-rUS]: Заряд -->
+    <!-- starshine: Заряд -->
+    <string name="energy_column_elec_percent">Заряд</string>
+
+    <!-- original[values]: Топливо -->
+    <!-- original[values-zh-rCN]: Топливо -->
+    <!-- original[values-en-rUS]: Топливо -->
+    <!-- starshine: Топливо -->
+    <string name="energy_column_oil_percent">Топливо</string>
+
+    <!-- original[values]: Мощность: %s кВт -->
+    <!-- original[values-zh-rCN]: Мощность: %s кВт -->
+    <!-- original[values-en-rUS]: Мощность: %s кВт -->
+    <!-- starshine: Мощность: %s кВт -->
+    <string name="energy_column_power">Мощность: %s кВт</string>
+
+    <!-- original[values]: Энергия: %s кВт·ч -->
+    <!-- original[values-zh-rCN]: Энергия: %s кВт·ч -->
+    <!-- original[values-en-rUS]: Энергия: %s кВт·ч -->
+    <!-- starshine: Энергия: %s кВт·ч -->
+    <string name="energy_column_quantity_electricity">Энергия: %s кВт·ч</string>
+
+    <!-- original[values]: Напряжение: %s В -->
+    <!-- original[values-zh-rCN]: Напряжение: %s В -->
+    <!-- original[values-en-rUS]: Напряжение: %s В -->
+    <!-- starshine: Напряжение: %s В -->
+    <string name="energy_column_voltage">Напряжение: %s В</string>
+
+    <!-- original[values]: энергосбережение -->
+    <!-- original[values-zh-rCN]: энергосбережение -->
+    <!-- original[values-en-rUS]: энергосбережение -->
+    <!-- starshine: энергосбережение -->
+    <string name="energy_conservation">энергосбережение</string>
+
+    <!-- original[values]: расход энергии -->
+    <!-- original[values-zh-rCN]: расход энергии -->
+    <!-- original[values-en-rUS]: расход энергии -->
+    <!-- starshine: расход энергии -->
+    <string name="energy_consumption">расход энергии</string>
+
+    <!-- original[values]: Привод: силовая установка -->
+    <!-- original[values-zh-rCN]: Привод: силовая установка -->
+    <!-- original[values-en-rUS]: Привод: силовая установка -->
+    <!-- starshine: Привод: силовая установка -->
+    <string name="energy_consumption_info_tip1">Привод: силовая установка</string>
+
+    <!-- original[values]: Климат: кондиционирование -->
+    <!-- original[values-zh-rCN]: Климат: кондиционирование -->
+    <!-- original[values-en-rUS]: Климат: кондиционирование -->
+    <!-- starshine: Климат: кондиционирование -->
+    <string name="energy_consumption_info_tip2">Климат: кондиционирование</string>
+
+    <!-- original[values]: Терморегуляция: батарея -->
+    <!-- original[values-zh-rCN]: Терморегуляция: батарея -->
+    <!-- original[values-en-rUS]: Терморегуляция: батарея -->
+    <!-- starshine: Терморегуляция: батарея -->
+    <string name="energy_consumption_info_tip3">Терморегуляция: батарея</string>
+
+    <!-- original[values]: Другое: свет, мультимедиа и пр. -->
+    <!-- original[values-zh-rCN]: Другое: свет, мультимедиа и пр. -->
+    <!-- original[values-en-rUS]: Другое: свет, мультимедиа и пр. -->
+    <!-- starshine: Другое: свет, мультимедиа и пр. -->
+    <string name="energy_consumption_info_tip4">Другое: свет, мультимедиа и пр.</string>
+
+    <!-- original[values]: кВт·ч/100 км -->
+    <!-- original[values-zh-rCN]: кВт·ч/100 км -->
+    <!-- original[values-en-rUS]: кВт·ч/100 км -->
+    <!-- starshine: кВт·ч/100 км -->
+    <string name="energy_consumption_unit">кВт·ч/100 км</string>
+
+    <!-- original[values]: кВт·ч/100 км -->
+    <!-- original[values-zh-rCN]: кВт·ч/100 км -->
+    <!-- original[values-en-rUS]: кВт·ч/100 км -->
+    <!-- starshine: кВт·ч/100 км -->
+    <string name="energy_consumption_unit_with_title">кВт·ч/100 км</string>
+
+    <!-- original[values]: Средний расход: эквивалент расхода бензина, рассчитанный на основе потребления метанола и бензина по стандарту Q/CT 1130. -->
+    <!-- original[values-zh-rCN]: Средний расход: эквивалент расхода бензина, рассчитанный на основе потребления метанола и бензина по стандарту Q/CT 1130. -->
+    <!-- original[values-en-rUS]: Средний расход: эквивалент расхода бензина, рассчитанный на основе потребления метанола и бензина по стандарту Q/CT 1130. -->
+    <!-- starshine: Средний расход: эквивалент расхода бензина, рассчитанный на основе потребления метанола и бензина по стандарту Q/CT 1130. -->
+    <string name="energy_fuel_meth_consumption_info_tip">Средний расход: эквивалент расхода бензина, рассчитанный на основе потребления метанола и бензина по стандарту Q/CT 1130.</string>
+
+    <!-- original[values]: Экстремальный запас хода (EV) -->
+    <!-- original[values-zh-rCN]: Экстремальный запас хода (EV) -->
+    <!-- original[values-en-rUS]: Экстремальный запас хода (EV) -->
+    <!-- starshine: Экстремальный запас хода (EV) -->
+    <string name="energy_super_power">Экстремальный запас хода (EV)</string>
+
+    <!-- original[values]: Экстремальный режим выкл. -->
+    <!-- original[values-zh-rCN]: Экстремальный режим выкл. -->
+    <!-- original[values-en-rUS]: Экстремальный режим выкл. -->
+    <!-- starshine: Экстремальный режим выкл. -->
+    <string name="energy_super_power_close_success">Экстремальный режим выкл.</string>
+
+    <!-- original[values]: Увеличивает пробег, но снижает мощность при малом заряде. Только на текущую поездку. -->
+    <!-- original[values-zh-rCN]: Увеличивает пробег, но снижает мощность при малом заряде. Только на текущую поездку. -->
+    <!-- original[values-en-rUS]: Увеличивает пробег, но снижает мощность при малом заряде. Только на текущую поездку. -->
+    <!-- starshine: Увеличивает пробег, но снижает мощность при малом заряде. Только на текущую поездку. -->
+    <string name="energy_super_power_message">Увеличивает пробег, но снижает мощность при малом заряде. Только на текущую поездку.</string>
+
+    <!-- original[values]: Включить -->
+    <!-- original[values-zh-rCN]: Включить -->
+    <!-- original[values-en-rUS]: Включить -->
+    <!-- starshine: Включить -->
+    <string name="energy_super_power_ok">Включить</string>
+
+    <!-- original[values]: Экстремальный режим вкл. -->
+    <!-- original[values-zh-rCN]: Экстремальный режим вкл. -->
+    <!-- original[values-en-rUS]: Экстремальный режим вкл. -->
+    <!-- starshine: Экстремальный режим вкл. -->
+    <string name="energy_super_power_open_success">Экстремальный режим вкл.</string>
+
+    <!-- original[values]: Сброс после заправки -->
+    <!-- original[values-zh-rCN]: Сброс после заправки -->
+    <!-- original[values-en-rUS]: Сброс после заправки -->
+    <!-- starshine: Сброс после заправки -->
+    <string name="energy_supplement_reset">Сброс после заправки</string>
+
+    <!-- original[values]: кВт·ч -->
+    <!-- original[values-zh-rCN]: кВт·ч -->
+    <!-- original[values-en-rUS]: кВт·ч -->
+    <!-- starshine: кВт·ч -->
+    <string name="energy_unit">кВт·ч</string>
+
+    <!-- original[values]: кВт·ч -->
+    <!-- original[values-zh-rCN]: кВт·ч -->
+    <!-- original[values-en-rUS]: кВт·ч -->
+    <!-- starshine: кВт·ч -->
+    <string name="energy_unit_with_title">кВт·ч</string>
+
+    <!-- original[values]: Ошибка -->
+    <!-- original[values-zh-rCN]: Ошибка -->
+    <!-- original[values-en-rUS]: Ошибка -->
+    <!-- starshine: Ошибка -->
+    <string name="error_icon_content_description">Ошибка</string>
+
+    <!-- original[values]: Ежедневно -->
+    <!-- original[values-zh-rCN]: Ежедневно -->
+    <!-- original[values-en-rUS]: Ежедневно -->
+    <!-- starshine: Ежедневно -->
+    <string name="every_day">Ежедневно</string>
+
+    <!-- original[values]: Выходные -->
+    <!-- original[values-zh-rCN]: Выходные -->
+    <!-- original[values-en-rUS]: Выходные -->
+    <!-- starshine: Выходные -->
+    <string name="every_weekend">Выходные</string>
+
+    <!-- original[values]: Будни -->
+    <!-- original[values-zh-rCN]: Будни -->
+    <!-- original[values-en-rUS]: Будни -->
+    <!-- starshine: Будни -->
+    <string name="every_workday">Будни</string>
+
+    <!-- original[values]: Меню -->
+    <!-- original[values-zh-rCN]: Меню -->
+    <!-- original[values-en-rUS]: Меню -->
+    <!-- starshine: Меню -->
+    <string name="exposed_dropdown_menu_content_description">Меню</string>
+
+    <!-- original[values]: Внешняя отдача -->
+    <!-- original[values-zh-rCN]: Внешняя отдача -->
+    <!-- original[values-en-rUS]: Внешняя отдача -->
+    <!-- starshine: Внешняя отдача -->
+    <string name="external_discharge">Внешняя отдача</string>
+
+    <!-- original[values]: Загрузка… -->
+    <!-- original[values-zh-rCN]: Загрузка… -->
+    <!-- original[values-en-rUS]: Загрузка… -->
+    <!-- starshine: Загрузка… -->
+    <string name="fa_global_loading">Загрузка…</string>
+
+    <!-- original[values]: ч -->
+    <!-- original[values-zh-rCN]: ч -->
+    <!-- original[values-en-rUS]: ч -->
+    <!-- starshine: ч -->
+    <string name="fa_picker_date_time_hour">ч</string>
+
+    <!-- original[values]: мин -->
+    <!-- original[values-zh-rCN]: мин -->
+    <!-- original[values-en-rUS]: мин -->
+    <!-- starshine: мин -->
+    <string name="fa_picker_date_time_min">мин</string>
+
+    <!-- original[values]: Ошибка, потяните для повтора -->
+    <!-- original[values-zh-rCN]: Ошибка, потяните для повтора -->
+    <!-- original[values-en-rUS]: Ошибка, потяните для повтора -->
+    <!-- starshine: Ошибка, потяните для повтора -->
+    <string name="fa_pull_loading_failed">Ошибка, потяните для повтора</string>
+
+    <!-- original[values]: Поиск -->
+    <!-- original[values-zh-rCN]: Поиск -->
+    <!-- original[values-en-rUS]: Поиск -->
+    <!-- starshine: Поиск -->
+    <string name="fa_search_hint">Поиск</string>
+
+    <!-- original[values]: Приоритет скорости зарядки -->
+    <!-- original[values-zh-rCN]: Приоритет скорости зарядки -->
+    <!-- original[values-en-rUS]: Приоритет скорости зарядки -->
+    <!-- starshine: Приоритет скорости зарядки -->
+    <string name="forced_power_protection">Приоритет скорости зарядки</string>
+
+    <!-- original[values]: Принудительная электротяга -->
+    <!-- original[values-zh-rCN]: Принудительная электротяга -->
+    <!-- original[values-en-rUS]: Принудительная электротяга -->
+    <!-- starshine: Принудительная электротяга -->
+    <string name="forced_pure_electric">Принудительная электротяга</string>
+
+    <!-- original[values]: %1s -->
+    <!-- original[values-zh-rCN]: %1s -->
+    <!-- original[values-en-rUS]: %1s -->
+    <!-- starshine: %1s -->
+    <string name="format_single">%1s</string>
+
+    <!-- original[values]: Пт -->
+    <!-- original[values-zh-rCN]: Пт -->
+    <!-- original[values-en-rUS]: Пт -->
+    <!-- starshine: Пт -->
+    <string name="fri">Пт</string>
+
+    <!-- original[values]: Поддержание заряда двигателем -->
+    <!-- original[values-zh-rCN]: Поддержание заряда двигателем -->
+    <!-- original[values-en-rUS]: Поддержание заряда двигателем -->
+    <!-- starshine: Поддержание заряда двигателем -->
+    <string name="fuel_charge_summary">Поддержание заряда двигателем</string>
+
+    <!-- original[values]: Поддержание уровня заряда батареи за счет топлива в движении -->
+    <!-- original[values-zh-rCN]: Поддержание уровня заряда батареи за счет топлива в движении -->
+    <!-- original[values-en-rUS]: Поддержание уровня заряда батареи за счет топлива в движении -->
+    <!-- starshine: Поддержание уровня заряда батареи за счет топлива в движении -->
+    <string name="fuel_charge_summary_meth">Поддержание уровня заряда батареи за счет топлива в движении</string>
+
+    <!-- original[values]: Смените режим электропривода -->
+    <!-- original[values-zh-rCN]: Смените режим электропривода -->
+    <!-- original[values-en-rUS]: Смените режим электропривода -->
+    <!-- starshine: Смените режим электропривода -->
+    <string name="fuel_charge_summary_notactive_1">Смените режим электропривода</string>
+
+    <!-- original[values]: Смените режим электропривода -->
+    <!-- original[values-zh-rCN]: Смените режим электропривода -->
+    <!-- original[values-en-rUS]: Смените режим электропривода -->
+    <!-- starshine: Смените режим электропривода -->
+    <string name="fuel_charge_summary_notactive_1_U1">Смените режим электропривода</string>
+
+    <!-- original[values]: Недоступно при дозаправке -->
+    <!-- original[values-zh-rCN]: Недоступно при дозаправке -->
+    <!-- original[values-en-rUS]: Недоступно при дозаправке -->
+    <!-- starshine: Недоступно при дозаправке -->
+    <string name="fuel_charge_summary_notactive_2">Недоступно при дозаправке</string>
+
+    <!-- original[values]: Идет зарядка от генератора, поддержание заряда в движении недоступно -->
+    <!-- original[values-zh-rCN]: Идет зарядка от генератора, поддержание заряда в движении недоступно -->
+    <!-- original[values-en-rUS]: Идет зарядка от генератора, поддержание заряда в движении недоступно -->
+    <!-- starshine: Идет зарядка от генератора, поддержание заряда в движении недоступно -->
+    <string name="fuel_charge_summary_notactive_2_meth">Идет зарядка от генератора, поддержание заряда в движении недоступно</string>
+
+    <!-- original[values]: Сохранение заряда -->
+    <!-- original[values-zh-rCN]: Сохранение заряда -->
+    <!-- original[values-en-rUS]: Сохранение заряда -->
+    <!-- starshine: Сохранение заряда -->
+    <string name="fuel_charge_title">Сохранение заряда</string>
+
+    <!-- original[values]: Зарядка в пути и на парковке -->
+    <!-- original[values-zh-rCN]: Зарядка в пути и на парковке -->
+    <!-- original[values-en-rUS]: Зарядка в пути и на парковке -->
+    <!-- starshine: Зарядка в пути и на парковке -->
+    <string name="fuel_charging_summary1">Зарядка в пути и на парковке</string>
+
+    <!-- original[values]: Зарядка от двигателя -->
+    <!-- original[values-zh-rCN]: Зарядка от двигателя -->
+    <!-- original[values-en-rUS]: Зарядка от двигателя -->
+    <!-- starshine: Зарядка от двигателя -->
+    <string name="fuel_charging_title">Зарядка от двигателя</string>
+
+    <!-- original[values]: расход топлива -->
+    <!-- original[values-zh-rCN]: расход топлива -->
+    <!-- original[values-en-rUS]: расход топлива -->
+    <!-- starshine: расход топлива -->
+    <string name="fuel_consumption">расход топлива</string>
+
+    <!-- original[values]: л/100 км -->
+    <!-- original[values-zh-rCN]: л/100 км -->
+    <!-- original[values-en-rUS]: л/100 км -->
+    <!-- starshine: л/100 км -->
+    <string name="fuel_consumption_unit">л/100 км</string>
+
+    <!-- original[values]: л/100 км -->
+    <!-- original[values-zh-rCN]: л/100 км -->
+    <!-- original[values-en-rUS]: л/100 км -->
+    <!-- starshine: л/100 км -->
+    <string name="fuel_consumption_unit_with_title">л/100 км</string>
+
+    <!-- original[values]: л -->
+    <!-- original[values-zh-rCN]: л -->
+    <!-- original[values-en-rUS]: л -->
+    <!-- starshine: л -->
+    <string name="fuel_unit">л</string>
+
+    <!-- original[values]: л -->
+    <!-- original[values-zh-rCN]: л -->
+    <!-- original[values-en-rUS]: л -->
+    <!-- starshine: л -->
+    <string name="fuel_unit_with_title">л</string>
+
+    <!-- original[values]: Бережная зарядка -->
+    <!-- original[values-zh-rCN]: Бережная зарядка -->
+    <!-- original[values-en-rUS]: Бережная зарядка -->
+    <!-- starshine: Бережная зарядка -->
+    <string name="healthy_charging">Бережная зарядка</string>
+
+    <!-- original[values]: Замедляет старение батареи -->
+    <!-- original[values-zh-rCN]: Замедляет старение батареи -->
+    <!-- original[values-en-rUS]: Замедляет старение батареи -->
+    <!-- starshine: Замедляет старение батареи -->
+    <string name="healthy_charging_content">Замедляет старение батареи</string>
+
+    <!-- original[values]: Ошибка включения бережной зарядки -->
+    <!-- original[values-zh-rCN]: Ошибка включения бережной зарядки -->
+    <!-- original[values-en-rUS]: Ошибка включения бережной зарядки -->
+    <!-- starshine: Ошибка включения бережной зарядки -->
+    <string name="healthy_charging_error">Ошибка включения бережной зарядки</string>
+
+    <!-- original[values]: Бережная зарядка замедляет износ батареи. Система изучает ваши привычки: заряжает до 80% и завершает зарядку перед самой поездкой. Для отключения деактивируйте эту функцию вручную. -->
+    <!-- original[values-zh-rCN]: Бережная зарядка замедляет износ батареи. Система изучает ваши привычки: заряжает до 80% и завершает зарядку перед самой поездкой. Для отключения деактивируйте эту функцию вручную. -->
+    <!-- original[values-en-rUS]: Бережная зарядка замедляет износ батареи. Система изучает ваши привычки: заряжает до 80% и завершает зарядку перед самой поездкой. Для отключения деактивируйте эту функцию вручную. -->
+    <!-- starshine: Бережная зарядка замедляет износ батареи. Система изучает ваши привычки: заряжает до 80% и завершает зарядку перед самой поездкой. Для отключения деактивируйте эту функцию вручную. -->
+    <string name="healthy_charging_notice">Бережная зарядка замедляет износ батареи. Система изучает ваши привычки: заряжает до 80% и завершает зарядку перед самой поездкой. Для отключения деактивируйте эту функцию вручную.</string>
+
+    <!-- original[values]: Бережная зарядка включена -->
+    <!-- original[values-zh-rCN]: Бережная зарядка включена -->
+    <!-- original[values-en-rUS]: Бережная зарядка включена -->
+    <!-- starshine: Бережная зарядка включена -->
+    <string name="healthy_charging_success">Бережная зарядка включена</string>
+
+    <!-- original[values]: ч -->
+    <!-- original[values-zh-rCN]: ч -->
+    <!-- original[values-en-rUS]: ч -->
+    <!-- starshine: ч -->
+    <string name="hours">ч</string>
+
+    <!-- original[values]: Иконка -->
+    <!-- original[values-zh-rCN]: Иконка -->
+    <!-- original[values-en-rUS]: Иконка -->
+    <!-- starshine: Иконка -->
+    <string name="icon_content_description">Иконка</string>
+
+    <!-- original[values]: Начать сейчас -->
+    <!-- original[values-zh-rCN]: Начать сейчас -->
+    <!-- original[values-en-rUS]: Начать сейчас -->
+    <!-- starshine: Начать сейчас -->
+    <string name="immediate_charge">Начать сейчас</string>
+
+    <!-- original[values]: В процессе -->
+    <!-- original[values-zh-rCN]: В процессе -->
+    <!-- original[values-en-rUS]: В процессе -->
+    <!-- starshine: В процессе -->
+    <string name="in_progress">В процессе</string>
+
+    <!-- original[values]: Выбрано частично -->
+    <!-- original[values-zh-rCN]: Выбрано частично -->
+    <!-- original[values-en-rUS]: Выбрано частично -->
+    <!-- starshine: Выбрано частично -->
+    <string name="indeterminate">Выбрано частично</string>
+
+    <!-- original[values]: Вкладка -->
+    <!-- original[values-zh-rCN]: Вкладка -->
+    <!-- original[values-en-rUS]: Вкладка -->
+    <!-- starshine: Вкладка -->
+    <string name="item_view_role_description">Вкладка</string>
+
+    <!-- original[values]: Понятно -->
+    <!-- original[values-zh-rCN]: Понятно -->
+    <!-- original[values-en-rUS]: Понятно -->
+    <!-- starshine: Понятно -->
+    <string name="know">Понятно</string>
+
+    <!-- original[values]: %1s кВт·ч -->
+    <!-- original[values-zh-rCN]: %1s кВт·ч -->
+    <!-- original[values-en-rUS]: %1s кВт·ч -->
+    <!-- starshine: %1s кВт·ч -->
+    <string name="kwh_unit">%1s кВт·ч</string>
+
+    <!-- original[values]: %1s л -->
+    <!-- original[values-zh-rCN]: %1s л -->
+    <!-- original[values-en-rUS]: %1s л -->
+    <!-- starshine: %1s л -->
+    <string name="l_unit">%1s л</string>
+
+    <!-- original[values]: Загрузка... -->
+    <!-- original[values-zh-rCN]: Загрузка... -->
+    <!-- original[values-en-rUS]: Загрузка... -->
+    <!-- starshine: Загрузка... -->
+    <string name="loading">Загрузка...</string>
+
+    <!-- original[values]: Ошибка сети. Повторите позже -->
+    <!-- original[values-zh-rCN]: Ошибка сети. Повторите позже -->
+    <!-- original[values-en-rUS]: Ошибка сети. Повторите позже -->
+    <!-- starshine: Ошибка сети. Повторите позже -->
+    <string name="loading_failed">Ошибка сети. Повторите позже</string>
+
+    <!-- original[values]: Зарядка привязана к месту. При выезде настройка отключится. -->
+    <!-- original[values-zh-rCN]: Зарядка привязана к месту. При выезде настройка отключится. -->
+    <!-- original[values-en-rUS]: Зарядка привязана к месту. При выезде настройка отключится. -->
+    <!-- starshine: Зарядка привязана к месту. При выезде настройка отключится. -->
+    <string name="location_pre_pop">Зарядка привязана к месту. При выезде настройка отключится.</string>
+
+    <!-- original[values]: Заряжать по расписанию только здесь -->
+    <!-- original[values-zh-rCN]: Заряжать по расписанию только здесь -->
+    <!-- original[values-en-rUS]: Заряжать по расписанию только здесь -->
+    <!-- starshine: Заряжать по расписанию только здесь -->
+    <string name="location_pre_tip">Заряжать по расписанию только здесь</string>
+
+    <!-- original[values]: Пуск при малом заряде -->
+    <!-- original[values-zh-rCN]: Пуск при малом заряде -->
+    <!-- original[values-en-rUS]: Пуск при малом заряде -->
+    <!-- starshine: Пуск при малом заряде -->
+    <string name="low_start">Пуск при малом заряде</string>
+
+    <!-- original[values]: Запуск двигателя при низком заряде -->
+    <!-- original[values-zh-rCN]: Запуск двигателя при низком заряде -->
+    <!-- original[values-en-rUS]: Запуск двигателя при низком заряде -->
+    <!-- starshine: Запуск двигателя при низком заряде -->
+    <string name="low_start_content">Запуск двигателя при низком заряде</string>
+
+    <!-- original[values]: Запуск генератора при низком заряде во время внешней отдачи энергии (V2L) -->
+    <!-- original[values-zh-rCN]: Запуск генератора при низком заряде во время внешней отдачи энергии (V2L) -->
+    <!-- original[values-en-rUS]: Запуск генератора при низком заряде во время внешней отдачи энергии (V2L) -->
+    <!-- starshine: Запуск генератора при низком заряде во время внешней отдачи энергии (V2L) -->
+    <string name="low_start_content_meth">Запуск генератора при низком заряде во время внешней отдачи энергии (V2L)</string>
+
+    <!-- original[values]: Понятно -->
+    <!-- original[values-zh-rCN]: Понятно -->
+    <!-- original[values-en-rUS]: Понятно -->
+    <!-- starshine: Понятно -->
+    <string name="low_start_know">Понятно</string>
+
+    <!-- original[values]: Опасно! Держите авто на открытом воздухе (выхлопные газы). -->
+    <!-- original[values-zh-rCN]: Опасно! Держите авто на открытом воздухе (выхлопные газы). -->
+    <!-- original[values-en-rUS]: Опасно! Держите авто на открытом воздухе (выхлопные газы). -->
+    <!-- starshine: Опасно! Держите авто на открытом воздухе (выхлопные газы). -->
+    <string name="low_start_notice">Опасно! Держите авто на открытом воздухе (выхлопные газы).</string>
+
+    <!-- original[values]: Важно -->
+    <!-- original[values-zh-rCN]: Важно -->
+    <!-- original[values-en-rUS]: Важно -->
+    <!-- starshine: Важно -->
+    <string name="low_start_title">Важно</string>
+
+    <!-- original[values]: Свернуть -->
+    <!-- original[values-zh-rCN]: Свернуть -->
+    <!-- original[values-en-rUS]: Свернуть -->
+    <!-- starshine: Свернуть -->
+    <string name="m3c_bottom_sheet_collapse_description">Свернуть</string>
+
+    <!-- original[values]: Закрыть -->
+    <!-- original[values-zh-rCN]: Закрыть -->
+    <!-- original[values-en-rUS]: Закрыть -->
+    <!-- starshine: Закрыть -->
+    <string name="m3c_bottom_sheet_dismiss_description">Закрыть</string>
+
+    <!-- original[values]: Маркер -->
+    <!-- original[values-zh-rCN]: Маркер -->
+    <!-- original[values-en-rUS]: Маркер -->
+    <!-- starshine: Маркер -->
+    <string name="m3c_bottom_sheet_drag_handle_description">Маркер</string>
+
+    <!-- original[values]: Развернуть -->
+    <!-- original[values-zh-rCN]: Развернуть -->
+    <!-- original[values-en-rUS]: Развернуть -->
+    <!-- starshine: Развернуть -->
+    <string name="m3c_bottom_sheet_expand_description">Развернуть</string>
+
+    <!-- original[values]: Панель -->
+    <!-- original[values-zh-rCN]: Панель -->
+    <!-- original[values-en-rUS]: Панель -->
+    <!-- starshine: Панель -->
+    <string name="m3c_bottom_sheet_pane_title">Панель</string>
+
+    <!-- original[values]: Дата -->
+    <!-- original[values-zh-rCN]: Дата -->
+    <!-- original[values-en-rUS]: Дата -->
+    <!-- starshine: Дата -->
+    <string name="m3c_date_input_headline">Дата</string>
+
+    <!-- original[values]: Дата: %1$s -->
+    <!-- original[values-zh-rCN]: Дата: %1$s -->
+    <!-- original[values-en-rUS]: Дата: %1$s -->
+    <!-- starshine: Дата: %1$s -->
+    <string name="m3c_date_input_headline_description">Дата: %1$s</string>
+
+    <!-- original[values]: Формат: %1$s -->
+    <!-- original[values-zh-rCN]: Формат: %1$s -->
+    <!-- original[values-en-rUS]: Формат: %1$s -->
+    <!-- starshine: Формат: %1$s -->
+    <string name="m3c_date_input_invalid_for_pattern">Формат: %1$s</string>
+
+    <!-- original[values]: Ошибка: %1$s -->
+    <!-- original[values-zh-rCN]: Ошибка: %1$s -->
+    <!-- original[values-en-rUS]: Ошибка: %1$s -->
+    <!-- starshine: Ошибка: %1$s -->
+    <string name="m3c_date_input_invalid_not_allowed">Ошибка: %1$s</string>
+
+    <!-- original[values]: Год: %1$s – %2$s -->
+    <!-- original[values-zh-rCN]: Год: %1$s – %2$s -->
+    <!-- original[values-en-rUS]: Год: %1$s – %2$s -->
+    <!-- starshine: Год: %1$s – %2$s -->
+    <string name="m3c_date_input_invalid_year_range">Год: %1$s – %2$s</string>
+
+    <!-- original[values]: Дата -->
+    <!-- original[values-zh-rCN]: Дата -->
+    <!-- original[values-en-rUS]: Дата -->
+    <!-- starshine: Дата -->
+    <string name="m3c_date_input_label">Дата</string>
+
+    <!-- original[values]: Пусто -->
+    <!-- original[values-zh-rCN]: Пусто -->
+    <!-- original[values-en-rUS]: Пусто -->
+    <!-- starshine: Пусто -->
+    <string name="m3c_date_input_no_input_description">Пусто</string>
+
+    <!-- original[values]: Выбор даты -->
+    <!-- original[values-zh-rCN]: Выбор даты -->
+    <!-- original[values-en-rUS]: Выбор даты -->
+    <!-- starshine: Выбор даты -->
+    <string name="m3c_date_input_title">Выбор даты</string>
+
+    <!-- original[values]: Выбрано -->
+    <!-- original[values-zh-rCN]: Выбрано -->
+    <!-- original[values-en-rUS]: Выбрано -->
+    <!-- starshine: Выбрано -->
+    <string name="m3c_date_picker_headline">Выбрано</string>
+
+    <!-- original[values]: Выбор: %1$s -->
+    <!-- original[values-zh-rCN]: Выбор: %1$s -->
+    <!-- original[values-en-rUS]: Выбор: %1$s -->
+    <!-- starshine: Выбор: %1$s -->
+    <string name="m3c_date_picker_headline_description">Выбор: %1$s</string>
+
+    <!-- original[values]: К %1$s году -->
+    <!-- original[values-zh-rCN]: К %1$s году -->
+    <!-- original[values-en-rUS]: К %1$s году -->
+    <!-- starshine: К %1$s году -->
+    <string name="m3c_date_picker_navigate_to_year_description">К %1$s году</string>
+
+    <!-- original[values]: Пусто -->
+    <!-- original[values-zh-rCN]: Пусто -->
+    <!-- original[values-en-rUS]: Пусто -->
+    <!-- starshine: Пусто -->
+    <string name="m3c_date_picker_no_selection_description">Пусто</string>
+
+    <!-- original[values]: Раньше -->
+    <!-- original[values-zh-rCN]: Раньше -->
+    <!-- original[values-en-rUS]: Раньше -->
+    <!-- starshine: Раньше -->
+    <string name="m3c_date_picker_scroll_to_earlier_years">Раньше</string>
+
+    <!-- original[values]: Позже -->
+    <!-- original[values-zh-rCN]: Позже -->
+    <!-- original[values-en-rUS]: Позже -->
+    <!-- starshine: Позже -->
+    <string name="m3c_date_picker_scroll_to_later_years">Позже</string>
+
+    <!-- original[values]: Календарь -->
+    <!-- original[values-zh-rCN]: Календарь -->
+    <!-- original[values-en-rUS]: Календарь -->
+    <!-- starshine: Календарь -->
+    <string name="m3c_date_picker_switch_to_calendar_mode">Календарь</string>
+
+    <!-- original[values]: К дням -->
+    <!-- original[values-zh-rCN]: К дням -->
+    <!-- original[values-en-rUS]: К дням -->
+    <!-- starshine: К дням -->
+    <string name="m3c_date_picker_switch_to_day_selection">К дням</string>
+
+    <!-- original[values]: Ввод -->
+    <!-- original[values-zh-rCN]: Ввод -->
+    <!-- original[values-en-rUS]: Ввод -->
+    <!-- starshine: Ввод -->
+    <string name="m3c_date_picker_switch_to_input_mode">Ввод</string>
+
+    <!-- original[values]: След. месяц -->
+    <!-- original[values-zh-rCN]: След. месяц -->
+    <!-- original[values-en-rUS]: След. месяц -->
+    <!-- starshine: След. месяц -->
+    <string name="m3c_date_picker_switch_to_next_month">След. месяц</string>
+
+    <!-- original[values]: Пред. месяц -->
+    <!-- original[values-zh-rCN]: Пред. месяц -->
+    <!-- original[values-en-rUS]: Пред. месяц -->
+    <!-- starshine: Пред. месяц -->
+    <string name="m3c_date_picker_switch_to_previous_month">Пред. месяц</string>
+
+    <!-- original[values]: Выбор года -->
+    <!-- original[values-zh-rCN]: Выбор года -->
+    <!-- original[values-en-rUS]: Выбор года -->
+    <!-- starshine: Выбор года -->
+    <string name="m3c_date_picker_switch_to_year_selection">Выбор года</string>
+
+    <!-- original[values]: Выберите дату -->
+    <!-- original[values-zh-rCN]: Выберите дату -->
+    <!-- original[values-en-rUS]: Выберите дату -->
+    <!-- starshine: Выберите дату -->
+    <string name="m3c_date_picker_title">Выберите дату</string>
+
+    <!-- original[values]: Сегодня -->
+    <!-- original[values-zh-rCN]: Сегодня -->
+    <!-- original[values-en-rUS]: Сегодня -->
+    <!-- starshine: Сегодня -->
+    <string name="m3c_date_picker_today_description">Сегодня</string>
+
+    <!-- original[values]: Выбор года -->
+    <!-- original[values-zh-rCN]: Выбор года -->
+    <!-- original[values-en-rUS]: Выбор года -->
+    <!-- starshine: Выбор года -->
+    <string name="m3c_date_picker_year_picker_pane_title">Выбор года</string>
+
+    <!-- original[values]: Неверный диапазон -->
+    <!-- original[values-zh-rCN]: Неверный диапазон -->
+    <!-- original[values-en-rUS]: Неверный диапазон -->
+    <!-- starshine: Неверный диапазон -->
+    <string name="m3c_date_range_input_invalid_range_input">Неверный диапазон</string>
+
+    <!-- original[values]: Введите даты -->
+    <!-- original[values-zh-rCN]: Введите даты -->
+    <!-- original[values-en-rUS]: Введите даты -->
+    <!-- starshine: Введите даты -->
+    <string name="m3c_date_range_input_title">Введите даты</string>
+
+    <!-- original[values]: В диапазоне -->
+    <!-- original[values-zh-rCN]: В диапазоне -->
+    <!-- original[values-en-rUS]: В диапазоне -->
+    <!-- starshine: В диапазоне -->
+    <string name="m3c_date_range_picker_day_in_range">В диапазоне</string>
+
+    <!-- original[values]: Конец -->
+    <!-- original[values-zh-rCN]: Конец -->
+    <!-- original[values-en-rUS]: Конец -->
+    <!-- starshine: Конец -->
+    <string name="m3c_date_range_picker_end_headline">Конец</string>
+
+    <!-- original[values]: Далее -->
+    <!-- original[values-zh-rCN]: Далее -->
+    <!-- original[values-en-rUS]: Далее -->
+    <!-- starshine: Далее -->
+    <string name="m3c_date_range_picker_scroll_to_next_month">Далее</string>
+
+    <!-- original[values]: Назад -->
+    <!-- original[values-zh-rCN]: Назад -->
+    <!-- original[values-en-rUS]: Назад -->
+    <!-- starshine: Назад -->
+    <string name="m3c_date_range_picker_scroll_to_previous_month">Назад</string>
+
+    <!-- original[values]: Начало -->
+    <!-- original[values-zh-rCN]: Начало -->
+    <!-- original[values-en-rUS]: Начало -->
+    <!-- starshine: Начало -->
+    <string name="m3c_date_range_picker_start_headline">Начало</string>
+
+    <!-- original[values]: Диапазон дат -->
+    <!-- original[values-zh-rCN]: Диапазон дат -->
+    <!-- original[values-en-rUS]: Диапазон дат -->
+    <!-- starshine: Диапазон дат -->
+    <string name="m3c_date_range_picker_title">Диапазон дат</string>
+
+    <!-- original[values]: Окно -->
+    <!-- original[values-zh-rCN]: Окно -->
+    <!-- original[values-en-rUS]: Окно -->
+    <!-- starshine: Окно -->
+    <string name="m3c_dialog">Окно</string>
+
+    <!-- original[values]: Свернуто -->
+    <!-- original[values-zh-rCN]: Свернуто -->
+    <!-- original[values-en-rUS]: Свернуто -->
+    <!-- starshine: Свернуто -->
+    <string name="m3c_dropdown_menu_collapsed">Свернуто</string>
+
+    <!-- original[values]: Развернуто -->
+    <!-- original[values-zh-rCN]: Развернуто -->
+    <!-- original[values-en-rUS]: Развернуто -->
+    <!-- starshine: Развернуто -->
+    <string name="m3c_dropdown_menu_expanded">Развернуто</string>
+
+    <!-- original[values]: Поиск -->
+    <!-- original[values-zh-rCN]: Поиск -->
+    <!-- original[values-en-rUS]: Поиск -->
+    <!-- starshine: Поиск -->
+    <string name="m3c_search_bar_search">Поиск</string>
+
+    <!-- original[values]: Закрыть -->
+    <!-- original[values-zh-rCN]: Закрыть -->
+    <!-- original[values-en-rUS]: Закрыть -->
+    <!-- starshine: Закрыть -->
+    <string name="m3c_snackbar_dismiss">Закрыть</string>
+
+    <!-- original[values]: Есть варианты -->
+    <!-- original[values-zh-rCN]: Есть варианты -->
+    <!-- original[values-en-rUS]: Есть варианты -->
+    <!-- starshine: Есть варианты -->
+    <string name="m3c_suggestions_available">Есть варианты</string>
+
+    <!-- original[values]: AM -->
+    <!-- original[values-zh-rCN]: AM -->
+    <!-- original[values-en-rUS]: AM -->
+    <!-- starshine: AM -->
+    <string name="m3c_time_picker_am">AM</string>
+
+    <!-- original[values]: Час -->
+    <!-- original[values-zh-rCN]: Час -->
+    <!-- original[values-en-rUS]: Час -->
+    <!-- starshine: Час -->
+    <string name="m3c_time_picker_hour">Час</string>
+
+    <!-- original[values]: %1$d ч -->
+    <!-- original[values-zh-rCN]: %1$d ч -->
+    <!-- original[values-en-rUS]: %1$d ч -->
+    <!-- starshine: %1$d ч -->
+    <string name="m3c_time_picker_hour_24h_suffix">%1$d ч</string>
+
+    <!-- original[values]: Выбор часа -->
+    <!-- original[values-zh-rCN]: Выбор часа -->
+    <!-- original[values-en-rUS]: Выбор часа -->
+    <!-- starshine: Выбор часа -->
+    <string name="m3c_time_picker_hour_selection">Выбор часа</string>
+
+    <!-- original[values]: %1$d ч -->
+    <!-- original[values-zh-rCN]: %1$d ч -->
+    <!-- original[values-en-rUS]: %1$d ч -->
+    <!-- starshine: %1$d ч -->
+    <string name="m3c_time_picker_hour_suffix">%1$d ч</string>
+
+    <!-- original[values]: часы -->
+    <!-- original[values-zh-rCN]: часы -->
+    <!-- original[values-en-rUS]: часы -->
+    <!-- starshine: часы -->
+    <string name="m3c_time_picker_hour_text_field">часы</string>
+
+    <!-- original[values]: Мин -->
+    <!-- original[values-zh-rCN]: Мин -->
+    <!-- original[values-en-rUS]: Мин -->
+    <!-- starshine: Мин -->
+    <string name="m3c_time_picker_minute">Мин</string>
+
+    <!-- original[values]: Выбор минут -->
+    <!-- original[values-zh-rCN]: Выбор минут -->
+    <!-- original[values-en-rUS]: Выбор минут -->
+    <!-- starshine: Выбор минут -->
+    <string name="m3c_time_picker_minute_selection">Выбор минут</string>
+
+    <!-- original[values]: %1$d мин -->
+    <!-- original[values-zh-rCN]: %1$d мин -->
+    <!-- original[values-en-rUS]: %1$d мин -->
+    <!-- starshine: %1$d мин -->
+    <string name="m3c_time_picker_minute_suffix">%1$d мин</string>
+
+    <!-- original[values]: минуты -->
+    <!-- original[values-zh-rCN]: минуты -->
+    <!-- original[values-en-rUS]: минуты -->
+    <!-- starshine: минуты -->
+    <string name="m3c_time_picker_minute_text_field">минуты</string>
+
+    <!-- original[values]: AM/PM -->
+    <!-- original[values-zh-rCN]: AM/PM -->
+    <!-- original[values-en-rUS]: AM/PM -->
+    <!-- starshine: AM/PM -->
+    <string name="m3c_time_picker_period_toggle_description">AM/PM</string>
+
+    <!-- original[values]: PM -->
+    <!-- original[values-zh-rCN]: PM -->
+    <!-- original[values-en-rUS]: PM -->
+    <!-- starshine: PM -->
+    <string name="m3c_time_picker_pm">PM</string>
+
+    <!-- original[values]: Подсказка -->
+    <!-- original[values-zh-rCN]: Подсказка -->
+    <!-- original[values-en-rUS]: Подсказка -->
+    <!-- starshine: Подсказка -->
+    <string name="m3c_tooltip_long_press_label">Подсказка</string>
+
+    <!-- original[values]: Описание -->
+    <!-- original[values-zh-rCN]: Описание -->
+    <!-- original[values-en-rUS]: Описание -->
+    <!-- starshine: Описание -->
+    <string name="m3c_tooltip_pane_description">Описание</string>
+
+    <!-- original[values]: : -->
+    <!-- original[values-zh-rCN]: : -->
+    <!-- original[values-en-rUS]: : -->
+    <!-- starshine: : -->
+    <string name="material_clock_display_divider">:</string>
+
+    <!-- original[values]: AM/PM -->
+    <!-- original[values-zh-rCN]: AM/PM -->
+    <!-- original[values-en-rUS]: AM/PM -->
+    <!-- starshine: AM/PM -->
+    <string name="material_clock_toggle_content_description">AM/PM</string>
+
+    <!-- original[values]: Выбор часа -->
+    <!-- original[values-zh-rCN]: Выбор часа -->
+    <!-- original[values-en-rUS]: Выбор часа -->
+    <!-- starshine: Выбор часа -->
+    <string name="material_hour_selection">Выбор часа</string>
+
+    <!-- original[values]: %1$s ч -->
+    <!-- original[values-zh-rCN]: %1$s ч -->
+    <!-- original[values-en-rUS]: %1$s ч -->
+    <!-- starshine: %1$s ч -->
+    <string name="material_hour_suffix">%1$s ч</string>
+
+    <!-- original[values]: Выбор минут -->
+    <!-- original[values-zh-rCN]: Выбор минут -->
+    <!-- original[values-en-rUS]: Выбор минут -->
+    <!-- starshine: Выбор минут -->
+    <string name="material_minute_selection">Выбор минут</string>
+
+    <!-- original[values]: %1$s мин -->
+    <!-- original[values-zh-rCN]: %1$s мин -->
+    <!-- original[values-en-rUS]: %1$s мин -->
+    <!-- starshine: %1$s мин -->
+    <string name="material_minute_suffix">%1$s мин</string>
+
+    <!-- original[values]: Конец -->
+    <!-- original[values-zh-rCN]: Конец -->
+    <!-- original[values-en-rUS]: Конец -->
+    <!-- starshine: Конец -->
+    <string name="material_slider_range_end">Конец</string>
+
+    <!-- original[values]: Начало -->
+    <!-- original[values-zh-rCN]: Начало -->
+    <!-- original[values-en-rUS]: Начало -->
+    <!-- starshine: Начало -->
+    <string name="material_slider_range_start">Начало</string>
+
+    <!-- original[values]: AM -->
+    <!-- original[values-zh-rCN]: AM -->
+    <!-- original[values-en-rUS]: AM -->
+    <!-- starshine: AM -->
+    <string name="material_timepicker_am">AM</string>
+
+    <!-- original[values]: Циферблат -->
+    <!-- original[values-zh-rCN]: Циферблат -->
+    <!-- original[values-en-rUS]: Циферблат -->
+    <!-- starshine: Циферблат -->
+    <string name="material_timepicker_clock_mode_description">Циферблат</string>
+
+    <!-- original[values]: Час -->
+    <!-- original[values-zh-rCN]: Час -->
+    <!-- original[values-en-rUS]: Час -->
+    <!-- starshine: Час -->
+    <string name="material_timepicker_hour">Час</string>
+
+    <!-- original[values]: Мин -->
+    <!-- original[values-zh-rCN]: Мин -->
+    <!-- original[values-en-rUS]: Мин -->
+    <!-- starshine: Мин -->
+    <string name="material_timepicker_minute">Мин</string>
+
+    <!-- original[values]: PM -->
+    <!-- original[values-zh-rCN]: PM -->
+    <!-- original[values-en-rUS]: PM -->
+    <!-- starshine: PM -->
+    <string name="material_timepicker_pm">PM</string>
+
+    <!-- original[values]: Время -->
+    <!-- original[values-zh-rCN]: Время -->
+    <!-- original[values-en-rUS]: Время -->
+    <!-- starshine: Время -->
+    <string name="material_timepicker_select_time">Время</string>
+
+    <!-- original[values]: Ввод текста -->
+    <!-- original[values-zh-rCN]: Ввод текста -->
+    <!-- original[values-en-rUS]: Ввод текста -->
+    <!-- starshine: Ввод текста -->
+    <string name="material_timepicker_text_input_mode_description">Ввод текста</string>
+
+    <!-- original[values]: Расход метанола -->
+    <!-- original[values-zh-rCN]: Расход метанола -->
+    <!-- original[values-en-rUS]: Расход метанола -->
+    <!-- starshine: Расход метанола -->
+    <string name="methanol_consumption">Расход метанола</string>
+
+    <!-- original[values]: л/100 км -->
+    <!-- original[values-zh-rCN]: л/100 км -->
+    <!-- original[values-en-rUS]: л/100 км -->
+    <!-- starshine: л/100 км -->
+    <string name="methanol_consumption_unit_with_title">л/100 км</string>
+
+    <!-- original[values]: График расхода -->
+    <!-- original[values-zh-rCN]: График расхода -->
+    <!-- original[values-en-rUS]: График расхода -->
+    <!-- starshine: График расхода -->
+    <string name="mileage_curve">График расхода</string>
+
+    <!-- original[values]: "Последние
+100 км" -->
+    <!-- original[values-zh-rCN]: "Последние
+100 км" -->
+    <!-- original[values-en-rUS]: "Последние
+100 км" -->
+    <!-- starshine: "Последние
+100 км" -->
+    <string name="mileage_curve_100">"Последние
+100 км"</string>
+
+    <!-- original[values]: "Последние
+50 км" -->
+    <!-- original[values-zh-rCN]: "Последние
+50 км" -->
+    <!-- original[values-en-rUS]: "Последние
+50 км" -->
+    <!-- starshine: "Последние
+50 км" -->
+    <string name="mileage_curve_50">"Последние
+50 км"</string>
+
+    <!-- original[values]: кВт·ч/100 км -->
+    <!-- original[values-zh-rCN]: кВт·ч/100 км -->
+    <!-- original[values-en-rUS]: кВт·ч/100 км -->
+    <!-- starshine: кВт·ч/100 км -->
+    <string name="mileage_energy_unit">кВт·ч/100 км</string>
+
+    <!-- original[values]: Топливо (л/100 км) -->
+    <!-- original[values-zh-rCN]: Топливо (л/100 км) -->
+    <!-- original[values-en-rUS]: Топливо (л/100 км) -->
+    <!-- starshine: Топливо (л/100 км) -->
+    <string name="mileage_fuel_legend">Топливо (л/100 км)</string>
+
+    <!-- original[values]: Журнал расхода -->
+    <!-- original[values-zh-rCN]: Журнал расхода -->
+    <!-- original[values-en-rUS]: Журнал расхода -->
+    <!-- starshine: Журнал расхода -->
+    <string name="mileage_log">Журнал расхода</string>
+
+    <!-- original[values]: Энергия (кВт·ч/100 км) -->
+    <!-- original[values-zh-rCN]: Энергия (кВт·ч/100 км) -->
+    <!-- original[values-en-rUS]: Энергия (кВт·ч/100 км) -->
+    <!-- starshine: Энергия (кВт·ч/100 км) -->
+    <string name="mileage_power_legend">Энергия (кВт·ч/100 км)</string>
+
+    <!-- original[values]: Статистика -->
+    <!-- original[values-zh-rCN]: Статистика -->
+    <!-- original[values-en-rUS]: Статистика -->
+    <!-- starshine: Статистика -->
+    <string name="mileage_statistics_title">Статистика</string>
+
+    <!-- original[values]: Текущая статистика -->
+    <!-- original[values-zh-rCN]: Текущая статистика -->
+    <!-- original[values-en-rUS]: Текущая статистика -->
+    <!-- starshine: Текущая статистика -->
+    <string name="mileage_title">Текущая статистика</string>
+
+    <!-- original[values]: мин -->
+    <!-- original[values-zh-rCN]: мин -->
+    <!-- original[values-en-rUS]: мин -->
+    <!-- starshine: мин -->
+    <string name="minute">мин</string>
+
+    <!-- original[values]: Пн -->
+    <!-- original[values-zh-rCN]: Пн -->
+    <!-- original[values-en-rUS]: Пн -->
+    <!-- starshine: Пн -->
+    <string name="mon">Пн</string>
+
+    <!-- original[values]: месяц -->
+    <!-- original[values-zh-rCN]: месяц -->
+    <!-- original[values-en-rUS]: месяц -->
+    <!-- starshine: месяц -->
+    <string name="month">месяц</string>
+
+    <!-- original[values]: Уведомление -->
+    <!-- original[values-zh-rCN]: Уведомление -->
+    <!-- original[values-en-rUS]: Уведомление -->
+    <!-- starshine: Уведомление -->
+    <string name="mtrl_badge_numberless_content_description">Уведомление</string>
+
+    <!-- original[values]: Удалить %1$s -->
+    <!-- original[values-zh-rCN]: Удалить %1$s -->
+    <!-- original[values-en-rUS]: Удалить %1$s -->
+    <!-- starshine: Удалить %1$s -->
+    <string name="mtrl_chip_close_icon_content_description">Удалить %1$s</string>
+
+    <!-- original[values]: > %1$d уведомлений -->
+    <!-- original[values-zh-rCN]: > %1$d уведомлений -->
+    <!-- original[values-en-rUS]: > %1$d уведомлений -->
+    <!-- starshine: > %1$d уведомлений -->
+    <string name="mtrl_exceed_max_badge_number_content_description">&gt; %1$d уведомлений</string>
+
+    <!-- original[values]: %1$d%2$s -->
+    <!-- original[values-zh-rCN]: %1$d%2$s -->
+    <!-- original[values-en-rUS]: %1$d%2$s -->
+    <!-- starshine: %1$d%2$s -->
+    <string name="mtrl_exceed_max_badge_number_suffix">%1$d%2$s</string>
+
+    <!-- original[values]: След. месяц -->
+    <!-- original[values-zh-rCN]: След. месяц -->
+    <!-- original[values-en-rUS]: След. месяц -->
+    <!-- starshine: След. месяц -->
+    <string name="mtrl_picker_a11y_next_month">След. месяц</string>
+
+    <!-- original[values]: Пред. месяц -->
+    <!-- original[values-zh-rCN]: Пред. месяц -->
+    <!-- original[values-en-rUS]: Пред. месяц -->
+    <!-- starshine: Пред. месяц -->
+    <string name="mtrl_picker_a11y_prev_month">Пред. месяц</string>
+
+    <!-- original[values]: Выбор: %1$s -->
+    <!-- original[values-zh-rCN]: Выбор: %1$s -->
+    <!-- original[values-en-rUS]: Выбор: %1$s -->
+    <!-- starshine: Выбор: %1$s -->
+    <string name="mtrl_picker_announce_current_selection">Выбор: %1$s</string>
+
+    <!-- original[values]: Отмена -->
+    <!-- original[values-zh-rCN]: Отмена -->
+    <!-- original[values-en-rUS]: Отмена -->
+    <!-- starshine: Отмена -->
+    <string name="mtrl_picker_cancel">Отмена</string>
+
+    <!-- original[values]: ОК -->
+    <!-- original[values-zh-rCN]: ОК -->
+    <!-- original[values-en-rUS]: ОК -->
+    <!-- starshine: ОК -->
+    <string name="mtrl_picker_confirm">ОК</string>
+
+    <!-- original[values]: %1$s -->
+    <!-- original[values-zh-rCN]: %1$s -->
+    <!-- original[values-en-rUS]: %1$s -->
+    <!-- starshine: %1$s -->
+    <string name="mtrl_picker_date_header_selected">%1$s</string>
+
+    <!-- original[values]: Дата -->
+    <!-- original[values-zh-rCN]: Дата -->
+    <!-- original[values-en-rUS]: Дата -->
+    <!-- starshine: Дата -->
+    <string name="mtrl_picker_date_header_title">Дата</string>
+
+    <!-- original[values]: Выберите дату -->
+    <!-- original[values-zh-rCN]: Выберите дату -->
+    <!-- original[values-en-rUS]: Выберите дату -->
+    <!-- starshine: Выберите дату -->
+    <string name="mtrl_picker_date_header_unselected">Выберите дату</string>
+
+    <!-- original[values]: День: %1$s -->
+    <!-- original[values-zh-rCN]: День: %1$s -->
+    <!-- original[values-en-rUS]: День: %1$s -->
+    <!-- starshine: День: %1$s -->
+    <string name="mtrl_picker_day_of_week_column_header">День: %1$s</string>
+
+    <!-- original[values]: Ошибка формата -->
+    <!-- original[values-zh-rCN]: Ошибка формата -->
+    <!-- original[values-en-rUS]: Ошибка формата -->
+    <!-- starshine: Ошибка формата -->
+    <string name="mtrl_picker_invalid_format">Ошибка формата</string>
+
+    <!-- original[values]: Пример: %1$s -->
+    <!-- original[values-zh-rCN]: Пример: %1$s -->
+    <!-- original[values-en-rUS]: Пример: %1$s -->
+    <!-- starshine: Пример: %1$s -->
+    <string name="mtrl_picker_invalid_format_example">Пример: %1$s</string>
+
+    <!-- original[values]: Используйте: %1$s -->
+    <!-- original[values-zh-rCN]: Используйте: %1$s -->
+    <!-- original[values-en-rUS]: Используйте: %1$s -->
+    <!-- starshine: Используйте: %1$s -->
+    <string name="mtrl_picker_invalid_format_use">Используйте: %1$s</string>
+
+    <!-- original[values]: Ошибка диапазона -->
+    <!-- original[values-zh-rCN]: Ошибка диапазона -->
+    <!-- original[values-en-rUS]: Ошибка диапазона -->
+    <!-- starshine: Ошибка диапазона -->
+    <string name="mtrl_picker_invalid_range">Ошибка диапазона</string>
+
+    <!-- original[values]: К %1$s году -->
+    <!-- original[values-zh-rCN]: К %1$s году -->
+    <!-- original[values-en-rUS]: К %1$s году -->
+    <!-- starshine: К %1$s году -->
+    <string name="mtrl_picker_navigate_to_year_description">К %1$s году</string>
+
+    <!-- original[values]: Вне диапазона: %1$s -->
+    <!-- original[values-zh-rCN]: Вне диапазона: %1$s -->
+    <!-- original[values-en-rUS]: Вне диапазона: %1$s -->
+    <!-- starshine: Вне диапазона: %1$s -->
+    <string name="mtrl_picker_out_of_range">Вне диапазона: %1$s</string>
+
+    <!-- original[values]: От %1$s -->
+    <!-- original[values-zh-rCN]: От %1$s -->
+    <!-- original[values-en-rUS]: От %1$s -->
+    <!-- starshine: От %1$s -->
+    <string name="mtrl_picker_range_header_only_end_selected">От %1$s</string>
+
+    <!-- original[values]: До %1$s -->
+    <!-- original[values-zh-rCN]: До %1$s -->
+    <!-- original[values-en-rUS]: До %1$s -->
+    <!-- starshine: До %1$s -->
+    <string name="mtrl_picker_range_header_only_start_selected">До %1$s</string>
+
+    <!-- original[values]: %1$s – %2$s -->
+    <!-- original[values-zh-rCN]: %1$s – %2$s -->
+    <!-- original[values-en-rUS]: %1$s – %2$s -->
+    <!-- starshine: %1$s – %2$s -->
+    <string name="mtrl_picker_range_header_selected">%1$s – %2$s</string>
+
+    <!-- original[values]: Диапазон -->
+    <!-- original[values-zh-rCN]: Диапазон -->
+    <!-- original[values-en-rUS]: Диапазон -->
+    <!-- starshine: Диапазон -->
+    <string name="mtrl_picker_range_header_title">Диапазон</string>
+
+    <!-- original[values]: Диапазон -->
+    <!-- original[values-zh-rCN]: Диапазон -->
+    <!-- original[values-en-rUS]: Диапазон -->
+    <!-- starshine: Диапазон -->
+    <string name="mtrl_picker_range_header_unselected">Диапазон</string>
+
+    <!-- original[values]: Сохранить -->
+    <!-- original[values-zh-rCN]: Сохранить -->
+    <!-- original[values-en-rUS]: Сохранить -->
+    <!-- starshine: Сохранить -->
+    <string name="mtrl_picker_save">Сохранить</string>
+
+    <!-- original[values]: Дата -->
+    <!-- original[values-zh-rCN]: Дата -->
+    <!-- original[values-en-rUS]: Дата -->
+    <!-- starshine: Дата -->
+    <string name="mtrl_picker_text_input_date_hint">Дата</string>
+
+    <!-- original[values]: Конец -->
+    <!-- original[values-zh-rCN]: Конец -->
+    <!-- original[values-en-rUS]: Конец -->
+    <!-- starshine: Конец -->
+    <string name="mtrl_picker_text_input_date_range_end_hint">Конец</string>
+
+    <!-- original[values]: Начало -->
+    <!-- original[values-zh-rCN]: Начало -->
+    <!-- original[values-en-rUS]: Начало -->
+    <!-- starshine: Начало -->
+    <string name="mtrl_picker_text_input_date_range_start_hint">Начало</string>
+
+    <!-- original[values]: д -->
+    <!-- original[values-zh-rCN]: д -->
+    <!-- original[values-en-rUS]: д -->
+    <!-- starshine: д -->
+    <string name="mtrl_picker_text_input_day_abbr">д</string>
+
+    <!-- original[values]: м -->
+    <!-- original[values-zh-rCN]: м -->
+    <!-- original[values-en-rUS]: м -->
+    <!-- starshine: м -->
+    <string name="mtrl_picker_text_input_month_abbr">м</string>
+
+    <!-- original[values]: г -->
+    <!-- original[values-zh-rCN]: г -->
+    <!-- original[values-en-rUS]: г -->
+    <!-- starshine: г -->
+    <string name="mtrl_picker_text_input_year_abbr">г</string>
+
+    <!-- original[values]: Календарь -->
+    <!-- original[values-zh-rCN]: Календарь -->
+    <!-- original[values-en-rUS]: Календарь -->
+    <!-- starshine: Календарь -->
+    <string name="mtrl_picker_toggle_to_calendar_input_mode">Календарь</string>
+
+    <!-- original[values]: К дням -->
+    <!-- original[values-zh-rCN]: К дням -->
+    <!-- original[values-en-rUS]: К дням -->
+    <!-- starshine: К дням -->
+    <string name="mtrl_picker_toggle_to_day_selection">К дням</string>
+
+    <!-- original[values]: Ввод -->
+    <!-- original[values-zh-rCN]: Ввод -->
+    <!-- original[values-en-rUS]: Ввод -->
+    <!-- starshine: Ввод -->
+    <string name="mtrl_picker_toggle_to_text_input_mode">Ввод</string>
+
+    <!-- original[values]: К годам -->
+    <!-- original[values-zh-rCN]: К годам -->
+    <!-- original[values-en-rUS]: К годам -->
+    <!-- starshine: К годам -->
+    <string name="mtrl_picker_toggle_to_year_selection">К годам</string>
+
+    <!-- original[values]: Меню -->
+    <!-- original[values-zh-rCN]: Меню -->
+    <!-- original[values-en-rUS]: Меню -->
+    <!-- starshine: Меню -->
+    <string name="navigation_menu">Меню</string>
+
+    <!-- original[values]: "Последние
+100 км" -->
+    <!-- original[values-zh-rCN]: "Последние
+100 км" -->
+    <!-- original[values-en-rUS]: "Последние
+100 км" -->
+    <!-- starshine: "Последние
+100 км" -->
+    <string name="nearest_100_kilometers">"Последние
+100 км"</string>
+
+    <!-- original[values]: "Последние
+50 км" -->
+    <!-- original[values-zh-rCN]: "Последние
+50 км" -->
+    <!-- original[values-en-rUS]: "Последние
+50 км" -->
+    <!-- starshine: "Последние
+50 км" -->
+    <string name="nearest_50_kilometers">"Последние
+50 км"</string>
+
+    <!-- original[values]: Начать зарядку? -->
+    <!-- original[values-zh-rCN]: Начать зарядку? -->
+    <!-- original[values-en-rUS]: Начать зарядку? -->
+    <!-- starshine: Начать зарядку? -->
+    <string name="need_start_charge">Начать зарядку?</string>
+
+    <!-- original[values]: Завтра -->
+    <!-- original[values-zh-rCN]: Завтра -->
+    <!-- original[values-en-rUS]: Завтра -->
+    <!-- starshine: Завтра -->
+    <string name="next_day">Завтра</string>
+
+    <!-- original[values]: Не выбрано -->
+    <!-- original[values-zh-rCN]: Не выбрано -->
+    <!-- original[values-en-rUS]: Не выбрано -->
+    <!-- starshine: Не выбрано -->
+    <string name="not_selected">Не выбрано</string>
+
+    <!-- original[values]: Выкл -->
+    <!-- original[values-zh-rCN]: Выкл -->
+    <!-- original[values-en-rUS]: Выкл -->
+    <!-- starshine: Выкл -->
+    <string name="off">Выкл</string>
+
+    <!-- original[values]: Вкл -->
+    <!-- original[values-zh-rCN]: Вкл -->
+    <!-- original[values-en-rUS]: Вкл -->
+    <!-- starshine: Вкл -->
+    <string name="on">Вкл</string>
+
+    <!-- original[values]: Один раз -->
+    <!-- original[values-zh-rCN]: Один раз -->
+    <!-- original[values-en-rUS]: Один раз -->
+    <!-- starshine: Один раз -->
+    <string name="only_one">Один раз</string>
+
+    <!-- original[values]: Выходная мощность -->
+    <!-- original[values-zh-rCN]: Выходная мощность -->
+    <!-- original[values-en-rUS]: Выходная мощность -->
+    <!-- starshine: Выходная мощность -->
+    <string name="output_power">Выходная мощность</string>
+
+    <!-- original[values]: Сбой генерации энергии -->
+    <!-- original[values-zh-rCN]: Сбой генерации энергии -->
+    <!-- original[values-en-rUS]: Сбой генерации энергии -->
+    <!-- starshine: Сбой генерации энергии -->
+    <string name="parking_charge_cannot_enter">Сбой генерации энергии</string>
+
+    <!-- original[values]: Генерация энергии выключена -->
+    <!-- original[values-zh-rCN]: Генерация энергии выключена -->
+    <!-- original[values-en-rUS]: Генерация энергии выключена -->
+    <!-- starshine: Генерация энергии выключена -->
+    <string name="parking_charge_close">Генерация энергии выключена</string>
+
+    <!-- original[values]: Генерация завершена -->
+    <!-- original[values-zh-rCN]: Генерация завершена -->
+    <!-- original[values-en-rUS]: Генерация завершена -->
+    <!-- starshine: Генерация завершена -->
+    <string name="parking_charge_completed">Генерация завершена</string>
+
+    <!-- original[values]: Идет генерация энергии -->
+    <!-- original[values-zh-rCN]: Идет генерация энергии -->
+    <!-- original[values-en-rUS]: Идет генерация энергии -->
+    <!-- starshine: Идет генерация энергии -->
+    <string name="parking_charge_open">Идет генерация энергии</string>
+
+    <!-- original[values]: Генерация на парковке -->
+    <!-- original[values-zh-rCN]: Генерация на парковке -->
+    <!-- original[values-en-rUS]: Генерация на парковке -->
+    <!-- starshine: Генерация на парковке -->
+    <string name="parking_charging">Генерация на парковке</string>
+
+    <!-- original[values]: Зарядка от генератора... -->
+    <!-- original[values-zh-rCN]: Зарядка от генератора... -->
+    <!-- original[values-en-rUS]: Зарядка от генератора... -->
+    <!-- starshine: Зарядка от генератора... -->
+    <string name="parking_charging_meth">Зарядка от генератора...</string>
+
+    <!-- original[values]: "Условия:
+1. Режим «Ready», передача «P».
+2. Тормоз отпущен.
+3. Заряд <85%.
+Тормоз отключает функцию." -->
+    <!-- original[values-zh-rCN]: "Условия:
+1. Режим «Ready», передача «P».
+2. Тормоз отпущен.
+3. Заряд <85%.
+Тормоз отключает функцию." -->
+    <!-- original[values-en-rUS]: "Условия:
+1. Режим «Ready», передача «P».
+2. Тормоз отпущен.
+3. Заряд <85%.
+Тормоз отключает функцию." -->
+    <!-- starshine: "Условия:
+1. Режим «Ready», передача «P».
+2. Тормоз отпущен.
+3. Заряд <85%.
+Тормоз отключает функцию." -->
+    <string name="parking_power_generation_notice_summary">"Условия:
+1. Режим «Ready», передача «P».
+2. Тормоз отпущен.
+3. Заряд &lt;85%.
+Тормоз отключает функцию."</string>
+
+    <!-- original[values]: Инструкция генерации -->
+    <!-- original[values-zh-rCN]: Инструкция генерации -->
+    <!-- original[values-en-rUS]: Инструкция генерации -->
+    <!-- starshine: Инструкция генерации -->
+    <string name="parking_power_generation_notice_title">Инструкция генерации</string>
+
+    <!-- original[values]: Запуск двигателя в режиме «P» -->
+    <!-- original[values-zh-rCN]: Запуск двигателя в режиме «P» -->
+    <!-- original[values-en-rUS]: Запуск двигателя в режиме «P» -->
+    <!-- starshine: Запуск двигателя в режиме «P» -->
+    <string name="parking_power_generation_summary">Запуск двигателя в режиме «P»</string>
+
+    <!-- original[values]: Зарядка на парковке -->
+    <!-- original[values-zh-rCN]: Зарядка на парковке -->
+    <!-- original[values-en-rUS]: Зарядка на парковке -->
+    <!-- starshine: Зарядка на парковке -->
+    <string name="parking_power_generation_title">Зарядка на парковке</string>
+
+    <!-- original[values]: Зарядка от топлива -->
+    <!-- original[values-zh-rCN]: Зарядка от топлива -->
+    <!-- original[values-en-rUS]: Зарядка от топлива -->
+    <!-- starshine: Зарядка от топлива -->
+    <string name="parking_power_generation_title_meth">Зарядка от топлива</string>
+
+    <!-- original[values]: Сброс после парковки -->
+    <!-- original[values-zh-rCN]: Сброс после парковки -->
+    <!-- original[values-en-rUS]: Сброс после парковки -->
+    <!-- starshine: Сброс после парковки -->
+    <string name="parking_reset">Сброс после парковки</string>
+
+    <!-- original[values]: Пароль -->
+    <!-- original[values-zh-rCN]: Пароль -->
+    <!-- original[values-en-rUS]: Пароль -->
+    <!-- starshine: Пароль -->
+    <string name="password_toggle_content_description">Пароль</string>
+
+    <!-- original[values]: Время непиковой зарядки: %s -->
+    <!-- original[values-zh-rCN]: Время непиковой зарядки: %s -->
+    <!-- original[values-en-rUS]: Время непиковой зарядки: %s -->
+    <!-- starshine: Время непиковой зарядки: %s -->
+    <string name="peak_charging_subtitle">Время непиковой зарядки: %s</string>
+
+    <!-- original[values]: Зарядка в непиковые часы -->
+    <!-- original[values-zh-rCN]: Зарядка в непиковые часы -->
+    <!-- original[values-en-rUS]: Зарядка в непиковые часы -->
+    <!-- starshine: Зарядка в непиковые часы -->
+    <string name="peak_charging_title">Зарядка в непиковые часы</string>
+
+    <!-- original[values]: %d%% -->
+    <!-- original[values-zh-rCN]: %d%% -->
+    <!-- original[values-en-rUS]: %d%% -->
+    <!-- starshine: %d%% -->
+    <string name="percentage_format">%d%%</string>
+
+    <!-- original[values]: Низкий заряд! Зарядите авто или запустите двигатель. -->
+    <!-- original[values-zh-rCN]: Низкий заряд! Зарядите авто или запустите двигатель. -->
+    <!-- original[values-en-rUS]: Низкий заряд! Зарядите авто или запустите двигатель. -->
+    <!-- starshine: Низкий заряд! Зарядите авто или запустите двигатель. -->
+    <string name="power_low_notice">Низкий заряд! Зарядите авто или запустите двигатель.</string>
+
+    <!-- original[values]: Сбой: извлеките кабель -->
+    <!-- original[values-zh-rCN]: Сбой: извлеките кабель -->
+    <!-- original[values-en-rUS]: Сбой: извлеките кабель -->
+    <!-- starshine: Сбой: извлеките кабель -->
+    <string name="power_notice_fail1">Сбой: извлеките кабель</string>
+
+    <!-- original[values]: Сбой: закройте капот -->
+    <!-- original[values-zh-rCN]: Сбой: закройте капот -->
+    <!-- original[values-en-rUS]: Сбой: закройте капот -->
+    <!-- starshine: Сбой: закройте капот -->
+    <string name="power_notice_fail2">Сбой: закройте капот</string>
+
+    <!-- original[values]: Выкл: мало топлива -->
+    <!-- original[values-zh-rCN]: Выкл: мало топлива -->
+    <!-- original[values-en-rUS]: Выкл: мало топлива -->
+    <!-- starshine: Выкл: мало топлива -->
+    <string name="power_notice_fail3">Выкл: мало топлива</string>
+
+    <!-- original[values]: Выкл: режим «P» -->
+    <!-- original[values-zh-rCN]: Выкл: режим «P» -->
+    <!-- original[values-en-rUS]: Выкл: режим «P» -->
+    <!-- starshine: Выкл: режим «P» -->
+    <string name="power_notice_fail4">Выкл: режим «P»</string>
+
+    <!-- original[values]: Выкл: лимит времени -->
+    <!-- original[values-zh-rCN]: Выкл: лимит времени -->
+    <!-- original[values-en-rUS]: Выкл: лимит времени -->
+    <!-- starshine: Выкл: лимит времени -->
+    <string name="power_notice_fail5">Выкл: лимит времени</string>
+
+    <!-- original[values]: Выкл: ключ не найден -->
+    <!-- original[values-zh-rCN]: Выкл: ключ не найден -->
+    <!-- original[values-en-rUS]: Выкл: ключ не найден -->
+    <!-- starshine: Выкл: ключ не найден -->
+    <string name="power_notice_fail6">Выкл: ключ не найден</string>
+
+    <!-- original[values]: Выкл: сбой системы -->
+    <!-- original[values-zh-rCN]: Выкл: сбой системы -->
+    <!-- original[values-en-rUS]: Выкл: сбой системы -->
+    <!-- starshine: Выкл: сбой системы -->
+    <string name="power_notice_fail7">Выкл: сбой системы</string>
+
+    <!-- original[values]: Выкл: лимит мощности -->
+    <!-- original[values-zh-rCN]: Выкл: лимит мощности -->
+    <!-- original[values-en-rUS]: Выкл: лимит мощности -->
+    <!-- starshine: Выкл: лимит мощности -->
+    <string name="power_notice_fail8">Выкл: лимит мощности</string>
+
+    <!-- original[values]: Сбой: много попыток -->
+    <!-- original[values-zh-rCN]: Сбой: много попыток -->
+    <!-- original[values-en-rUS]: Сбой: много попыток -->
+    <!-- starshine: Сбой: много попыток -->
+    <string name="power_notice_fail9">Сбой: много попыток</string>
+
+    <!-- original[values]: Генерация выключена -->
+    <!-- original[values-zh-rCN]: Генерация выключена -->
+    <!-- original[values-en-rUS]: Генерация выключена -->
+    <!-- starshine: Генерация выключена -->
+    <string name="power_notice_off">Генерация выключена</string>
+
+    <!-- original[values]: Генерация включена -->
+    <!-- original[values-zh-rCN]: Генерация включена -->
+    <!-- original[values-en-rUS]: Генерация включена -->
+    <!-- starshine: Генерация включена -->
+    <string name="power_notice_on">Генерация включена</string>
+
+    <!-- original[values]: Время не совпадает -->
+    <!-- original[values-zh-rCN]: Время не совпадает -->
+    <!-- original[values-en-rUS]: Время не совпадает -->
+    <!-- starshine: Время не совпадает -->
+    <string name="precharge_time_notice">Время не совпадает</string>
+
+    <!-- original[values]: Зарядка начнется в указанное время только здесь. -->
+    <!-- original[values-zh-rCN]: Зарядка начнется в указанное время только здесь. -->
+    <!-- original[values-en-rUS]: Зарядка начнется в указанное время только здесь. -->
+    <!-- starshine: Зарядка начнется в указанное время только здесь. -->
+    <string name="precharge_time_tip">Зарядка начнется в указанное время только здесь.</string>
+
+    <!-- original[values]: Условия активации -->
+    <!-- original[values-zh-rCN]: Условия активации -->
+    <!-- original[values-en-rUS]: Условия активации -->
+    <!-- starshine: Условия активации -->
+    <string name="predictability_condition">Условия активации</string>
+
+    <!-- original[values]: "Экономия: %s л/100 км.
+Всего: %s л." -->
+    <!-- original[values-zh-rCN]: "Экономия: %s л/100 км.
+Всего: %s л." -->
+    <!-- original[values-en-rUS]: "Экономия: %s л/100 км.
+Всего: %s л." -->
+    <!-- starshine: "Экономия: %s л/100 км.
+Всего: %s л." -->
+    <string name="predictability_condition_fuel">"Экономия: %s л/100 км.
+Всего: %s л."</string>
+
+    <!-- original[values]: Экономия сейчас -->
+    <!-- original[values-zh-rCN]: Экономия сейчас -->
+    <!-- original[values-en-rUS]: Экономия сейчас -->
+    <!-- starshine: Экономия сейчас -->
+    <string name="predictability_condition_fuel_1">Экономия сейчас</string>
+
+    <!-- original[values]: Расчетная экономия топлива -->
+    <!-- original[values-zh-rCN]: Расчетная экономия топлива -->
+    <!-- original[values-en-rUS]: Расчетная экономия топлива -->
+    <!-- starshine: Расчетная экономия топлива -->
+    <string name="predictability_condition_fuel_1_meth">Расчетная экономия топлива</string>
+
+    <!-- original[values]: %s л/100 км -->
+    <!-- original[values-zh-rCN]: %s л/100 км -->
+    <!-- original[values-en-rUS]: %s л/100 км -->
+    <!-- starshine: %s л/100 км -->
+    <string name="predictability_condition_fuel_2">%s л/100 км</string>
+
+    <!-- original[values]: , итого -->
+    <!-- original[values-zh-rCN]: , итого -->
+    <!-- original[values-en-rUS]: , итого -->
+    <!-- starshine: , итого -->
+    <string name="predictability_condition_fuel_3">, итого</string>
+
+    <!-- original[values]: , всего сэкономлено -->
+    <!-- original[values-zh-rCN]: , всего сэкономлено -->
+    <!-- original[values-en-rUS]: , всего сэкономлено -->
+    <!-- starshine: , всего сэкономлено -->
+    <string name="predictability_condition_fuel_3_meth">, всего сэкономлено</string>
+
+    <!-- original[values]: %s л -->
+    <!-- original[values-zh-rCN]: %s л -->
+    <!-- original[values-en-rUS]: %s л -->
+    <!-- starshine: %s л -->
+    <string name="predictability_condition_fuel_4">%s л</string>
+
+    <!-- original[values]: "Интеллектуальное управление:
+Оптимизация расхода на основе навигации для экономии и комфорта." -->
+    <!-- original[values-zh-rCN]: "Интеллектуальное управление:
+Оптимизация расхода на основе навигации для экономии и комфорта." -->
+    <!-- original[values-en-rUS]: "Интеллектуальное управление:
+Оптимизация расхода на основе навигации для экономии и комфорта." -->
+    <!-- starshine: "Интеллектуальное управление:
+Оптимизация расхода на основе навигации для экономии и комфорта." -->
+    <string name="predictability_desc">"Интеллектуальное управление:
+Оптимизация расхода на основе навигации для экономии и комфорта."</string>
+
+    <!-- original[values]: Умное управление энергией использует навигацию для переключения режимов: топливо — на свободных дорогах, электричество — в пробках. Также система регулирует температуру батареи для экономии и комфорта. -->
+    <!-- original[values-zh-rCN]: Умное управление энергией использует навигацию для переключения режимов: топливо — на свободных дорогах, электричество — в пробках. Также система регулирует температуру батареи для экономии и комфорта. -->
+    <!-- original[values-en-rUS]: Умное управление энергией использует навигацию для переключения режимов: топливо — на свободных дорогах, электричество — в пробках. Также система регулирует температуру батареи для экономии и комфорта. -->
+    <!-- starshine: Умное управление энергией использует навигацию для переключения режимов: топливо — на свободных дорогах, электричество — в пробках. Также система регулирует температуру батареи для экономии и комфорта. -->
+    <string name="predictability_desc_meth">Умное управление энергией использует навигацию для переключения режимов: топливо — на свободных дорогах, электричество — в пробках. Также система регулирует температуру батареи для экономии и комфорта.</string>
+
+    <!-- original[values]: Автоматическая оптимизация расхода и терморегуляции по маршруту. -->
+    <!-- original[values-zh-rCN]: Автоматическая оптимизация расхода и терморегуляции по маршруту. -->
+    <!-- original[values-en-rUS]: Автоматическая оптимизация расхода и терморегуляции по маршруту. -->
+    <!-- starshine: Автоматическая оптимизация расхода и терморегуляции по маршруту. -->
+    <string name="predictability_tip">Автоматическая оптимизация расхода и терморегуляции по маршруту.</string>
+
+    <!-- original[values]: Управление энергией -->
+    <!-- original[values-zh-rCN]: Управление энергией -->
+    <!-- original[values-en-rUS]: Управление энергией -->
+    <!-- starshine: Управление энергией -->
+    <string name="predictability_title">Управление энергией</string>
+
+    <!-- original[values]: электропривод -->
+    <!-- original[values-zh-rCN]: электропривод -->
+    <!-- original[values-en-rUS]: электропривод -->
+    <!-- starshine: электропривод -->
+    <string name="pure_electric">электропривод</string>
+
+    <!-- original[values]: Конец -->
+    <!-- original[values-zh-rCN]: Конец -->
+    <!-- original[values-en-rUS]: Конец -->
+    <!-- starshine: Конец -->
+    <string name="range_end">Конец</string>
+
+    <!-- original[values]: Начало -->
+    <!-- original[values-zh-rCN]: Начало -->
+    <!-- original[values-en-rUS]: Начало -->
+    <!-- starshine: Начало -->
+    <string name="range_start">Начало</string>
+
+    <!-- original[values]: бронирование -->
+    <!-- original[values-zh-rCN]: бронирование -->
+    <!-- original[values-en-rUS]: бронирование -->
+    <!-- starshine: бронирование -->
+    <string name="reservation">бронирование</string>
+
+    <!-- original[values]: Старт в %s -->
+    <!-- original[values-zh-rCN]: Старт в %s -->
+    <!-- original[values-en-rUS]: Старт в %s -->
+    <!-- starshine: Старт в %s -->
+    <string name="reservation_charging_area">Старт в %s</string>
+
+    <!-- original[values]: %2s -->
+    <!-- original[values-zh-rCN]: %2s -->
+    <!-- original[values-en-rUS]: %2s -->
+    <!-- starshine: %2s -->
+    <string name="reservation_charging_end">%2s</string>
+
+    <!-- original[values]: Ежедневно %1s – -->
+    <!-- original[values-zh-rCN]: Ежедневно %1s – -->
+    <!-- original[values-en-rUS]: Ежедневно %1s – -->
+    <!-- starshine: Ежедневно %1s – -->
+    <string name="reservation_charging_start">Ежедневно %1s –</string>
+
+    <!-- original[values]: Ежедневно %1s – %2s (след. день) -->
+    <!-- original[values-zh-rCN]: Ежедневно %1s – %2s (след. день) -->
+    <!-- original[values-en-rUS]: Ежедневно %1s – %2s (след. день) -->
+    <!-- starshine: Ежедневно %1s – %2s (след. день) -->
+    <string name="reservation_charging_summary">Ежедневно %1s – %2s (след. день)</string>
+
+    <!-- original[values]: Запланированная зарядка -->
+    <!-- original[values-zh-rCN]: Запланированная зарядка -->
+    <!-- original[values-en-rUS]: Запланированная зарядка -->
+    <!-- starshine: Запланированная зарядка -->
+    <string name="reservation_charging_title">Запланированная зарядка</string>
+
+    <!-- original[values]: Сбой расписания. Повторите. -->
+    <!-- original[values-zh-rCN]: Сбой расписания. Повторите. -->
+    <!-- original[values-en-rUS]: Сбой расписания. Повторите. -->
+    <!-- starshine: Сбой расписания. Повторите. -->
+    <string name="reservation_error">Сбой расписания. Повторите.</string>
+
+    <!-- original[values]: Зарядка по расписанию -->
+    <!-- original[values-zh-rCN]: Зарядка по расписанию -->
+    <!-- original[values-en-rUS]: Зарядка по расписанию -->
+    <!-- starshine: Зарядка по расписанию -->
+    <string name="reservation_title">Зарядка по расписанию</string>
+
+    <!-- original[values]: Медленная зарядка -->
+    <!-- original[values-zh-rCN]: Медленная зарядка -->
+    <!-- original[values-en-rUS]: Медленная зарядка -->
+    <!-- starshine: Медленная зарядка -->
+    <string name="reservation_title2">Медленная зарядка</string>
+
+    <!-- original[values]: Сброс -->
+    <!-- original[values-zh-rCN]: Сброс -->
+    <!-- original[values-en-rUS]: Сброс -->
+    <!-- starshine: Сброс -->
+    <string name="reset">Сброс</string>
+
+    <!-- original[values]: Сб -->
+    <!-- original[values-zh-rCN]: Сб -->
+    <!-- original[values-en-rUS]: Сб -->
+    <!-- starshine: Сб -->
+    <string name="sat">Сб</string>
+
+    <!-- original[values]: Поиск -->
+    <!-- original[values-zh-rCN]: Поиск -->
+    <!-- original[values-en-rUS]: Поиск -->
+    <!-- starshine: Поиск -->
+    <string name="search_menu_title">Поиск</string>
+
+    <!-- original[values]: Выбрано -->
+    <!-- original[values-zh-rCN]: Выбрано -->
+    <!-- original[values-en-rUS]: Выбрано -->
+    <!-- starshine: Выбрано -->
+    <string name="selected">Выбрано</string>
+
+    <!-- original[values]: Сброс данных после зарядки -->
+    <!-- original[values-zh-rCN]: Сброс данных после зарядки -->
+    <!-- original[values-en-rUS]: Сброс данных после зарядки -->
+    <!-- starshine: Сброс данных после зарядки -->
+    <string name="single_reset_charging">Сброс данных после зарядки</string>
+
+    <!-- original[values]: Сброс данных после парковки -->
+    <!-- original[values-zh-rCN]: Сброс данных после парковки -->
+    <!-- original[values-en-rUS]: Сброс данных после парковки -->
+    <!-- starshine: Сброс данных после парковки -->
+    <string name="single_reset_parking">Сброс данных после парковки</string>
+
+    <!-- original[values]: *Пробег с последней заправки -->
+    <!-- original[values-zh-rCN]: *Пробег с последней заправки -->
+    <!-- original[values-en-rUS]: *Пробег с последней заправки -->
+    <!-- starshine: *Пробег с последней заправки -->
+    <string name="single_reset_set_charging">*Пробег с последней заправки</string>
+
+    <!-- original[values]: *Пробег с последней парковки -->
+    <!-- original[values-zh-rCN]: *Пробег с последней парковки -->
+    <!-- original[values-en-rUS]: *Пробег с последней парковки -->
+    <!-- starshine: *Пробег с последней парковки -->
+    <string name="single_reset_set_parking">*Пробег с последней парковки</string>
+
+    <!-- original[values]: Защита заряда вкл. -->
+    <!-- original[values-zh-rCN]: Защита заряда вкл. -->
+    <!-- original[values-en-rUS]: Защита заряда вкл. -->
+    <!-- starshine: Защита заряда вкл. -->
+    <string name="smart_charge_open">Защита заряда вкл.</string>
+
+    <!-- original[values]: Автоматически -->
+    <!-- original[values-zh-rCN]: Автоматически -->
+    <!-- original[values-en-rUS]: Автоматически -->
+    <!-- starshine: Автоматически -->
+    <string name="smart_charging">Автоматически</string>
+
+    <!-- original[values]: Целевой заряд -->
+    <!-- original[values-zh-rCN]: Целевой заряд -->
+    <!-- original[values-en-rUS]: Целевой заряд -->
+    <!-- starshine: Целевой заряд -->
+    <string name="soc_charge">Целевой заряд</string>
+
+    <!-- original[values]: 85% -->
+    <!-- original[values-zh-rCN]: 85% -->
+    <!-- original[values-en-rUS]: 85% -->
+    <!-- starshine: 85% -->
+    <string name="soc_charge_max">85%</string>
+
+    <!-- original[values]: 30% -->
+    <!-- original[values-zh-rCN]: 30% -->
+    <!-- original[values-en-rUS]: 30% -->
+    <!-- starshine: 30% -->
+    <string name="soc_charge_min">30%</string>
+
+    <!-- original[values]: Снизьте лимит, если есть зарядка в пути. Повысьте для гор и пробок. -->
+    <!-- original[values-zh-rCN]: Снизьте лимит, если есть зарядка в пути. Повысьте для гор и пробок. -->
+    <!-- original[values-en-rUS]: Снизьте лимит, если есть зарядка в пути. Повысьте для гор и пробок. -->
+    <!-- starshine: Снизьте лимит, если есть зарядка в пути. Повысьте для гор и пробок. -->
+    <string name="soc_charge_summary">Снизьте лимит, если есть зарядка в пути. Повысьте для гор и пробок.</string>
+
+    <!-- original[values]: "Если в пункте назначения есть зарядка, снизьте целевой
+уровень заряда для максимальной экономии топлива.
+Если зарядки нет или впереди пробки/горы, повысьте
+целевой уровень для поддержания запаса энергии.
+Примечание: поддержание заряда эффективнее при
+плавном движении на высокой скорости." -->
+    <!-- original[values-zh-rCN]: "Если в пункте назначения есть зарядка, снизьте целевой
+уровень заряда для максимальной экономии топлива.
+Если зарядки нет или впереди пробки/горы, повысьте
+целевой уровень для поддержания запаса энергии.
+Примечание: поддержание заряда эффективнее при
+плавном движении на высокой скорости." -->
+    <!-- original[values-en-rUS]: "Если в пункте назначения есть зарядка, снизьте целевой
+уровень заряда для максимальной экономии топлива.
+Если зарядки нет или впереди пробки/горы, повысьте
+целевой уровень для поддержания запаса энергии.
+Примечание: поддержание заряда эффективнее при
+плавном движении на высокой скорости." -->
+    <!-- starshine: "Если в пункте назначения есть зарядка, снизьте целевой
+уровень заряда для максимальной экономии топлива.
+Если зарядки нет или впереди пробки/горы, повысьте
+целевой уровень для поддержания запаса энергии.
+Примечание: поддержание заряда эффективнее при
+плавном движении на высокой скорости." -->
+    <string name="soc_charge_summary_meth">"Если в пункте назначения есть зарядка, снизьте целевой
+уровень заряда для максимальной экономии топлива.
+Если зарядки нет или впереди пробки/горы, повысьте
+целевой уровень для поддержания запаса энергии.
+Примечание: поддержание заряда эффективнее при
+плавном движении на высокой скорости."</string>
+
+    <!-- original[values]: , затрачено -->
+    <!-- original[values-zh-rCN]: , затрачено -->
+    <!-- original[values-en-rUS]: , затрачено -->
+    <!-- starshine: , затрачено -->
+    <string name="spent_time">, затрачено</string>
+
+    <!-- original[values]: Генерация энергии -->
+    <!-- original[values-zh-rCN]: Генерация энергии -->
+    <!-- original[values-en-rUS]: Генерация энергии -->
+    <!-- starshine: Генерация энергии -->
+    <string name="start_engine">Генерация энергии</string>
+
+    <!-- original[values]: Старт -->
+    <!-- original[values-zh-rCN]: Старт -->
+    <!-- original[values-en-rUS]: Старт -->
+    <!-- starshine: Старт -->
+    <string name="start_engine_btn">Старт</string>
+
+    <!-- original[values]: Старт -->
+    <!-- original[values-zh-rCN]: Старт -->
+    <!-- original[values-en-rUS]: Старт -->
+    <!-- starshine: Старт -->
+    <string name="start_time">Старт</string>
+
+    <!-- original[values]: *С момента последнего сброса -->
+    <!-- original[values-zh-rCN]: *С момента последнего сброса -->
+    <!-- original[values-en-rUS]: *С момента последнего сброса -->
+    <!-- starshine: *С момента последнего сброса -->
+    <string name="state_reset">*С момента последнего сброса</string>
+
+    <!-- original[values]: 999+ -->
+    <!-- original[values-zh-rCN]: 999+ -->
+    <!-- original[values-en-rUS]: 999+ -->
+    <!-- starshine: 999+ -->
+    <string name="status_bar_notification_info_overflow">999+</string>
+
+    <!-- original[values]: Стоп питание -->
+    <!-- original[values-zh-rCN]: Стоп питание -->
+    <!-- original[values-en-rUS]: Стоп питание -->
+    <!-- starshine: Стоп питание -->
+    <string name="stop_discharging">Стоп питание</string>
+
+    <!-- original[values]: Общая статистика -->
+    <!-- original[values-zh-rCN]: Общая статистика -->
+    <!-- original[values-en-rUS]: Общая статистика -->
+    <!-- starshine: Общая статистика -->
+    <string name="subtotal_mileage_title">Общая статистика</string>
+
+    <!-- original[values]: Вс -->
+    <!-- original[values-zh-rCN]: Вс -->
+    <!-- original[values-en-rUS]: Вс -->
+    <!-- starshine: Вс -->
+    <string name="sun">Вс</string>
+
+    <!-- original[values]: , осталось -->
+    <!-- original[values-zh-rCN]: , осталось -->
+    <!-- original[values-en-rUS]: , осталось -->
+    <!-- starshine: , осталось -->
+    <string name="surplus_charging_time">, осталось</string>
+
+    <!-- original[values]: Переключатель -->
+    <!-- original[values-zh-rCN]: Переключатель -->
+    <!-- original[values-en-rUS]: Переключатель -->
+    <!-- starshine: Переключатель -->
+    <string name="switch_role">Переключатель</string>
+
+    <!-- original[values]: Вкладка -->
+    <!-- original[values-zh-rCN]: Вкладка -->
+    <!-- original[values-en-rUS]: Вкладка -->
+    <!-- starshine: Вкладка -->
+    <string name="tab">Вкладка</string>
+
+    <!-- original[values]: %1$d%% -->
+    <!-- original[values-zh-rCN]: %1$d%% -->
+    <!-- original[values-en-rUS]: %1$d%% -->
+    <!-- starshine: %1$d%% -->
+    <string name="template_percent">%1$d%%</string>
+
+    <!-- original[values]: Ассистенты временно недоступны -->
+    <!-- original[values-zh-rCN]: Ассистенты временно недоступны -->
+    <!-- original[values-en-rUS]: Ассистенты временно недоступны -->
+    <!-- starshine: Ассистенты временно недоступны -->
+    <string name="the_intelligent_driving_system_cannot_be_turned_off_for_the_time_being">Ассистенты временно недоступны</string>
+
+    <!-- original[values]: Энергосбережение выкл., ассистенты вкл. -->
+    <!-- original[values-zh-rCN]: Энергосбережение выкл., ассистенты вкл. -->
+    <!-- original[values-en-rUS]: Энергосбережение выкл., ассистенты вкл. -->
+    <!-- starshine: Энергосбережение выкл., ассистенты вкл. -->
+    <string name="the_intelligent_driving_system_has_been_activated">Энергосбережение выкл., ассистенты вкл.</string>
+
+    <!-- original[values]: Перезапуск ассистентов… -->
+    <!-- original[values-zh-rCN]: Перезапуск ассистентов… -->
+    <!-- original[values-en-rUS]: Перезапуск ассистентов… -->
+    <!-- starshine: Перезапуск ассистентов… -->
+    <string name="the_intelligent_driving_system_is_about_to_be_restarted">Перезапуск ассистентов…</string>
+
+    <!-- original[values]: Ассистенты вождения отключены -->
+    <!-- original[values-zh-rCN]: Ассистенты вождения отключены -->
+    <!-- original[values-en-rUS]: Ассистенты вождения отключены -->
+    <!-- starshine: Ассистенты вождения отключены -->
+    <string name="the_intelligent_driving_system_is_shut_down">Ассистенты вождения отключены</string>
+
+    <!-- original[values]: Сегодня -->
+    <!-- original[values-zh-rCN]: Сегодня -->
+    <!-- original[values-en-rUS]: Сегодня -->
+    <!-- starshine: Сегодня -->
+    <string name="this_day">Сегодня</string>
+
+    <!-- original[values]: Чт -->
+    <!-- original[values-zh-rCN]: Чт -->
+    <!-- original[values-en-rUS]: Чт -->
+    <!-- starshine: Чт -->
+    <string name="thu">Чт</string>
+
+    <!-- original[values]: подсказка -->
+    <!-- original[values-zh-rCN]: подсказка -->
+    <!-- original[values-en-rUS]: подсказка -->
+    <!-- starshine: подсказка -->
+    <string name="tooltip_description">подсказка</string>
+
+    <!-- original[values]: подсказка -->
+    <!-- original[values-zh-rCN]: подсказка -->
+    <!-- original[values-en-rUS]: подсказка -->
+    <!-- starshine: подсказка -->
+    <string name="tooltip_label">подсказка</string>
+
+    <!-- original[values]: общий запас хода -->
+    <!-- original[values-zh-rCN]: общий запас хода -->
+    <!-- original[values-en-rUS]: общий запас хода -->
+    <!-- starshine: общий запас хода -->
+    <string name="total_mileage">общий запас хода</string>
+
+    <!-- original[values]: Общий пробег: %s км -->
+    <!-- original[values-zh-rCN]: Общий пробег: %s км -->
+    <!-- original[values-en-rUS]: Общий пробег: %s км -->
+    <!-- starshine: Общий пробег: %s км -->
+    <string name="total_mileage_title">Общий пробег: %s км</string>
+
+    <!-- original[values]: Средний расход -->
+    <!-- original[values-zh-rCN]: Средний расход -->
+    <!-- original[values-en-rUS]: Средний расход -->
+    <!-- starshine: Средний расход -->
+    <string name="trip1_energy_aec">Средний расход</string>
+
+    <!-- original[values]: Климат -->
+    <!-- original[values-zh-rCN]: Климат -->
+    <!-- original[values-en-rUS]: Климат -->
+    <!-- starshine: Климат -->
+    <string name="trip1_energy_air_conditioner">Климат</string>
+
+    <!-- original[values]: Терморегуляция батареи -->
+    <!-- original[values-zh-rCN]: Терморегуляция батареи -->
+    <!-- original[values-en-rUS]: Терморегуляция батареи -->
+    <!-- starshine: Терморегуляция батареи -->
+    <string name="trip1_energy_battery">Терморегуляция батареи</string>
+
+    <!-- original[values]: "Расход
+энергии" -->
+    <!-- original[values-zh-rCN]: "Расход
+энергии" -->
+    <!-- original[values-en-rUS]: "Расход
+энергии" -->
+    <!-- starshine: "Расход
+энергии" -->
+    <string name="trip1_energy_consumption">"Расход
+энергии"</string>
+
+    <!-- original[values]: Распределение расхода -->
+    <!-- original[values-zh-rCN]: Распределение расхода -->
+    <!-- original[values-en-rUS]: Распределение расхода -->
+    <!-- starshine: Распределение расхода -->
+    <string name="trip1_energy_consumption_distribution">Распределение расхода</string>
+
+    <!-- original[values]: Привод -->
+    <!-- original[values-zh-rCN]: Привод -->
+    <!-- original[values-en-rUS]: Привод -->
+    <!-- starshine: Привод -->
+    <string name="trip1_energy_driving">Привод</string>
+
+    <!-- original[values]: Другое -->
+    <!-- original[values-zh-rCN]: Другое -->
+    <!-- original[values-en-rUS]: Другое -->
+    <!-- starshine: Другое -->
+    <string name="trip1_energy_other">Другое</string>
+
+    <!-- original[values]: "Расход
+топлива" -->
+    <!-- original[values-zh-rCN]: "Расход
+топлива" -->
+    <!-- original[values-en-rUS]: "Расход
+топлива" -->
+    <!-- starshine: "Расход
+топлива" -->
+    <string name="trip1_fuel_consumption">"Расход
+топлива"</string>
+
+    <!-- original[values]: Расход метанола -->
+    <!-- original[values-zh-rCN]: Расход метанола -->
+    <!-- original[values-en-rUS]: Расход метанола -->
+    <!-- starshine: Расход метанола -->
+    <string name="trip1_methanol_consumption">Расход метанола</string>
+
+    <!-- original[values]: Сбросить пробег? -->
+    <!-- original[values-zh-rCN]: Сбросить пробег? -->
+    <!-- original[values-en-rUS]: Сбросить пробег? -->
+    <!-- starshine: Сбросить пробег? -->
+    <string name="trip_reset_title">Сбросить пробег?</string>
+
+    <!-- original[values]: Вт -->
+    <!-- original[values-zh-rCN]: Вт -->
+    <!-- original[values-en-rUS]: Вт -->
+    <!-- starshine: Вт -->
+    <string name="tue">Вт</string>
+
+    <!-- original[values]: Выключить ассистенты (режим «P») -->
+    <!-- original[values-zh-rCN]: Выключить ассистенты (режим «P») -->
+    <!-- original[values-en-rUS]: Выключить ассистенты (режим «P») -->
+    <!-- starshine: Выключить ассистенты (режим «P») -->
+    <string name="turn_off_intelligent_driving">Выключить ассистенты (режим «P»)</string>
+
+    <!-- original[values]: "Внимание:
+1. Системы безопасности и парковки выключатся.
+2. Автосвет и обновления приостановлены.
+3. Обзор 360° работает." -->
+    <!-- original[values-zh-rCN]: "Внимание:
+1. Системы безопасности и парковки выключатся.
+2. Автосвет и обновления приостановлены.
+3. Обзор 360° работает." -->
+    <!-- original[values-en-rUS]: "Внимание:
+1. Системы безопасности и парковки выключатся.
+2. Автосвет и обновления приостановлены.
+3. Обзор 360° работает." -->
+    <!-- starshine: "Внимание:
+1. Системы безопасности и парковки выключатся.
+2. Автосвет и обновления приостановлены.
+3. Обзор 360° работает." -->
+    <string name="turn_off_intelligent_driving_notice">"Внимание:
+1. Системы безопасности и парковки выключатся.
+2. Автосвет и обновления приостановлены.
+3. Обзор 360° работает."</string>
+
+    <!-- original[values]: Выключить ассистенты -->
+    <!-- original[values-zh-rCN]: Выключить ассистенты -->
+    <!-- original[values-en-rUS]: Выключить ассистенты -->
+    <!-- starshine: Выключить ассистенты -->
+    <string name="turn_off_intelligent_driving_system">Выключить ассистенты</string>
+
+    <!-- original[values]: %s км -->
+    <!-- original[values-zh-rCN]: %s км -->
+    <!-- original[values-en-rUS]: %s км -->
+    <!-- starshine: %s км -->
+    <string name="unit_distance">%s км</string>
+
+    <!-- original[values]: %s кВт·ч/100 км -->
+    <!-- original[values-zh-rCN]: %s кВт·ч/100 км -->
+    <!-- original[values-en-rUS]: %s кВт·ч/100 км -->
+    <!-- starshine: %s кВт·ч/100 км -->
+    <string name="unit_energy_consumption">%s кВт·ч/100 км</string>
+
+    <!-- original[values]: энергия: %s кВт·ч/100 км -->
+    <!-- original[values-zh-rCN]: энергия: %s кВт·ч/100 км -->
+    <!-- original[values-en-rUS]: энергия: %s кВт·ч/100 км -->
+    <!-- starshine: энергия: %s кВт·ч/100 км -->
+    <string name="unit_energy_consumption_with_lable">энергия: %s кВт·ч/100 км</string>
+
+    <!-- original[values]: %s л/100 км -->
+    <!-- original[values-zh-rCN]: %s л/100 км -->
+    <!-- original[values-en-rUS]: %s л/100 км -->
+    <!-- starshine: %s л/100 км -->
+    <string name="unit_fuel_consumption">%s л/100 км</string>
+
+    <!-- original[values]: топливо: %s л/100 км -->
+    <!-- original[values-zh-rCN]: топливо: %s л/100 км -->
+    <!-- original[values-en-rUS]: топливо: %s л/100 км -->
+    <!-- starshine: топливо: %s л/100 км -->
+    <string name="unit_fuel_consumption_with_lable">топливо: %s л/100 км</string>
+
+    <!-- original[values]: %s мин -->
+    <!-- original[values-zh-rCN]: %s мин -->
+    <!-- original[values-en-rUS]: %s мин -->
+    <!-- starshine: %s мин -->
+    <string name="unit_minutes">%s мин</string>
+
+    <!-- original[values]: %s км/ч -->
+    <!-- original[values-zh-rCN]: %s км/ч -->
+    <!-- original[values-en-rUS]: %s км/ч -->
+    <!-- starshine: %s км/ч -->
+    <string name="unit_speed">%s км/ч</string>
+
+    <!-- original[values]: , расчет времени… -->
+    <!-- original[values-zh-rCN]: , расчет времени… -->
+    <!-- original[values-en-rUS]: , расчет времени… -->
+    <!-- starshine: , расчет времени… -->
+    <string name="unknown_charging_time">, расчет времени…</string>
+
+    <!-- original[values]: Время использования -->
+    <!-- original[values-zh-rCN]: Время использования -->
+    <!-- original[values-en-rUS]: Время использования -->
+    <!-- starshine: Время использования -->
+    <string name="use_time">Время использования</string>
+
+    <!-- original[values]: %1s кВт -->
+    <!-- original[values-zh-rCN]: %1s кВт -->
+    <!-- original[values-en-rUS]: %1s кВт -->
+    <!-- starshine: %1s кВт -->
+    <string name="w_unit">%1s кВт</string>
+
+    <!-- original[values]: Ср -->
+    <!-- original[values-zh-rCN]: Ср -->
+    <!-- original[values-en-rUS]: Ср -->
+    <!-- starshine: Ср -->
+    <string name="wed">Ср</string>
+
+    <!-- original[values]: Терморегуляция батареи -->
+    <!-- original[values-zh-rCN]: Терморегуляция батареи -->
+    <!-- original[values-en-rUS]: Терморегуляция батареи -->
+    <!-- starshine: Терморегуляция батареи -->
+    <string name="widget_charge_heating">Терморегуляция батареи</string>
+
+    <!-- original[values]: Ошибка кабеля. Смените зарядку. -->
+    <!-- original[values-zh-rCN]: Ошибка кабеля. Смените зарядку. -->
+    <!-- original[values-en-rUS]: Ошибка кабеля. Смените зарядку. -->
+    <!-- starshine: Ошибка кабеля. Смените зарядку. -->
+    <string name="widget_charge_plug_mis_matched">Ошибка кабеля. Смените зарядку.</string>
+
+    <!-- original[values]: %s кВт·ч -->
+    <!-- original[values-zh-rCN]: %s кВт·ч -->
+    <!-- original[values-en-rUS]: %s кВт·ч -->
+    <!-- starshine: %s кВт·ч -->
+    <string name="widget_charging_electric_unit">%s кВт·ч</string>
+
+    <!-- original[values]: >24 ч -->
+    <!-- original[values-zh-rCN]: >24 ч -->
+    <!-- original[values-en-rUS]: >24 ч -->
+    <!-- starshine: >24 ч -->
+    <string name="widget_charging_max_title">&gt;24 ч</string>
+
+    <!-- original[values]: Заряд батареи -->
+    <!-- original[values-zh-rCN]: Заряд батареи -->
+    <!-- original[values-en-rUS]: Заряд батареи -->
+    <!-- starshine: Заряд батареи -->
+    <string name="widget_electric_percent">Заряд батареи</string>
+
+    <!-- original[values]: Запас хода -->
+    <!-- original[values-zh-rCN]: Запас хода -->
+    <!-- original[values-en-rUS]: Запас хода -->
+    <!-- starshine: Запас хода -->
+    <string name="widget_fuel_range">Запас хода</string>
+
+    <!-- original[values]: Запас хода на топливе -->
+    <!-- original[values-zh-rCN]: Запас хода на топливе -->
+    <!-- original[values-en-rUS]: Запас хода на топливе -->
+    <!-- starshine: Запас хода на топливе -->
+    <string name="widget_fuel_range_meth">Запас хода на топливе</string>
+
+    <!-- original[values]: %s км -->
+    <!-- original[values-zh-rCN]: %s км -->
+    <!-- original[values-en-rUS]: %s км -->
+    <!-- starshine: %s км -->
+    <string name="widget_km_unit">%s км</string>
+
+    <!-- original[values]: кВт·ч/100 км -->
+    <!-- original[values-zh-rCN]: кВт·ч/100 км -->
+    <!-- original[values-en-rUS]: кВт·ч/100 км -->
+    <!-- starshine: кВт·ч/100 км -->
+    <string name="widget_mileage_energy_unit">кВт·ч/100 км</string>
+
+    <!-- original[values]: %s кВт -->
+    <!-- original[values-zh-rCN]: %s кВт -->
+    <!-- original[values-en-rUS]: %s кВт -->
+    <!-- starshine: %s кВт -->
+    <string name="widget_power">%s кВт</string>
+
+    <!-- original[values]: Запас хода -->
+    <!-- original[values-zh-rCN]: Запас хода -->
+    <!-- original[values-en-rUS]: Запас хода -->
+    <!-- starshine: Запас хода -->
+    <string name="widget_pure_electric_range">Запас хода</string>
+
+    <!-- original[values]: Осталось времени -->
+    <!-- original[values-zh-rCN]: Осталось времени -->
+    <!-- original[values-en-rUS]: Осталось времени -->
+    <!-- starshine: Осталось времени -->
+    <string name="widget_remain_charge_time">Осталось времени</string>
+
+    <!-- original[values]: "Запланировано
+Старт в %s" -->
+    <!-- original[values-zh-rCN]: "Запланировано
+Старт в %s" -->
+    <!-- original[values-en-rUS]: "Запланировано
+Старт в %s" -->
+    <!-- starshine: "Запланировано
+Старт в %s" -->
+    <string name="widget_reservation_charging_area">"Запланировано
+Старт в %s"</string>
+
+    <!-- original[values]: Энергоцентр -->
+    <!-- original[values-zh-rCN]: Энергоцентр -->
+    <!-- original[values-en-rUS]: Энергоцентр -->
+    <!-- starshine: Энергоцентр -->
+    <string name="widget_title">Энергоцентр</string>
+
+    <!-- original[values]: Общий запас хода -->
+    <!-- original[values-zh-rCN]: Общий запас хода -->
+    <!-- original[values-en-rUS]: Общий запас хода -->
+    <!-- starshine: Общий запас хода -->
+    <string name="widget_total_electric_range">Общий запас хода</string>
+
+    <!-- original[values]: Скоро зарядится -->
+    <!-- original[values-zh-rCN]: Скоро зарядится -->
+    <!-- original[values-en-rUS]: Скоро зарядится -->
+    <!-- starshine: Скоро зарядится -->
+    <string name="widget_will_full">Скоро зарядится</string>
+
+    <!-- original[values]: Осталось -->
+    <!-- original[values-zh-rCN]: Осталось -->
+    <!-- original[values-en-rUS]: Осталось -->
+    <!-- starshine: Осталось -->
+    <string name="will_be">Осталось</string>
+
+    <!-- original[values]: , скоро зарядится -->
+    <!-- original[values-zh-rCN]: , скоро зарядится -->
+    <!-- original[values-en-rUS]: , скоро зарядится -->
+    <!-- starshine: , скоро зарядится -->
+    <string name="will_full">, скоро зарядится</string>
+
+    <!-- original[values]: год -->
+    <!-- original[values-zh-rCN]: год -->
+    <!-- original[values-en-rUS]: год -->
+    <!-- starshine: год -->
+    <string name="year">год</string>
+
+    <!-- original[values]: MM.yyyy -->
+    <!-- original[values-zh-rCN]: MM.yyyy -->
+    <!-- original[values-en-rUS]: MM.yyyy -->
+    <!-- starshine: MM.yyyy -->
+    <string name="year_and_month_format">MM.yyyy</string>
+
+    <!-- original[values]: yyyy -->
+    <!-- original[values-zh-rCN]: yyyy -->
+    <!-- original[values-en-rUS]: yyyy -->
+    <!-- starshine: yyyy -->
+    <string name="year_format">yyyy</string>
+
+</resources>

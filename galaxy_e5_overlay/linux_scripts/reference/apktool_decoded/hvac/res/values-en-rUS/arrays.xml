@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="exo_controls_playback_speeds">
+        <item>0.25x</item>
+        <item>0.5x</item>
+        <item>0.75x</item>
+        <item>Обычная</item>
+        <item>1.25x</item>
+        <item>1.5x</item>
+        <item>2x</item>
+    </string-array>
+    <string-array name="hvac_fan_direction">
+        <item>В лицо</item>
+        <item>Лицо/Ноги</item>
+        <item>Лицо/Ноги/Стекло</item>
+        <item>В ноги</item>
+        <item>Ноги/Стекло</item>
+        <item>На стекло</item>
+        <item>Лицо/Стекло</item>
+    </string-array>
+    <string-array name="seat_massage_program">
+        <item>Режим</item>
+        <item>Активация</item>
+        <item>Расслабление</item>
+        <item>Плечи</item>
+        <item>Спина</item>
+        <item>Поясница</item>
+        <item>Бодрость</item>
+        <item>Растяжка</item>
+        <item>Ягодицы</item>
+    </string-array>
+</resources>

@@ -1,0 +1,16 @@
+version: 3.0.3
+apkFileName: archive_10_off_16060488_len_181988.apk
+usesFramework:
+  ids:
+  - 1
+sdkInfo:
+  minSdkVersion: 28
+  targetSdkVersion: 36
+versionInfo:
+  versionCode: 1
+  versionName: 1.8.0-starshine
+resourcesInfo:
+  packageId: 127
+  packageName: com.flyme.auto.settings
+doNotCompress:
+- META-INF/version-control-info.textproto
